@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SiteLayout } from "../../../components/SiteLayout";
-import "../../globals.css";
 
 export function generateStaticParams() { return [{ locale: "ar" }, { locale: "fr" }]; }
 
@@ -27,5 +26,5 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
 export default function LocaleLayout({ children, params }: { children: ReactNode; params: { locale: string } }) {
   if (!["en", "ar", "fr"].includes(params.locale)) notFound();
   const locale = params.locale;
-  return <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}><body><SiteLayout locale={locale}>{children}</SiteLayout></body></html>;
+  return <div lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}><SiteLayout locale={locale}>{children}</SiteLayout></div>;
 }

@@ -12,11 +12,24 @@ export const organizationJsonLd = {
   sameAs: []
 };
 
-export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+const breadcrumbLabels: Record<string, Record<string, string>> = {
+  Home: { ar: "الرئيسية", fr: "Accueil" },
+  ERP: { ar: "نظام ERP", fr: "ERP" },
+  Plans: { ar: "الخطط", fr: "Offres" },
+  "Field service": { ar: "الخدمة الميدانية", fr: "Service terrain" },
+  CryptoSettle: { ar: "CryptoSettle", fr: "CryptoSettle" },
+  "MatchPulse": { ar: "MatchPulse", fr: "MatchPulse" },
+  Solutions: { ar: "الحلول", fr: "Solutions" },
+  About: { ar: "من نحن", fr: "À propos" },
+  Contact: { ar: "تواصل معنا", fr: "Contact" }
+};
+
+export function breadcrumbJsonLd(items: { name: string; path: string }[], locale = "en") {
+  const prefix = locale === "en" ? "" : `/${locale}`;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, item: `https://www.helixiumsolutions.com${item.path}` }))
+    itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: breadcrumbLabels[item.name]?.[locale] || item.name, item: `https://www.helixiumsolutions.com${prefix}${item.path}` }))
   };
 }
 

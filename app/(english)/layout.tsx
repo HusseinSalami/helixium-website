@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SiteLayout } from "../../components/SiteLayout";
-import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.helixiumsolutions.com"),
@@ -11,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" dir="ltr"><body><SiteLayout locale="en">{children}</SiteLayout></body></html>;
+  return <div lang="en" dir="ltr"><SiteLayout locale="en">{children}</SiteLayout></div>;
 }
