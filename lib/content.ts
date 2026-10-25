@@ -1,4 +1,5 @@
 export const showMatchPulseStrip = true;
+export const showCustomerStories = false;
 
 export const team = [
   { name: "Bassam Salame", role: "CEO", image: "/media/optimized/team-bassam.webp", alt: "Bassam Salame, CEO of Helixium Solutions", width: 367, height: 369 },
@@ -46,49 +47,52 @@ export const translations = {
   en: {
     nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle", match: "MatchPulse", solutions: "Solutions", plans: "Plans", customers: "Customers", about: "About", contact: "Contact" },
     ctaTrial: "Start free trial", ctaDemo: "Book a demo",
-    homeTitle: "The ERP that does the work, not just the reports.",
-    homeLead: "Helixium connects finance, inventory, sales, service, POS, and production. Agents watch the work, propose the next move, and keep a human in control.",
+    homeTitle: "The ERP that does the work, so your team doesn't have to.",
+    homeLead: "Accounting, inventory, POS, field service and payroll in one friendly system, in English, Arabic and French. Agents prepare the busywork and you approve with one click.",
+    agentChip: "AI agents that ask before they act",
     partners: "Partners and product teams",
     threeWays: "Three ways to work with us",
     homeThreeLead: "Start with the platform you need today, then extend it around the way your team actually operates.",
-    securityTitle: "Useful autonomy. Visible decisions.",
-    securityLead: "The activity feed makes agent work legible: observe the record, propose a next step, ask for approval, act, and preserve the trail.",
+    securityTitle: "A little automation, with you in control.",
+    securityLead: "Agents prepare routine work, show you the context, and wait for your approval before anything consequential happens.",
     caseTitle: "Operational software should leave a better handoff.",
     caseLead: "MOM and Endomedix use the ERP's work-order and repair-order foundation. Approved outcomes and customer quotes are intentionally left for the team to add.",
     teamTitle: "The people behind the work",
-    finalTitle: "Bring the workflow. We will help make the next step clearer.",
+    finalTitle: "Bring the busywork. We will make it lighter.",
     formPending: "Machine-drafted, pending native review."
   },
   ar: {
     nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle", match: "MatchPulse", solutions: "الحلول", plans: "الخطط", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
     ctaTrial: "ابدأ التجربة المجانية", ctaDemo: "احجز عرضاً",
-    homeTitle: "نظام ERP ينجز العمل، وليس التقارير فقط.",
-    homeLead: "تربط Helixium بين المالية والمخزون والمبيعات والخدمة ونقاط البيع والإنتاج. تراقب الوكلاء سير العمل وتقترح الخطوة التالية مع إبقاء الإنسان مسيطراً.",
+    homeTitle: "نظام ERP ينجز العمل، حتى لا يضطر فريقك إلى ذلك.",
+    homeLead: "المحاسبة والمخزون ونقاط البيع والخدمة الميدانية والرواتب في نظام واحد ودود بالعربية والإنجليزية والفرنسية. يجهّز الوكلاء العمل المتكرر وتوافق أنت بنقرة واحدة.",
+    agentChip: "وكلاء ذكاء اصطناعي يسألون قبل التنفيذ",
     partners: "شركاء وفرق المنتجات",
     threeWays: "ثلاث طرق للعمل معنا",
     homeThreeLead: "ابدأ بالمنصة التي تحتاجها اليوم، ثم وسّعها بما يناسب طريقة عمل فريقك.",
-    securityTitle: "استقلالية مفيدة. قرارات واضحة.",
-    securityLead: "يجعل سجل النشاط عمل الوكلاء مفهوماً: قراءة السجل، اقتراح الخطوة، طلب الموافقة، التنفيذ، وحفظ الأثر.",
+    securityTitle: "أتمتة بسيطة، وأنت دائماً في السيطرة.",
+    securityLead: "يجهّز الوكلاء العمل المتكرر ويعرض السياق وينتظر موافقتك قبل تنفيذ أي خطوة مهمة.",
     caseTitle: "يجب أن يترك البرنامج التشغيلي تسليماً أفضل.",
     caseLead: "تستخدم MOM وEndomedix أساس أوامر العمل وأوامر الإصلاح في ERP. تُترك النتائج والاقتباسات المعتمدة للفريق لإضافتها.",
     teamTitle: "الأشخاص وراء العمل",
-    finalTitle: "أحضر سير العمل، وسنساعدك على توضيح الخطوة التالية.",
+    finalTitle: "أحضر العمل المتكرر، وسنجعله أخف.",
     formPending: "مسودة آلية بانتظار المراجعة من متحدث أصلي."
   },
   fr: {
     nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle", match: "MatchPulse", solutions: "Solutions", plans: "Offres", customers: "Clients", about: "À propos", contact: "Contact" },
     ctaTrial: "Démarrer l'essai gratuit", ctaDemo: "Réserver une démo",
-    homeTitle: "L'ERP qui fait le travail, pas seulement les rapports.",
-    homeLead: "Helixium relie la finance, les stocks, les ventes, le service, la caisse et la production. Les agents observent le travail et proposent la prochaine étape, avec un humain aux commandes.",
+    homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",
+    homeLead: "Comptabilité, stocks, caisse, service terrain et paie dans un système convivial en français, anglais et arabe. Les agents préparent le travail répétitif et vous validez en un clic.",
+    agentChip: "Des agents IA qui demandent avant d'agir",
     partners: "Partenaires et équipes produit",
     threeWays: "Trois façons de travailler avec nous",
     homeThreeLead: "Commencez par la plateforme dont vous avez besoin, puis adaptez-la au fonctionnement réel de votre équipe.",
-    securityTitle: "Une autonomie utile. Des décisions visibles.",
-    securityLead: "Le fil d'activité rend le travail des agents lisible : observer, proposer, demander l'accord, agir et conserver la trace.",
+    securityTitle: "Une automatisation simple, sous votre contrôle.",
+    securityLead: "Les agents préparent les tâches répétitives, montrent le contexte et attendent votre validation avant toute action importante.",
     caseTitle: "Un logiciel opérationnel doit améliorer le passage de relais.",
     caseLead: "MOM et Endomedix utilisent la base ERP des ordres de travail et de réparation. Les résultats approuvés et les citations restent à compléter par l'équipe.",
     teamTitle: "Les personnes derrière le travail",
-    finalTitle: "Apportez votre workflow. Nous clarifierons la prochaine étape.",
+    finalTitle: "Apportez le travail répétitif. Nous l'allégerons.",
     formPending: "Brouillon automatique, en attente d'une relecture native."
   }
 } as const;

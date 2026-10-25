@@ -76,6 +76,11 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     ar: { title: "خطط وأسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium وإضافة CryptoSettle. تواصل معنا للتسعير حسب السوق." },
     fr: { title: "Offres et tarifs Helixium ERP", description: "Comparez Pantheon, Olympus, Elysium et l'extension CryptoSettle. Contactez-nous pour un tarif selon le marché." }
   },
+  compare: {
+    en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval-aware automation." },
+    ar: { title: "بديل Odoo في لبنان والخليج", description: "قارن Helixium ERP مع Odoo وQuickBooks Online وZoho Books في نموذج التسعير واللغات والخدمة الميدانية ونقاط البيع." },
+    fr: { title: "Alternative à Odoo au Liban et dans le Golfe", description: "Comparez Helixium ERP à Odoo, QuickBooks Online et Zoho Books sur le modèle tarifaire, les langues, le service terrain et la caisse." }
+  },
   solutions: {
     en: { title: "Agentic AI and custom software solutions", description: "Explore Helixium agentic AI workflows and custom software portfolio work for operational teams." },
     ar: { title: "حلول الذكاء الاصطناعي الوكيلي والبرمجيات المخصصة", description: "اكتشف سير عمل الذكاء الاصطناعي الوكيلي وأعمال البرمجيات المخصصة للفرق التشغيلية." },
@@ -92,9 +97,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Portfolio de développement logiciel sur mesure", description: "Découvrez des projets e-commerce, réservation, construction, caisse, restauration et produits interactifs." }
   },
   customers: {
-    en: { title: "Helixium ERP customer stories", description: "Explore customer story placeholders for MOM and Endomedix, plus Helixium portfolio work." },
-    ar: { title: "قصص عملاء Helixium ERP", description: "استكشف قصص MOM وEndomedix مع حقول النتائج والاقتباسات بانتظار الاعتماد." },
-    fr: { title: "Histoires clients Helixium ERP", description: "Découvrez les histoires de MOM et Endomedix avec des résultats et citations à valider." }
+    en: { title: "Helixium ERP customer stories", description: "See how MOM and Endomedix use Helixium work-order and repair-order workflows." },
+    ar: { title: "قصص عملاء Helixium ERP", description: "اكتشف كيف تستخدم MOM وEndomedix سير عمل أوامر العمل والإصلاح في Helixium." },
+    fr: { title: "Histoires clients Helixium ERP", description: "Découvrez comment MOM et Endomedix utilisent les workflows d'ordres de travail et de réparation Helixium." }
   },
   about: {
     en: { title: "About Helixium Solutions", description: "Helixium Solutions builds practical software for connected operations." },

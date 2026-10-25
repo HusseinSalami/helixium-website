@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const base = "https://www.helixiumsolutions.com";
-const paths = ["/", "/erp/", "/erp/accounting/", "/erp/inventory/", "/erp/sales-purchases/", "/erp/pos/", "/erp/manufacturing/", "/erp/payroll/", "/erp/field-service/", "/field-service/", "/cryptosettle/", "/matchpulse/", "/plans/", "/solutions/", "/solutions/agentic-ai/", "/solutions/custom-software/", "/customers/", "/about/", "/contact/"];
+const paths = ["/", "/erp/", "/erp/accounting/", "/erp/inventory/", "/erp/sales-purchases/", "/erp/pos/", "/erp/manufacturing/", "/erp/payroll/", "/erp/field-service/", "/field-service/", "/cryptosettle/", "/matchpulse/", "/plans/", "/compare/", "/solutions/", "/solutions/agentic-ai/", "/solutions/custom-software/", "/customers/", "/about/", "/contact/"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
