@@ -358,7 +358,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .savings-result small { margin-top: 24px; color: #9ea2af; font-size: .7rem; }
 .process-step h3, .process-step p, .bullet-list li { color: var(--ink); }
 .process-step p { color: var(--mist); font-size: .9rem; }
-.step-number, .check { color: var(--teal); }
+.step-number, .check { color: #08736d; }
 .security-facts span { border-color: #d9e7e4; color: #445451; background: #f7fbfa; }
 .case-highlight, .matchpulse-strip { background: #fff; border-color: var(--line); box-shadow: 0 16px 50px rgba(20,22,31,.06); }
 .case-highlight h2, .matchpulse-strip h2 { color: var(--ink); }
