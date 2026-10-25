@@ -116,7 +116,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
 export function localizedMetadata(locale: string, path: string, key: keyof typeof seo) {
   const safeLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
   const current = seo[key][safeLocale];
-  const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? "erp" : key === "agentic" || key === "custom" ? "solutions" : key === "compare" ? "plans" : key;
+  const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? `erp-${key}` : key;
   const canonical = safeLocale === "en" ? path : `/${safeLocale}${path}`;
   return {
     title: current.title,
