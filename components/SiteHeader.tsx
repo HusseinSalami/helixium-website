@@ -28,7 +28,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
   const labels = [copy.nav.erp, copy.nav.field, copy.nav.crypto, copy.nav.solutions, copy.nav.plans, copy.nav.about, copy.nav.contact];
   return <header className="site-header">
     <div className="shell nav-row">
-      <Link className="brand" href={localizedPath(locale, "/")} onClick={() => setOpen(false)} aria-label="Helixium Solutions home">
+      <Link className="brand" href={localizedPath(locale, "/")} onClick={() => setOpen(false)}>
         <span className="brand-mark" aria-hidden="true">H</span><span className="brand-copy">Helixium Solutions</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
