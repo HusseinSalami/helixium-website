@@ -322,7 +322,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .proof-row span::before { content: "✓"; color: var(--teal); margin-inline-end: 7px; }
 .logo-strip { border-color: var(--line); background: #fff; padding: 28px 0; }
 .logo-strip-row { grid-template-columns: 1.1fr repeat(4, 1fr); }
-.logo-label { color: #777b84; }
+.logo-label { color: #5c626b; }
 .partner-logo { color: var(--ink); font-size: .78rem; font-weight: 700; }
 .partner-logo img { width: 120px; height: 58px; filter: grayscale(1); opacity: .72; transition: filter .2s ease, opacity .2s ease; }
 .partner-logo:hover img { filter: grayscale(0); opacity: 1; }
@@ -375,6 +375,8 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .price-list li { color: #4e535e; font-size: .9rem; }
 .price-list li::before { color: var(--teal); }
 .matrix thead th { color: #08736d; }
+.matrix tbody th { color: #333943; }
+.matrix td { color: #4e545f; }
 .pricing-section { padding: 32px 0 76px; }
 .pricing-toolbar { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 28px; }
 .pricing-toolbar h2 { margin: 12px 0 7px; font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -.06em; }
@@ -426,7 +428,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .mock-kpis > div { padding: 12px; border: 1px solid #ececf0; border-radius: 12px; }
 .mock-kpis span, .mock-kpis small { display: block; color: #68707c; font-size: .61rem; }
 .mock-kpis strong { display: block; margin: 7px 0 4px; font-size: 1rem; letter-spacing: -.04em; }
-.mock-kpis small { color: #179581; }
+.mock-kpis small { color: #117265; }
 .mock-agents { margin-top: 15px; border: 1px solid #ececf0; border-radius: 14px; padding: 15px; }
 .mock-panel-head { display: flex; justify-content: space-between; align-items: start; }
 .mock-panel-head h3 { margin: 4px 0 13px; font-size: .95rem; }
@@ -445,7 +447,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .compare-table th, .compare-table td { padding: 17px 18px; border-bottom: 1px solid var(--line); text-align: start; color: #5d626d; font-size: .86rem; }
 .compare-table thead th { background: #f5f4ef; color: var(--ink); font-size: .8rem; }
 .compare-table tbody th { color: var(--ink); font-weight: 750; }
-.compare-table td:first-of-type { color: #188e84; font-weight: 700; }
+.compare-table td:first-of-type { color: #08736d; font-weight: 700; }
 .compare-table sup { color: #7a6cc8; font-size: .6rem; }
 .compare-table sup a { color: #59499e; text-decoration: underline; text-underline-offset: 2px; }
 .compare-note { color: var(--mist); font-size: .8rem; margin-top: 15px; }
