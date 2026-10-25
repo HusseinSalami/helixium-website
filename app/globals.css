@@ -340,6 +340,11 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .tile-amber { background: #fff0d2; color: #b66b15; }
 .dark-panel, .savings-band { background: #14161f; border: 0; color: #fff; box-shadow: 0 22px 60px rgba(20,22,31,.16); }
 .dark-panel h2, .dark-panel h3, .dark-panel .hero-lede, .savings-band h2, .savings-band p { color: #fff; }
+.activity-card { border-color: var(--line); background: #fff; color: var(--ink); box-shadow: 0 16px 50px rgba(20,22,31,.06); }
+.activity-top { border-color: var(--line); }
+.activity-copy span { color: var(--mist); }
+.activity-item { border-color: var(--line); }
+.activity-status { color: #4d65c7; }
 .savings-band { display: grid; grid-template-columns: 1fr .8fr; gap: 48px; padding: 48px; border-radius: 28px; }
 .savings-band .eyebrow { color: #9ce7df; }
 .savings-market, .slider-label { display: grid; gap: 8px; margin-top: 27px; color: #d9dbe2; font-size: .83rem; font-weight: 700; }

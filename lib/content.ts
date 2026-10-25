@@ -16,13 +16,13 @@ export const partners = [
 ];
 
 export const portfolio = [
-  { title: "Feel Nature e-commerce", client: "Gandour", built: "A product-led e-commerce storefront for the Feel Nature range.", stack: "Web storefront, product catalog, responsive commerce UI", result: "Result placeholder: add approved conversion or delivery outcome.", image: "/media/optimized/portfolio-01.webp", alt: "Feel Nature e-commerce storefront" },
-  { title: "Skincare e-commerce", client: "Client name to confirm", built: "A visual skincare shop with product discovery and purchase flows.", stack: "Responsive e-commerce, product pages, content management", result: "Result placeholder: add approved outcome.", image: "/media/optimized/portfolio-02.webp", alt: "Skincare e-commerce website" },
-  { title: "Construction and renovation website", client: "Client name to confirm", built: "A project-led website for a construction and renovation company.", stack: "Marketing site, project gallery, lead capture", result: "Result placeholder: add approved lead or launch outcome.", image: "/media/optimized/portfolio-03.webp", alt: "Construction and renovation company website" },
-  { title: "Fitness studio and reservations", client: "Client name to confirm", built: "A fitness studio site with a reservation system.", stack: "Marketing site, class discovery, reservation workflow", result: "Result placeholder: add approved booking outcome.", image: "/media/optimized/portfolio-05.webp", alt: "Fitness studio website and reservation system" },
-  { title: "Retail POS", client: "Client name to confirm", built: "A retail point-of-sale interface connected to operational records.", stack: "POS interface, inventory workflow, sales records", result: "Result placeholder: add approved operational outcome.", image: "/media/optimized/portfolio-06.webp", alt: "Retail point of sale interface" },
-  { title: "Restaurant POS", client: "Client name to confirm", built: "A restaurant point-of-sale experience for front-line teams.", stack: "POS interface, order workflow, service operations", result: "Result placeholder: add approved operational outcome.", image: "/media/optimized/portfolio-07.webp", alt: "Restaurant point of sale interface" },
-  { title: "Ball game", client: "Client name to confirm", built: "A ball game experience built around a focused interactive flow.", stack: "Interactive web experience, responsive UI", result: "Result placeholder: add approved engagement outcome.", image: "/media/optimized/portfolio-03.webp", alt: "Interactive ball game web experience" }
+  { title: "Feel Nature e-commerce", client: "Gandour", built: "A product-led e-commerce storefront for the Feel Nature range.", stack: "Web storefront, product catalog, responsive commerce UI", image: "/media/optimized/portfolio-01.webp", alt: "Feel Nature e-commerce storefront" },
+  { title: "Skincare e-commerce", client: "Portfolio project", built: "A visual skincare shop with product discovery and purchase flows.", stack: "Responsive e-commerce, product pages, content management", image: "/media/optimized/portfolio-02.webp", alt: "Skincare e-commerce website" },
+  { title: "Construction and renovation website", client: "Portfolio project", built: "A project-led website for a construction and renovation company.", stack: "Marketing site, project gallery, lead capture", image: "/media/optimized/portfolio-03.webp", alt: "Construction and renovation company website" },
+  { title: "Fitness studio and reservations", client: "Portfolio project", built: "A fitness studio site with a reservation system.", stack: "Marketing site, class discovery, reservation workflow", image: "/media/optimized/portfolio-05.webp", alt: "Fitness studio website and reservation system" },
+  { title: "Retail POS", client: "Portfolio project", built: "A retail point-of-sale interface connected to operational records.", stack: "POS interface, inventory workflow, sales records", image: "/media/optimized/portfolio-06.webp", alt: "Retail point of sale interface" },
+  { title: "Restaurant POS", client: "Portfolio project", built: "A restaurant point-of-sale experience for front-line teams.", stack: "POS interface, order workflow, service operations", image: "/media/optimized/portfolio-07.webp", alt: "Restaurant point of sale interface" },
+  { title: "Ball game", client: "Portfolio project", built: "A ball game experience built around a focused interactive flow.", stack: "Interactive web experience, responsive UI", image: "/media/optimized/portfolio-03.webp", alt: "Interactive ball game web experience" }
 ];
 
 export const activityItems = [
@@ -55,11 +55,8 @@ export const translations = {
     homeThreeLead: "Start with the platform you need today, then extend it around the way your team actually operates.",
     securityTitle: "A little automation, with you in control.",
     securityLead: "Agents prepare routine work, show you the context, and wait for your approval before anything consequential happens.",
-    caseTitle: "Operational software should leave a better handoff.",
-    caseLead: "MOM and Endomedix use the ERP's work-order and repair-order foundation. Approved outcomes and customer quotes are intentionally left for the team to add.",
     teamTitle: "The people behind the work",
-    finalTitle: "Bring the busywork. We will make it lighter.",
-    formPending: "Machine-drafted, pending native review."
+    finalTitle: "Bring the busywork. We will make it lighter."
   },
   ar: {
     nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle", match: "MatchPulse", solutions: "الحلول", plans: "الخطط", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
@@ -72,11 +69,8 @@ export const translations = {
     homeThreeLead: "ابدأ بالمنصة التي تحتاجها اليوم، ثم وسّعها بما يناسب طريقة عمل فريقك.",
     securityTitle: "أتمتة بسيطة، وأنت دائماً في السيطرة.",
     securityLead: "يجهّز الوكلاء العمل المتكرر ويعرض السياق وينتظر موافقتك قبل تنفيذ أي خطوة مهمة.",
-    caseTitle: "يجب أن يترك البرنامج التشغيلي تسليماً أفضل.",
-    caseLead: "تستخدم MOM وEndomedix أساس أوامر العمل وأوامر الإصلاح في ERP. تُترك النتائج والاقتباسات المعتمدة للفريق لإضافتها.",
     teamTitle: "الأشخاص وراء العمل",
-    finalTitle: "أحضر العمل المتكرر، وسنجعله أخف.",
-    formPending: "مسودة آلية بانتظار المراجعة من متحدث أصلي."
+    finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
     nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle", match: "MatchPulse", solutions: "Solutions", plans: "Offres", customers: "Clients", about: "À propos", contact: "Contact" },
@@ -89,11 +83,8 @@ export const translations = {
     homeThreeLead: "Commencez par la plateforme dont vous avez besoin, puis adaptez-la au fonctionnement réel de votre équipe.",
     securityTitle: "Une automatisation simple, sous votre contrôle.",
     securityLead: "Les agents préparent les tâches répétitives, montrent le contexte et attendent votre validation avant toute action importante.",
-    caseTitle: "Un logiciel opérationnel doit améliorer le passage de relais.",
-    caseLead: "MOM et Endomedix utilisent la base ERP des ordres de travail et de réparation. Les résultats approuvés et les citations restent à compléter par l'équipe.",
     teamTitle: "Les personnes derrière le travail",
-    finalTitle: "Apportez le travail répétitif. Nous l'allégerons.",
-    formPending: "Brouillon automatique, en attente d'une relecture native."
+    finalTitle: "Apportez le travail répétitif. Nous l'allégerons."
   }
 } as const;
 

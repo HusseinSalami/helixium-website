@@ -72,9 +72,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Programme des lieux fondateurs MatchPulse", description: "Rejoignez le programme des lieux fondateurs MatchPulse. Les dix premiers lieux bénéficient de 50 % de réduction." }
   },
   plans: {
-    en: { title: "Helixium ERP plans and pricing", description: "Compare Pantheon, Olympus, Elysium, and the CryptoSettle add-on. Contact us for market-specific pricing." },
-    ar: { title: "خطط وأسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium وإضافة CryptoSettle. تواصل معنا للتسعير حسب السوق." },
-    fr: { title: "Offres et tarifs Helixium ERP", description: "Comparez Pantheon, Olympus, Elysium et l'extension CryptoSettle. Contactez-nous pour un tarif selon le marché." }
+    en: { title: "Helixium ERP plans and pricing", description: "Compare Pantheon, Olympus, Elysium, and the CryptoSettle add-on with market pricing for Lebanon, the Gulf, the US, and France." },
+    ar: { title: "خطط وأسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium وإضافة CryptoSettle مع أسعار الأسواق في لبنان والخليج والولايات المتحدة وفرنسا." },
+    fr: { title: "Offres et tarifs Helixium ERP", description: "Comparez Pantheon, Olympus, Elysium et l'extension CryptoSettle avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France." }
   },
   compare: {
     en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval-aware automation." },
@@ -116,7 +116,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
 export function localizedMetadata(locale: string, path: string, key: keyof typeof seo) {
   const safeLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
   const current = seo[key][safeLocale];
-  const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? "erp" : key === "agentic" || key === "custom" ? "solutions" : key;
+  const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? "erp" : key === "agentic" || key === "custom" ? "solutions" : key === "compare" ? "plans" : key;
   const canonical = safeLocale === "en" ? path : `/${safeLocale}${path}`;
   return {
     title: current.title,

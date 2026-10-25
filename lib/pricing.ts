@@ -1,6 +1,6 @@
 export type Market = "lb" | "ae" | "sa" | "us" | "fr";
 export type BillingCycle = "monthly" | "annual";
-export type PlanPrice = { monthly: number; annual: number; onboarding?: number };
+export type PlanPrice = { monthly: number; annual: number; onboarding?: string };
 
 export const markets: Record<Market, { label: string; currency: string }> = {
   lb: { label: "Lebanon", currency: "USD" },
@@ -11,11 +11,11 @@ export const markets: Record<Market, { label: string; currency: string }> = {
 };
 
 export const pricing: Record<Market, { currency: string; plans: Record<"pantheon" | "olympus" | "elysium", PlanPrice>; eInvoicingNote?: string }> = {
-  lb: { currency: "USD", plans: { pantheon: { monthly: 39, annual: 390, onboarding: 99 }, olympus: { monthly: 89, annual: 890, onboarding: 199 }, elysium: { monthly: 299, annual: 2990, onboarding: 499 } } },
-  ae: { currency: "AED", plans: { pantheon: { monthly: 179, annual: 1790, onboarding: 499 }, olympus: { monthly: 399, annual: 3990, onboarding: 999 }, elysium: { monthly: 1499, annual: 14990, onboarding: 2499 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." },
-  sa: { currency: "SAR", plans: { pantheon: { monthly: 179, annual: 1790, onboarding: 499 }, olympus: { monthly: 449, annual: 4490, onboarding: 999 }, elysium: { monthly: 1699, annual: 16990, onboarding: 2499 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." },
-  us: { currency: "USD", plans: { pantheon: { monthly: 79, annual: 790, onboarding: 199 }, olympus: { monthly: 199, annual: 1990, onboarding: 399 }, elysium: { monthly: 799, annual: 7990, onboarding: 999 } } },
-  fr: { currency: "EUR", plans: { pantheon: { monthly: 59, annual: 590, onboarding: 149 }, olympus: { monthly: 149, annual: 1490, onboarding: 299 }, elysium: { monthly: 599, annual: 5990, onboarding: 699 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." }
+  lb: { currency: "USD", plans: { pantheon: { monthly: 39, annual: 390 }, olympus: { monthly: 89, annual: 890 }, elysium: { monthly: 299, annual: 2990 } } },
+  ae: { currency: "AED", plans: { pantheon: { monthly: 179, annual: 1790 }, olympus: { monthly: 399, annual: 3990 }, elysium: { monthly: 1499, annual: 14990 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." },
+  sa: { currency: "SAR", plans: { pantheon: { monthly: 179, annual: 1790 }, olympus: { monthly: 449, annual: 4490 }, elysium: { monthly: 1699, annual: 16990 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." },
+  us: { currency: "USD", plans: { pantheon: { monthly: 79, annual: 790 }, olympus: { monthly: 199, annual: 1990 }, elysium: { monthly: 799, annual: 7990 } } },
+  fr: { currency: "EUR", plans: { pantheon: { monthly: 59, annual: 590 }, olympus: { monthly: 149, annual: 1490 }, elysium: { monthly: 599, annual: 5990 } }, eInvoicingNote: "Local e-invoicing integration on our roadmap - talk to us before you buy." }
 };
 
 export const addOns = {

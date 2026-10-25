@@ -1,36 +1,39 @@
 # Helixium website revision
 
-Outcome: Rebuild the marketing site around Helixium ERP, field service, CryptoSettle, MatchPulse, and custom software with localized EN/AR/FR routes, source-grounded claims, and contact-for-pricing placeholders.
+Outcome: v3 presents a light, friendly Helixium ERP site with a product-led hero, market pricing, a savings calculator, and a cited comparison page. EN/AR/FR routes retain localized metadata and RTL support.
 
 ## Decisions to evaluate
 
-D1 Keep all prices as TBD in `lib/pricing.ts`. Why: proposed numbers are not approved. If overruled: replace only the centralized market values after approval.
-D2 Use neutral local e-invoicing roadmap language for Lebanon, UAE, Saudi Arabia, US, and France. Why: source code does not verify ZATCA/FATOORA, UBL, structured e-invoice, or compliance implementations. If overruled: add only verified integrations.
-D3 Keep MatchPulse as a founding-venues waitlist with 50% off for the first 10 venues. Why: there are no customers yet. If overruled: replace programme copy with approved launch evidence.
+D1 Use the approved market prices in `lib/pricing.ts`, with annual billing at 10x monthly. Why: the user approved the current matrix for now. If overruled: edit only the centralized pricing data.
+D2 Keep local e-invoicing wording neutral for UAE, KSA, and France. Why: no compliance implementation is verified. If overruled: add only a verified integration and matching evidence.
+D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: approved metrics, quotes, and outcomes are not available. If overruled: enable only after content approval.
 
 ## Open questions
 
-- Confirm approved ERP hostname, form endpoint, booking URL, and pricing before launch; defaults remain safe placeholders.
-- Arabic and French translations are machine-drafted, pending native review.
-- Confirm portfolio client names, stacks, and outcomes; placeholders remain visible.
+- Confirm Pantheon 5 users, Olympus 20 users, and Elysium unlimited as the final included-user policy; these are calculator defaults.
+- Arabic and French body copy is machine-drafted and needs native review.
+- Confirm the ERP signup hostname, form endpoint, booking URL, onboarding-fee policy, and portfolio client names before launch.
 
 ## Claims for the user to verify
 
-- Market list: Lebanon (USD), UAE (AED), Saudi Arabia (SAR), US (USD), France (EUR).
-- No ZATCA/FATOORA, UBL, structured e-invoice, or compliant QR claim is made; local e-invoicing integration is on the roadmap.
-- ERP modules, field-service scope, CryptoSettle flows, partner/customer relationships, 14-day trial, no-credit-card line, Cloud/on-premise/hybrid deployment wording, WhatsApp, addresses, and agent activity examples are source or user supplied and should be approved.
+- Market list and prices: Lebanon USD 39/89/299, UAE AED 179/399/1,499, KSA SAR 179/449/1,699, US USD 79/199/799, France EUR 59/149/599; annual prices are 10x monthly and tax-exclusive.
+- One-time onboarding is quoted with setup; no numeric onboarding fees are published.
+- CryptoSettle: 30-day pilot, then $29/month plus 0.15% matched volume capped at $299; MatchPulse founding venues are $99/month.
+- Odoo comparison baseline: $24/user/month, and the Oct 2026 date label.
+- ERP modules, AI approval flow, cloud/on-premise wording, partner relationships, customer relationships, trial CTA, addresses, and portfolio stacks.
+- UAE, KSA, and France use only “Local e-invoicing integration on our roadmap - talk to us before you buy”; no ZATCA/FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.
 
 ## Gate facts
 
-- Publish settings: Next build with trailing-slash routes; no production ERP endpoint calls.
+- Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls.
 - Call sites: none touched in `packages/*`.
-- Lanes: build and lint logs are captured separately.
-- Adversarial review: two independent rounds captured; remaining translation and launch-owner residuals are listed in `code-review.md`.
+- Lanes: v3 build, lint, Lighthouse, screenshots, and review captures are listed in the evidence directory.
+- Adversarial review: fresh v3 review round count is recorded in `code-review.md`.
 
 ## Evidence
 
-- `SEO-PLAN.md`, `build.log`, `lint.log`, `code-review.md`, and UX screenshots.
+- `build-v3.log`, `lint-v3.log`, Lighthouse JSON/logs, v3 screenshots, `SEO-PLAN.md`, `PRICING-SOURCES.md`, and `code-review.md`.
 
 ## Residuals
 
-- Pricing, compliance roadmap, translations, portfolio outcomes, and contact integrations need owner approval. Payroll and field-service plan placement remains Contact us until approved.
+- Native translation review, final contact integrations, user-inclusion policy, onboarding policy, and customer-story content remain launch-owner decisions.
