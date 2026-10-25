@@ -26,5 +26,6 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
 export default function LocaleLayout({ children, params }: { children: ReactNode; params: { locale: string } }) {
   if (!["en", "ar", "fr"].includes(params.locale)) notFound();
   const locale = params.locale;
-  return <div lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}><SiteLayout locale={locale}>{children}</SiteLayout></div>;
+  const direction = locale === "ar" ? "rtl" : "ltr";
+  return <><script dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(locale)};document.documentElement.dir=${JSON.stringify(direction)};` }} /><div lang={locale} dir={direction}><SiteLayout locale={locale}>{children}</SiteLayout></div></>;
 }

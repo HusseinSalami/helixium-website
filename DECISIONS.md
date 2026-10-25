@@ -11,21 +11,21 @@ D3 Keep MatchPulse as a founding-venues waitlist with 50% off for the first 10 v
 ## Open questions
 
 - Confirm approved ERP hostname, form endpoint, booking URL, and pricing before launch; defaults remain safe placeholders.
-- Confirm native review of Arabic and French translations.
+- Arabic and French translations are machine-drafted, pending native review.
 - Confirm portfolio client names, stacks, and outcomes; placeholders remain visible.
 
 ## Claims for the user to verify
 
 - Market list: Lebanon (USD), UAE (AED), Saudi Arabia (SAR), US (USD), France (EUR).
 - No ZATCA/FATOORA, UBL, structured e-invoice, or compliant QR claim is made; local e-invoicing integration is on the roadmap.
-- ERP modules, field-service scope, CryptoSettle flows, partner/customer relationships, 14-day trial, WhatsApp, addresses, and agent activity examples are source or user supplied and should be approved.
+- ERP modules, field-service scope, CryptoSettle flows, partner/customer relationships, 14-day trial, no-credit-card line, Cloud/on-premise/hybrid deployment wording, WhatsApp, addresses, and agent activity examples are source or user supplied and should be approved.
 
 ## Gate facts
 
 - Publish settings: Next build with trailing-slash routes; no production ERP endpoint calls.
 - Call sites: none touched in `packages/*`.
 - Lanes: build and lint logs are captured separately.
-- Adversarial review: pending implementation completion.
+- Adversarial review: two independent rounds captured; remaining translation and launch-owner residuals are listed in `code-review.md`.
 
 ## Evidence
 
@@ -33,4 +33,4 @@ D3 Keep MatchPulse as a founding-venues waitlist with 50% off for the first 10 v
 
 ## Residuals
 
-- Pricing, compliance roadmap, translations, portfolio outcomes, and contact integrations need owner approval.
+- Pricing, compliance roadmap, translations, portfolio outcomes, and contact integrations need owner approval. Payroll and field-service plan placement remains Contact us until approved.

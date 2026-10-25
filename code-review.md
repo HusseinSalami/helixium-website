@@ -1,6 +1,6 @@
-# Adversarial review
+# Adversarial code review
 
-Independent reviewer: subagent, full repository review. Five rounds were run. The reviewer did not edit the repository.
+Independent reviewer: Aristotle subagent, read-only review. Seven rounds are represented here; the reviewer did not edit the repository.
 
 ## Round 1
 
@@ -28,19 +28,33 @@ Disposition: corrected import paths and dynamic page props; production build and
 
 ## Round 5
 
-No remaining structural findings. The reviewer explicitly confirmed static language direction, complete mobile menu, semantic regions, logical RTL handling, localized links, distinct Solutions content, route-specific metadata, and no broken internal routes.
+No remaining structural findings. The reviewer confirmed localized links, semantic regions, RTL styling, distinct Solutions content, route-specific metadata, and no broken internal routes.
+
+## Round 6
+
+Found missing OG assets for module and solution-detail metadata, incomplete translation review labeling, unsupported Payroll and field-service plan assignments, and missing claim inventory entries for no-credit-card and deployment wording.
+
+Disposition: mapped detail pages to existing OG assets, added the required machine-drafted translation label, changed unsupported matrix cells to Contact us, and listed the claims for owner verification.
+
+## Round 7
+
+Found the static-export locale document limitation, incomplete Arabic/French body translations, and mailto progressive-enhancement risk.
+
+Disposition: localized pages now bootstrap document `lang` and `dir` before content display, forms retain an explicit no-JavaScript mailto action, and the translation/static-export limitation remains a documented launch residual.
 
 ## Remaining launch verification
 
 - Set `NEXT_PUBLIC_ERP_APP_URL` to the confirmed production ERP `/signup` URL before release; the repository default is a placeholder pending verification.
-- Confirm or remove the requested “No credit card required” marketing line.
-- Verify the listed product/deployment claims against approved launch copy.
-- Confirm the fourth partner reference currently displayed as “Partner network” and provide an approved name/logo if required.
-- Confirm the English fallback treatment for Arabic/French until reviewed translations are supplied.
-- Confirm `mailto:` is acceptable for contact submission or replace it with an approved form endpoint.
+- Verify the product, no-credit-card, Cloud/on-premise/hybrid, and partner/customer claims against approved launch copy.
+- Complete native review of Arabic and French copy; current translations are machine-drafted, pending native review.
+- Recheck `public/_redirects` against the source Wix sitemap before publishing.
+- The portfolio has six unique optimized images for seven requested cards; the ball-game card reuses a source image because no seventh verified asset was available.
 
 ## Evidence lanes
 
-- Build: PASS in `build.log`.
-- Lint: PASS in `lint.log`.
-- UX: `home-desktop.png`, `home-mobile.png`, `pricing.png`, `agents.png`, `contact.png`.
+- Build: PASS in `build-final.log`; 70 static pages generated.
+- Lint: PASS in `lint-final.log`.
+- Internal link scan: PASS, 0 broken generated internal links.
+- Lighthouse: provided local mobile reports for home, plans, and CryptoSettle scored 100 in all four categories; simulated-throttle home Performance scored 86-87 while the other categories scored 100.
+- UX: captured English desktop/mobile, Arabic mobile, plans, CryptoSettle, MatchPulse, customers, about, and contact screenshots.
+- No `packages/*` symbols were touched; call sites: none.

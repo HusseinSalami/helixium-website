@@ -111,6 +111,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
 export function localizedMetadata(locale: string, path: string, key: keyof typeof seo) {
   const safeLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
   const current = seo[key][safeLocale];
+  const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? "erp" : key === "agentic" || key === "custom" ? "solutions" : key;
   const canonical = safeLocale === "en" ? path : `/${safeLocale}${path}`;
   return {
     title: current.title,
@@ -119,8 +120,8 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
       canonical,
       languages: { en: path, ar: `/ar${path}`, fr: `/fr${path}`, "x-default": path }
     },
-    openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, images: [{ url: `/og/${key}.svg`, width: 1200, height: 630, alt: current.title }] },
-    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [`/og/${key}.svg`] }
+    openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, images: [{ url: `/og/${ogKey}.svg`, width: 1200, height: 630, alt: current.title }] },
+    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [`/og/${ogKey}.svg`] }
   };
 }
 

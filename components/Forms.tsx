@@ -17,7 +17,7 @@ export function ContactForm({ endpoint, interest = "ERP" }: { endpoint: string; 
     const value = new URLSearchParams(window.location.search).get("interest");
     if (value && ["ERP", "CryptoSettle", "MatchPulse", "Agentic AI", "Custom software"].includes(value)) setSelectedInterest(value);
   }, []);
-  return <form action={endpoint || undefined} method="post" onSubmit={(event) => submitOrMailto(event, endpoint, "Helixium website enquiry")}><div className="form-grid">
+  return <form action={endpoint || "mailto:info@helixiumsolutions.com?subject=Helixium%20website%20enquiry"} method="post" encType={endpoint ? undefined : "text/plain"} onSubmit={(event) => submitOrMailto(event, endpoint, "Helixium website enquiry")}><div className="form-grid">
     <div className="field"><label htmlFor="name">Name</label><input id="name" name="name" autoComplete="name" required /></div>
     <div className="field"><label htmlFor="company">Company</label><input id="company" name="company" autoComplete="organization" required /></div>
     <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required /></div>
@@ -30,7 +30,7 @@ export function ContactForm({ endpoint, interest = "ERP" }: { endpoint: string; 
 }
 
 export function WaitlistForm({ endpoint }: { endpoint: string }) {
-  return <form action={endpoint || undefined} method="post" onSubmit={(event) => submitOrMailto(event, endpoint, "MatchPulse founding venue")}><div className="form-grid">
+  return <form action={endpoint || "mailto:info@helixiumsolutions.com?subject=MatchPulse%20founding%20venue"} method="post" encType={endpoint ? undefined : "text/plain"} onSubmit={(event) => submitOrMailto(event, endpoint, "MatchPulse founding venue")}><div className="form-grid">
     <div className="field"><label htmlFor="venue-name">Name</label><input id="venue-name" name="name" required /></div>
     <div className="field"><label htmlFor="venue-email">Email</label><input id="venue-email" name="email" type="email" required /></div>
     <div className="field full"><label htmlFor="venue-company">Venue or company</label><input id="venue-company" name="company" required /></div>

@@ -1,4 +1,5 @@
 export type PlanKey = "pantheon" | "olympus" | "elysium";
+export type PlanAvailability = boolean | "contact";
 
 export const plans = [
   {
@@ -27,15 +28,15 @@ export const plans = [
   }
 ];
 
-export const modulePlanMatrix: Record<string, Record<PlanKey, boolean>> = {
+export const modulePlanMatrix: Record<string, Record<PlanKey, PlanAvailability>> = {
   accounting: { pantheon: true, olympus: true, elysium: true },
   inventory: { pantheon: true, olympus: true, elysium: true },
   salesPurchases: { pantheon: true, olympus: true, elysium: true },
   reporting: { pantheon: true, olympus: true, elysium: true },
   pos: { pantheon: false, olympus: true, elysium: true },
   manufacturing: { pantheon: false, olympus: true, elysium: true },
-  payroll: { pantheon: false, olympus: false, elysium: true },
-  fieldService: { pantheon: false, olympus: false, elysium: true },
+  payroll: { pantheon: "contact", olympus: "contact", elysium: "contact" },
+  fieldService: { pantheon: "contact", olympus: "contact", elysium: "contact" },
   workflowAutomation: { pantheon: false, olympus: true, elysium: true },
   customization: { pantheon: false, olympus: false, elysium: true },
   externalIntegrations: { pantheon: false, olympus: false, elysium: true },
