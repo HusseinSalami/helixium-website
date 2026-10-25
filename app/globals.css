@@ -465,7 +465,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 @media (max-width: 560px) {
   .shell { width: calc(100% - 28px); max-width: calc(100% - 28px); }
   .hero { padding-top: 68px; }
-  .hero-grid, .hero-copy { width: 100%; max-width: 100%; }
+  .hero-copy { width: 100%; max-width: 100%; }
   .page-hero .shell { width: calc(100% - 28px); max-width: calc(100% - 28px); }
   .hero h1, .page-hero h1 { width: 100%; max-width: 100%; font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.04; }
   .hero-grid > *, .split > *, .contact-grid > * { min-width: 0; }
