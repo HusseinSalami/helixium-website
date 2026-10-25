@@ -14,7 +14,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     description: "Agentic operations software for ERP, field service, POS, predictions, and custom workflows.",
     alternates: {
       canonical: locale === "en" ? "/" : `/${locale}/`,
-      languages: { en: "/", ar: "/ar/", fr: "/fr/" }
+      languages: { en: "/", ar: "/ar/", fr: "/fr/", "x-default": "/" }
     },
     openGraph: {
       title: "Helixium Solutions",

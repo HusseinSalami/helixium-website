@@ -1,3 +1,4 @@
-import AboutPage from "../../(localized)/[locale]/about/page";
-export const metadata = { title: "About Helixium Solutions", description: "Helixium Solutions builds practical software for connected operations." };
-export default AboutPage;
+import { AboutPage } from "../../../components/MarketingPages";
+import { localizedMetadata } from "../../../lib/site";
+export const metadata = localizedMetadata("en", "/about/", "about");
+export default function Page() { return <AboutPage locale="en" />; }

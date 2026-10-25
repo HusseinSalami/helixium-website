@@ -1,14 +1,2 @@
-import Link from "next/link";
-import { erpUrl, localizedMetadata, localizedPath } from "../../../../lib/site";
-
-const plans = [
-  { name: "Trial", copy: "Explore the platform with a time-boxed workspace.", note: "14 days", limits: ["1 company", "25 employees", "100 invoices per month"], featured: false },
-  { name: "Pro", copy: "For growing teams that need more operating room.", note: "Contact sales", limits: ["Up to 5 companies", "Up to 100 employees", "Up to 1,000 invoices per month"], featured: true },
-  { name: "Enterprise", copy: "For larger organizations and more complex deployments.", note: "Talk to us", limits: ["Up to 50 companies", "Up to 10,000 employees", "Up to 100,000 invoices per month"], featured: false }
-];
-
-export function generateMetadata({ params }: { params: { locale: string } }) { return localizedMetadata(params.locale, "/pricing/", "Pricing"); }
-export default function PricingPage({ params }: { params: { locale: string } }) {
-  const currentLocale = params.locale;
-  return <><section className="page-hero"><div className="shell"><span className="eyebrow">Pricing</span><h1>Start small. Scale with the work.</h1><p>Choose the operating space that fits today. Pro and Enterprise pricing is available through a conversation with the Helixium team.</p></div></section><section className="section-tight"><div className="shell pricing-grid">{plans.map((plan) => <article className={`price-card ${plan.featured ? "featured" : ""}`} key={plan.name}>{plan.featured && <span className="price-badge">Most flexible</span>}<h2>{plan.name}</h2><p>{plan.copy}</p><div className="price-note">{plan.note}<small>{plan.name === "Trial" ? "No credit card required" : "Contact us for deployment and commercial details"}</small></div><ul className="price-list">{plan.limits.map((limit) => <li key={limit}>{limit}</li>)}</ul><a className={`button ${plan.name === "Trial" ? "button-primary" : "button-secondary"}`} href={plan.name === "Trial" ? erpUrl : "mailto:info@helixiumsolutions.com?subject=Helixium%20pricing%20conversation"}>{plan.name === "Trial" ? "Start free trial ↗" : "Talk to us →"}</a></article>)}</div></section><section className="section-tight"><div className="shell number-grid"><div className="number-card"><strong>14 days</strong><span>Trial duration from the current product defaults.</span></div><div className="number-card"><strong>3 tiers</strong><span>Trial, Pro, and Enterprise.</span></div><div className="number-card"><strong>Locale shell</strong><span>EN, AR, and FR routes with RTL direction.</span></div><div className="number-card"><strong>3 deployment modes</strong><span>Cloud, on-premise, or hybrid.</span></div></div></section><section className="cta"><h2>Need a plan around your operating model?</h2><p>Tell us what you need to connect, what needs approval, and where the system should run.</p><div className="hero-actions"><Link className="button button-secondary" href={localizedPath(currentLocale, "/contact/")}>Contact Helixium →</Link></div></section></>;
-}
+import { redirect } from "next/navigation";
+export default function Page({ params }: { params: { locale: string } }) { redirect(`/${params.locale}/plans/`); }

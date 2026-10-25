@@ -1,3 +1,4 @@
-import ContactPage from "../../(localized)/[locale]/contact/page";
-export const metadata = { title: "Contact Helixium Solutions", description: "Talk with Helixium about your operational workflows." };
-export default ContactPage;
+import { ContactPage } from "../../../components/MarketingPages";
+import { localizedMetadata } from "../../../lib/site";
+export const metadata = localizedMetadata("en", "/contact/", "contact");
+export default function Page() { return <ContactPage locale="en" />; }

@@ -1,0 +1,25 @@
+# Helixium Solutions
+
+Helixium Solutions builds operational software around a flagship Helixium ERP.
+
+## Products
+
+- Helixium ERP: accounting, inventory, sales and purchases, POS, manufacturing, payroll, reporting, work orders, repair orders, dispatch, checklists, service contracts, and service requests.
+- Field service: work orders, repair orders, technician dispatch, schedules, checklists, service contracts, warranty-aware workflows, notifications, and service history.
+- CryptoSettle: an ERP add-on that can also work standalone. The current code monitors supported EVM-family chains and Tron, records transfers, matches invoices, creates payment links, emits webhooks, and exports CSV or OFX statements.
+- MatchPulse: a founding-venues programme. There are no customers yet. The first 10 venues are offered 50% off.
+- Custom software and agentic AI: portfolio work and approval-aware workflow design. Confirm scope, outcomes, and security claims with Helixium.
+
+## Plans
+
+Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium is for enterprise customization. Prices are TBD and render as Contact for pricing.
+
+## Claim boundaries
+
+Do not infer customer metrics, quotes, certifications, autonomous production behavior, or compliance from this file. Local e-invoicing integration is on the roadmap; contact Helixium for market-specific requirements.
+
+## Contact
+
+Website: https://www.helixiumsolutions.com
+Email: info@helixiumsolutions.com
+WhatsApp: https://wa.me/96171495273
