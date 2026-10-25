@@ -177,11 +177,14 @@ button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
 [dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
 @media (max-width: 900px) {
   .nav-links, .nav-actions .button-secondary { display: none; }
+  .nav-actions .language-links, .nav-actions > .button-primary { display: none; }
   .menu-button { display: block; }
   .mobile-nav { display: grid; gap: 8px; padding: 0 0 18px; }
   .mobile-nav > a:not(.button) { padding: 8px 0; color: var(--mist); }
   .mobile-nav > a:not(.button):hover { color: var(--white); }
   .mobile-nav .button { color: #071018; padding: 12px 17px; }
+  .mobile-language-label { color: #8491a6; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; margin-top: 8px; }
+  .mobile-language-links { display: flex; gap: 16px; }
   .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero { padding-top: 67px; }
   .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }

@@ -20,7 +20,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
           </nav>
           <div className="nav-actions">
             <nav className="language-links" aria-label="Language switcher">
-              <Link href="/en/" aria-current={locale === "en" ? "page" : undefined}>EN</Link>
+              <Link href="/" aria-current={locale === "en" ? "page" : undefined}>EN</Link>
               <Link href="/ar/" aria-current={locale === "ar" ? "page" : undefined}>AR</Link>
               <Link href="/fr/" aria-current={locale === "fr" ? "page" : undefined}>FR</Link>
             </nav>
@@ -33,7 +33,12 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
         {open && (
           <nav id="mobile-menu" className="mobile-nav" aria-label="Mobile navigation">
             {navItems.map((item) => <Link key={item.href} href={`${prefix}${item.href}`} onClick={() => setOpen(false)}>{item.label}</Link>)}
-            <Link href="/ar/" onClick={() => setOpen(false)}>العربية</Link>
+            <span className="mobile-language-label">Language</span>
+            <div className="mobile-language-links">
+              <Link href="/" onClick={() => setOpen(false)}>English</Link>
+              <Link href="/ar/" onClick={() => setOpen(false)}>العربية</Link>
+              <Link href="/fr/" onClick={() => setOpen(false)}>Français</Link>
+            </div>
             <a className="button button-primary" href={erpUrl}>Start free trial ↗</a>
           </nav>
         )}
