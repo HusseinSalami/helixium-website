@@ -28,11 +28,11 @@ D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: appro
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls.
 - Call sites: none touched in `packages/*`.
 - Lanes: v3 build, lint, Lighthouse, screenshots, and review captures are listed in the evidence directory; final mobile scores are 100/100/100/100 for home, plans, and compare.
-- Adversarial review: four fresh v3 review rounds are recorded in `code-review.md`.
+- Adversarial review: six fresh v3 review rounds are recorded in `code-review.md`.
 
 ## Evidence
 
-- `build-v3-final.log`, `lint-v3-final.log`, `lighthouse-v3-mobile-final10.log`, final/before v3 screenshots, `SEO-PLAN.md`, `PRICING-SOURCES.md`, and `code-review.md`.
+- `build-v3-final.log`, `lint-v3-final.log`, `lighthouse-v3-mobile-final11.log`, final/before v3 screenshots, `SEO-PLAN.md`, `PRICING-SOURCES.md`, and `code-review.md`.
 
 ## Residuals
 
