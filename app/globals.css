@@ -404,6 +404,8 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .contact-detail, .contact-detail strong { color: var(--mist); }
 .contact-detail strong { color: var(--ink); }
 .contact-detail a { color: #4d65c7; }
+.field label { color: #4e535e; }
+.portfolio-body dd { color: #4e535e; }
 .form-note { color: #7a7d86; }
 .footer-copy, .footer-links, .footer-bottom { color: var(--mist); }
 .site-footer { border-color: var(--line); background: #f5f4ef; }
@@ -451,6 +453,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .compare-table sup { color: #7a6cc8; font-size: .6rem; }
 .compare-table sup a { color: #59499e; text-decoration: underline; text-underline-offset: 2px; }
 .compare-note { color: var(--mist); font-size: .8rem; margin-top: 15px; }
+.compare-scroll-hint { display: none; color: #4d65c7; font-size: .8rem; font-weight: 750; margin: 0 0 10px; }
 .source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .source-grid .surface-card { min-height: 175px; }
 .not-found { background: #fbfaf7; }
@@ -478,6 +481,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
   .billing-toggle { width: max-content; }
   .pricing-addons > div { display: grid; gap: 7px; }
   .pricing-addons span { text-align: start; }
+  .compare-scroll-hint { display: block; }
   .savings-band { padding: 27px 21px; }
   .erp-mock-content { padding: 16px; }
   .erp-mock-body { grid-template-columns: 1fr; }
