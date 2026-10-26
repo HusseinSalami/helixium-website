@@ -1,44 +1,42 @@
 # Helixium website revision
 
-Outcome: v3 is a light, friendly product-led site with approved prices, centralized bundles, a savings calculator, a cited comparison, and EN/AR/FR captures.
+Outcome: The site now uses a compact light-first navigation, the ERP owns field service at `/erp/field-service/`, and the retired payment product is absent from active source and generated output. EN/AR/FR routes, pricing, redirects, and evidence were rebuilt locally.
 
 ## Decisions to evaluate
 
-D1 Keep the user-approved 2026-10-26 market price table in `lib/pricing.ts`, with annual billing at 10x monthly and Elysium shown as starting at its listed price. Why: the user approved these prices for now. If overruled: edit the one pricing data file.
-D2 Keep UAE, KSA, and France e-invoicing language neutral. Why: no compliance implementation is verified. If overruled: add only verified integration evidence.
-D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: approved metrics and quotes are unavailable. If overruled: enable only after content approval.
-D4 Keep the bundle split in `lib/plans.ts`; Olympus owns payroll and field service, with the bundle rows as the single source for cards, matrix, FAQ, and JSON-LD. Why: the bundle evidence is authoritative. If overruled: update all rendered bundle surfaces together.
-D5 Treat Arabic and French as machine-drafted pending native review. Why: the automated identical-string check passes, but language quality still needs a native reviewer. If overruled: replace copy and metadata without changing route structure.
+D1 Keep the user-approved 2026-10-26 ERP price table in `lib/pricing.ts`: LB USD 49/129/from399, US USD 99/249/from999, UAE AED 229/579/from1,799, KSA SAR 229/599/from1,999, France EUR 79/199/from749; annual billing is 10x monthly. Why: the user approved the values. If overruled: edit the one pricing data file and its derived surfaces.
+D2 Keep the ERP bundle split in `lib/plans.ts`: Pantheon base records, Olympus front-line modules and automation, Elysium customization and advanced configuration. Why: bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
+D3 Keep old standalone field-service URLs as 301 redirects to the ERP module route. Why: preserve existing links while keeping one canonical product path. If overruled: update redirects, sitemap, metadata, and internal links together.
+D4 Treat Arabic and French as machine-drafted, pending native review. Why: the automated localized-string check passes. If overruled: replace copy and metadata without changing route structure.
 
 ## Open questions
 
-- Confirm whether the approved included-user policy should change: Pantheon 3 users, Olympus 10 users, and Elysium custom are the current defaults.
-- Confirm ERP signup, form endpoint, booking URL, and portfolio client names before release.
-- Confirm final redirects against the source Wix sitemap and native Arabic/French copy review.
+- Confirm the configured ERP signup, form endpoint, booking URL, and host-specific 404 behavior before release; local defaults remain safe fallbacks.
+- Confirm customer-story publication, portfolio client names, partner relationships, and implementation claims.
+- Confirm the final Wix redirect inventory against the source sitemap.
 
 ## Claims for the user to verify
 
-- User-approved prices on 2026-10-26: Lebanon USD 49/129/399, UAE AED 229/579/1,799, KSA SAR 229/599/1,999, US USD 99/249/999, France EUR 79/199/749; annual prices are 10x monthly and tax-exclusive.
-- Pantheon includes 3 users, Olympus 10, Elysium custom; Pantheon extra-user pricing is scaled by market, and Olympus extra users are quoted.
-- Annual plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
-- Odoo benchmark is $24/user/month, labelled as published list pricing in Oct 2026.
-- ERP modules, approval flow, cloud/on-premise wording, relationships, trial behavior, addresses, and portfolio stacks.
-- UAE, KSA, and France use only local e-invoicing integration on the roadmap; no ZATCA, FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.
-- MatchPulse public screens confirm score predictions, results, points, correct-call counts, global ranking, and invite-only leaderboards; prize mechanics, exact scoring rules, venue/sponsor branding controls, and permission to reuse visible leaderboard handles remain unconfirmed.
+- Annual ERP plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
+- Pantheon includes 3 users and Lebanon extra users are USD 9/month; Olympus includes 10 users and extra users are quoted; Elysium users are custom.
+- Odoo comparison uses a $24/user/month benchmark labelled as published list pricing in October 2026.
+- ERP module behavior, approval flow, cloud/on-premise wording, addresses, customer relationships, trial behavior, and portfolio stacks.
+- UAE, KSA, and France use only the neutral local e-invoicing roadmap wording; no compliance implementation is claimed.
+- MatchPulse proof confirms predictions, results, points, correct-call counts, global ranking, and invite-only leaderboards; prize mechanics, exact scoring, venue/sponsor controls, and reuse rights for visible handles remain unconfirmed.
 
 ## Gate facts
 
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
-- Build and translation check: PASS in `build-pricing-approved.log`; lint: PASS in `lint-pricing-approved.log`.
-- Lighthouse mobile, provided-device mode: home, plans, and compare each score 100/100/100/100; see the `lighthouse-*-mobile-pricing-approved` reports.
-- Adversarial review: prior rounds plus two pricing passes are captured in `code-review.md`; the final pricing finding was fixed.
+- Build and translation/product-language checks: PASS in `build-v4.log`; lint: PASS in `lint-v4.log`.
+- Lighthouse provided-device mobile: home and pricing are 100/100/100/100 in `lighthouse-home-mobile-v4.json` and `lighthouse-plans-mobile-v4.json`.
+- Adversarial review: one fresh read-only subagent round; final findings and disposition are in `code-review.md`.
 
 ## Evidence
 
-- `pricing-approved-*.png` are fresh full-page captures; `lighthouse-*-mobile-pricing-approved.json` are current reports.
-- `SEO-PLAN.md`, `PRICING-SOURCES.md`, `build-pricing-approved.log`, `lint-pricing-approved.log`, and `code-review.md`.
+- `home-desktop.png`, `home-mobile.png`, `mobile-menu-open.png`, `header-1024.png`, `header-1280.png`, `header-1440.png`, `field-service-desktop.png`, `pricing-desktop.png`, `compare-desktop.png`, `about-desktop.png`, `home-ar.png`, `pricing-ar.png`, `home-fr.png`, and `pricing-fr.png` are fresh Playwright captures after scrolling.
+- `SEO-PLAN.md`, `build-v4.log`, `lint-v4.log`, Lighthouse JSON reports, and `code-review.md`.
 
 ## Residuals
 
-- Native translations, contact integrations, customer stories, and redirects remain release-owner decisions.
-- The configured ERP signup endpoint and host-specific 404 behavior still need a release smoke test.
+- Native Arabic and French review and release-owner verification remain.
+- Cloudflare redirect behavior and external form/booking integrations need a production smoke test.

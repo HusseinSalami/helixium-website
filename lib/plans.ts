@@ -74,8 +74,6 @@ export const planDescriptions = {
 const included = { pantheon: "included", olympus: "included", elysium: "included" } as const;
 const olympusPlus = { pantheon: "not-included", olympus: "included", elysium: "included" } as const;
 const elysiumOnly = { pantheon: "not-included", olympus: "not-included", elysium: "included" } as const;
-const comingSoon = { pantheon: "coming-soon", olympus: "coming-soon", elysium: "coming-soon" } as const;
-
 export const bundleRows: BundleRow[] = [
   { key: "accounting", label: "Accounting", plans: included },
   { key: "invoicing", label: "Invoicing", plans: included },
