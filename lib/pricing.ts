@@ -24,6 +24,7 @@ export const addOns = {
 
 export const includedUsers = { pantheon: 5, olympus: 20, elysium: "unlimited" } as const;
 
-export function formatPrice(value: number, currency: string) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency, maximumFractionDigits: 0 }).format(value);
+export function formatPrice(value: number, currency: string, locale = "en") {
+  const formatterLocale = locale === "ar" ? "ar" : locale === "fr" ? "fr-FR" : "en-US";
+  return new Intl.NumberFormat(formatterLocale, { style: "currency", currency, maximumFractionDigits: 0 }).format(value);
 }

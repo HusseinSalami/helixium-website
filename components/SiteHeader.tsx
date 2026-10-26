@@ -47,7 +47,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
     </div>
     {open && <nav id="mobile-menu" className="mobile-nav shell" aria-label="Mobile navigation">
       {navItems.map((item, index) => <Link key={item.href} href={localizedPath(locale, item.href)} onClick={() => setOpen(false)}>{labels[index]}</Link>)}
-      <div className="mobile-language-links"><Link href={switchPath("en")}>English</Link><Link href={switchPath("ar")}>العربية</Link><Link href={switchPath("fr")}>Français</Link></div>
+      <div className="mobile-language-links"><Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>English</Link><Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>العربية</Link><Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>Français</Link></div>
       <Link className="button button-secondary" href={localizedPath(locale, "/contact/")}>{copy.ctaContact} →</Link>
       <a className="button button-primary" href={erpUrl}>{copy.ctaErp} ↗</a>
     </nav>}
