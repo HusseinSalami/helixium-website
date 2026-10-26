@@ -91,7 +91,7 @@ export const translations = {
     finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
-    nav: { products: "Produits", solutions: "Solutions", plans: "Tarifs", customers: "Clients", about: "À propos", erp: "ERP", match: "MatchPulse", agentic: "IA agentique", custom: "Logiciel sur mesure" },
+    nav: { products: "Produits", solutions: "Nos solutions", plans: "Tarifs", customers: "Clients", about: "À propos", erp: "ERP", match: "MatchPulse", agentic: "IA agentique", custom: "Logiciel sur mesure" },
     ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
     toggleNavigation: "Ouvrir la navigation", mainNavigation: "Navigation principale", languageSwitcher: "Sélecteur de langue", mobileNavigation: "Navigation mobile", languageNames: ["Anglais", "Arabe", "Français"],
     homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",
