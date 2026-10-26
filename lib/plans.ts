@@ -29,7 +29,7 @@ export const plans = [
     key: "elysium" as const,
     name: "Elysium",
     audience: "Enterprise",
-    copy: "Shape the platform around complex operating models and integrations.",
+    copy: "Shape the platform around complex ways of working and integrations.",
     cta: "Talk to us",
     features: ["Everything in Olympus", "Customization", "Importer and configuration", "External integrations and APIs", "Advanced rules", "Advanced AI"]
   }

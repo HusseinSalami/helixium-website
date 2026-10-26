@@ -21,7 +21,8 @@ const breadcrumbLabels: Record<string, Record<string, string>> = {
   "MatchPulse": { ar: "MatchPulse", fr: "MatchPulse" },
   Solutions: { ar: "الحلول", fr: "Solutions" },
   About: { ar: "من نحن", fr: "À propos" },
-  Contact: { ar: "تواصل معنا", fr: "Contact" }
+  Contact: { ar: "تواصل معنا", fr: "Contact" },
+  Compare: { ar: "مقارنة", fr: "Comparer" }
 };
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[], locale = "en") {
