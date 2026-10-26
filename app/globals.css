@@ -473,13 +473,54 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .matchpulse-shot img { display: block; width: 100%; height: auto; }
 .matchpulse-shot figcaption { padding: 14px 17px 16px; color: #fff; font-size: .82rem; font-weight: 750; }
 .not-found { background: #fbfaf7; }
+.nav-dropdown-wrap, .language-control { position: relative; }
+.nav-menu-trigger, .language-trigger { border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
+.nav-menu-trigger { display: inline-flex; align-items: center; gap: 7px; padding: 8px 0; color: var(--mist); font-size: .9rem; }
+.nav-menu-trigger:hover, .nav-menu-trigger[aria-expanded="true"] { color: var(--ink); }
+.nav-menu-trigger span { color: #7f59d9; font-size: .8rem; }
+.nav-dropdown, .language-menu { position: absolute; top: calc(100% + 12px); inset-inline-start: 0; z-index: 60; display: grid; min-width: 190px; gap: 3px; padding: 8px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 42px rgba(20,22,31,.13); }
+.nav-dropdown a, .language-menu a { padding: 10px 12px; border-radius: 10px; color: var(--ink); font-size: .84rem; }
+.nav-dropdown a:hover, .nav-dropdown a:focus-visible, .language-menu a:hover, .language-menu a:focus-visible { background: #f1f4ff; color: #4d65c7; }
+.language-trigger { display: inline-flex; align-items: center; gap: 5px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); font-size: .72rem; font-weight: 800; letter-spacing: .05em; }
+.language-trigger span { color: #4d65c7; font-size: 1rem; line-height: 1; }
+.language-menu { inset-inline-start: auto; inset-inline-end: 0; min-width: 126px; }
+.header-talk { white-space: nowrap; }
+.mobile-nav-group { display: grid; gap: 4px; }
+.mobile-nav-group .nav-menu-trigger { justify-content: space-between; width: 100%; padding: 10px 0; }
+.mobile-subnav { display: grid; gap: 4px; padding-inline-start: 15px; border-inline-start: 2px solid #dfe6fb; }
+.mobile-subnav a { padding: 8px 0; color: var(--mist); font-size: .9rem; }
+.partner-logo { min-height: 106px; grid-template-rows: 70px auto; align-content: center; }
+.partner-logo img { width: 150px; height: 70px; object-fit: contain; filter: grayscale(1); opacity: .6; transition: filter .2s ease, opacity .2s ease, transform .2s ease; }
+.partner-logo:hover img, .partner-logo:focus-within img { filter: grayscale(0); opacity: 1; transform: scale(1.04); }
+.partner-logo-medco img { transform: scale(.94); }
+.partner-logo-endomedix img { transform: scale(.9); }
+.partner-logo-gandour img { transform: scale(.95); }
+.partner-logo-mom img { transform: scale(.92); }
+.partner-logo-medco:hover img, .partner-logo-medco:focus-within img { transform: scale(.98); }
+.partner-logo-endomedix:hover img, .partner-logo-endomedix:focus-within img { transform: scale(.94); }
+.partner-logo-gandour:hover img, .partner-logo-gandour:focus-within img { transform: scale(.99); }
+.partner-logo-mom:hover img, .partner-logo-mom:focus-within img { transform: scale(.96); }
+.team-card img { background: #fff; }
 @media (max-width: 900px) {
+  .nav-links, .header-talk, .language-control { display: none; }
+  .nav-actions { margin-inline-start: auto; }
+  .menu-button { display: block; }
+  .mobile-nav { display: grid; gap: 8px; padding: 0 0 18px; }
+  .mobile-nav > a:not(.button) { padding: 8px 0; color: var(--mist); }
+  .mobile-nav .button { color: #fff; }
   .hero-grid, .savings-band { grid-template-columns: 1fr; }
   .pricing-toolbar, .pricing-toolbar-compact { display: grid; align-items: start; }
   .pricing-controls { flex-wrap: wrap; }
   .pricing-addons, .source-grid { grid-template-columns: 1fr; }
   .erp-mock-body { grid-template-columns: 118px 1fr; }
   .mock-nav { font-size: .61rem; }
+}
+@media (min-width: 901px) and (max-width: 1120px) {
+  .nav-row { gap: 14px; }
+  .brand-copy { font-size: .9rem; }
+  .nav-links { gap: 11px; font-size: .78rem; }
+  .nav-menu-trigger { font-size: .78rem; }
+  .header-talk { padding-inline: 13px; font-size: .72rem; }
 }
 @media (max-width: 560px) {
   .shell { width: calc(100% - 28px); max-width: calc(100% - 28px); }

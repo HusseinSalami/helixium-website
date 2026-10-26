@@ -7,7 +7,7 @@ Outcome: v3 is a light, friendly product-led site with approved prices, centrali
 D1 Keep the user-approved 2026-10-26 market price table in `lib/pricing.ts`, with annual billing at 10x monthly and Elysium shown as starting at its listed price. Why: the user approved these prices for now. If overruled: edit the one pricing data file.
 D2 Keep UAE, KSA, and France e-invoicing language neutral. Why: no compliance implementation is verified. If overruled: add only verified integration evidence.
 D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: approved metrics and quotes are unavailable. If overruled: enable only after content approval.
-D4 Keep the bundle split in `lib/plans.ts`; Olympus owns payroll and field service, and CryptoSettle is coming soon. Why: the bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
+D4 Keep the bundle split in `lib/plans.ts`; Olympus owns payroll and field service, with the bundle rows as the single source for cards, matrix, FAQ, and JSON-LD. Why: the bundle evidence is authoritative. If overruled: update all rendered bundle surfaces together.
 D5 Treat Arabic and French as machine-drafted pending native review. Why: the automated identical-string check passes, but language quality still needs a native reviewer. If overruled: replace copy and metadata without changing route structure.
 
 ## Open questions
@@ -21,7 +21,6 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 - User-approved prices on 2026-10-26: Lebanon USD 49/129/399, UAE AED 229/579/1,799, KSA SAR 229/599/1,999, US USD 99/249/999, France EUR 79/199/749; annual prices are 10x monthly and tax-exclusive.
 - Pantheon includes 3 users, Olympus 10, Elysium custom; Pantheon extra-user pricing is scaled by market, and Olympus extra users are quoted.
 - Annual plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
-- CryptoSettle is early access with no price; MatchPulse is quoted per venue on request and its deployed World Cup 2026 edition is linked as product proof.
 - Odoo benchmark is $24/user/month, labelled as published list pricing in Oct 2026.
 - ERP modules, approval flow, cloud/on-premise wording, relationships, trial behavior, addresses, and portfolio stacks.
 - UAE, KSA, and France use only local e-invoicing integration on the roadmap; no ZATCA, FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.
