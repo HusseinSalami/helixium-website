@@ -8,8 +8,7 @@ const rows = [
   ["Field service and repair orders", "Included in ERP source", "Check", "Check", "Check"],
   ["POS", "Olympus and Elysium", "Check", "Check", "Check"],
   ["On-premise option", "Contact us", "Check", "Check", "Check"],
-  ["AI agents with approval", "Designed around approval", "Check", "Check", "Check"],
-  ["CryptoSettle status", "Early access", "Check", "Check", "Check"]
+  ["AI agents with approval", "Designed around approval", "Check", "Check", "Check"]
 ];
 
 const localizedRows = {
@@ -19,8 +18,7 @@ const localizedRows = {
     ["الخدمة الميدانية وأوامر الإصلاح", "مضمنة في مصدر ERP", "تحقق", "تحقق", "تحقق"],
     ["نقاط البيع", "Olympus و Elysium", "تحقق", "تحقق", "تحقق"],
     ["خيار النشر المحلي", "تواصل معنا", "تحقق", "تحقق", "تحقق"],
-    ["وكلاء ذكاء اصطناعي مع موافقة", "مصمم حول الموافقة", "تحقق", "تحقق", "تحقق"],
-    ["حالة CryptoSettle", "وصول مبكر", "تحقق", "تحقق", "تحقق"]
+    ["وكلاء ذكاء اصطناعي مع موافقة", "مصمم حول الموافقة", "تحقق", "تحقق", "تحقق"]
   ],
   fr: [
     ["Modèle tarifaire", "Prix fixe par entreprise", "Par utilisateur / offre", "Niveaux d'abonnement", "Niveaux d'abonnement"],
@@ -28,8 +26,7 @@ const localizedRows = {
     ["Service terrain et ordres de réparation", "Inclus dans le code ERP", "Vérifier", "Vérifier", "Vérifier"],
     ["Caisse", "Olympus et Elysium", "Vérifier", "Vérifier", "Vérifier"],
     ["Option sur site", "Contactez-nous", "Vérifier", "Vérifier", "Vérifier"],
-    ["Agents IA avec validation", "Conçu autour de la validation", "Vérifier", "Vérifier", "Vérifier"],
-    ["Statut de CryptoSettle", "Accès anticipé", "Vérifier", "Vérifier", "Vérifier"]
+    ["Agents IA avec validation", "Conçu autour de la validation", "Vérifier", "Vérifier", "Vérifier"]
   ]
 } as const;
 

@@ -61,7 +61,7 @@ export const erpModules = [
 
 export const translations = {
   en: {
-    nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle - Early access", match: "MatchPulse", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", contact: "Contact" },
+    nav: { products: "Products", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", erp: "ERP", match: "MatchPulse", agentic: "Agentic AI", custom: "Custom software" },
     ctaTrial: "Start your 14-day ERP trial", ctaErp: "Try the ERP free", ctaContact: "Talk to us", ctaDemo: "Book a demo",
     toggleNavigation: "Toggle navigation", mainNavigation: "Main navigation", languageSwitcher: "Language switcher", mobileNavigation: "Mobile navigation", languageNames: ["English", "Arabic", "French"],
     homeTitle: "The ERP that does the work, so your team doesn't have to.",
@@ -76,7 +76,7 @@ export const translations = {
     finalTitle: "Bring the busywork. We will make it lighter."
   },
   ar: {
-    nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle - وصول مبكر", match: "MatchPulse", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
+    nav: { products: "المنتجات", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", erp: "نظام ERP", match: "MatchPulse", agentic: "الذكاء الاصطناعي الوكيلي", custom: "البرمجيات المخصصة" },
     ctaTrial: "ابدأ تجربة ERP لمدة 14 يوماً", ctaErp: "جرّب ERP مجاناً", ctaContact: "تواصل معنا", ctaDemo: "احجز عرضاً",
     toggleNavigation: "فتح قائمة التنقل", mainNavigation: "التنقل الرئيسي", languageSwitcher: "مبدّل اللغة", mobileNavigation: "التنقل على الهاتف", languageNames: ["الإنجليزية", "العربية", "الفرنسية"],
     homeTitle: "نظام ERP ينجز العمل، حتى لا يضطر فريقك إلى ذلك.",
@@ -91,7 +91,7 @@ export const translations = {
     finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
-    nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle - accès anticipé", match: "MatchPulse", solutions: "Nos solutions", plans: "Tarifs", customers: "Clients", about: "À propos", contact: "Nous contacter" },
+    nav: { products: "Produits", solutions: "Solutions", plans: "Tarifs", customers: "Clients", about: "À propos", erp: "ERP", match: "MatchPulse", agentic: "IA agentique", custom: "Logiciel sur mesure" },
     ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
     toggleNavigation: "Ouvrir la navigation", mainNavigation: "Navigation principale", languageSwitcher: "Sélecteur de langue", mobileNavigation: "Navigation mobile", languageNames: ["Anglais", "Arabe", "Français"],
     homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",

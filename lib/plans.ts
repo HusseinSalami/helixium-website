@@ -98,8 +98,7 @@ export const bundleRows: BundleRow[] = [
   { key: "importerConfiguration", label: "Importer and configuration", plans: elysiumOnly },
   { key: "externalIntegrations", label: "External integrations and APIs", plans: elysiumOnly },
   { key: "advancedRules", label: "Advanced rules", plans: elysiumOnly },
-  { key: "advancedAi", label: "Advanced AI", plans: elysiumOnly },
-  { key: "cryptosettle", label: "CryptoSettle add-on", plans: comingSoon }
+  { key: "advancedAi", label: "Advanced AI", plans: elysiumOnly }
 ];
 
 const localizedBundleLabels = {
@@ -110,8 +109,7 @@ const localizedBundleLabels = {
     pos: "نقاط البيع", fieldService: "الخدمة الميدانية وأوامر الإصلاح", payroll: "الرواتب", manufacturing: "التصنيع",
     budgets: "الموازنات", advancedReports: "التقارير المتقدمة", recurringTransactions: "المعاملات المتكررة", notifications: "الإشعارات",
     workflowAutomation: "أتمتة سير العمل", customization: "التخصيص", importerConfiguration: "الاستيراد والإعداد",
-    externalIntegrations: "التكاملات الخارجية وواجهات API", advancedRules: "القواعد المتقدمة", advancedAi: "الذكاء الاصطناعي المتقدم",
-    cryptosettle: "CryptoSettle - قريباً"
+    externalIntegrations: "التكاملات الخارجية وواجهات API", advancedRules: "القواعد المتقدمة", advancedAi: "الذكاء الاصطناعي المتقدم"
   },
   fr: {
     accounting: "Comptabilité", invoicing: "Facturation", inventory: "Stocks", purchasing: "Achats", salesOrders: "Commandes de vente",
@@ -119,8 +117,7 @@ const localizedBundleLabels = {
     pos: "Caisse", fieldService: "Service terrain et ordres de réparation", payroll: "Paie", manufacturing: "Production",
     budgets: "Budgets financiers", advancedReports: "Rapports avancés", recurringTransactions: "Transactions récurrentes", notifications: "Alertes et notifications",
     workflowAutomation: "Automatisation des workflows", customization: "Personnalisation", importerConfiguration: "Import et configuration",
-    externalIntegrations: "Intégrations externes et API", advancedRules: "Règles avancées", advancedAi: "IA avancée",
-    cryptosettle: "Extension CryptoSettle - bientôt"
+    externalIntegrations: "Intégrations externes et API", advancedRules: "Règles avancées", advancedAi: "IA avancée"
   }
 } as const;
 
@@ -142,7 +139,6 @@ export const planFaqs = [
   { question: "How does annual billing work?", answer: "Annual billing is priced at 10 months, so you receive two months free compared with paying monthly. Prices are tax-exclusive." },
   { question: "How does onboarding work?", answer: "Annual plans include free onboarding and data migration from Excel, QuickBooks, or Odoo. For monthly plans, onboarding is quoted with your setup." },
   { question: "Can we switch plans?", answer: "Yes. Talk with us when your team or way of working changes and we will help you move to the right bundle." },
-  { question: "What is the CryptoSettle status?", answer: "CryptoSettle is in early access. It is planned as an ERP add-on that can also work standalone. Contact us for early-access updates." },
   { question: "Is on-premise deployment available?", answer: "Cloud or on-premise options can be discussed with the Helixium team. Contact us so we can understand your environment and requirements." },
   { question: "What about local tax and e-invoicing requirements?", answer: "Local e-invoicing integration is on our roadmap. Talk to us before you buy so we can discuss your market and requirements." }
 ] as const;
@@ -155,7 +151,6 @@ export const planFaqsByLocale = {
     { question: "كيف تعمل الفوترة السنوية؟", answer: "تُسعّر الفوترة السنوية بما يعادل 10 أشهر، أي تحصل على شهرين مجاناً مقارنة بالدفع الشهري. الأسعار لا تشمل الضرائب." },
     { question: "كيف يعمل الإعداد الأولي؟", answer: "تشمل الخطط السنوية إعداداً أولياً ونقل بيانات مجانياً من Excel أو QuickBooks أو Odoo. أما الخطط الشهرية فيُحدد إعدادها مع تجهيزك." },
     { question: "هل يمكننا تغيير الخطة؟", answer: "نعم. تواصل معنا عندما يتغير فريقك أو أسلوب عملك وسنساعدك في الانتقال إلى الحزمة المناسبة." },
-  { question: "ما حالة CryptoSettle؟", answer: "CryptoSettle في مرحلة الوصول المبكر. من المخطط أن تكون إضافة إلى ERP ويمكنها أيضاً العمل بشكل مستقل. تواصل معنا للحصول على تحديثات الوصول المبكر." },
     { question: "هل يتوفر النشر المحلي؟", answer: "يمكن مناقشة الخيارات السحابية أو المحلية مع فريق Helixium. تواصل معنا لفهم بيئتك ومتطلباتك." },
     { question: "ماذا عن الضرائب المحلية ومتطلبات الفوترة الإلكترونية؟", answer: "تكامل الفوترة الإلكترونية المحلية ضمن خارطة الطريق. تواصل معنا قبل الشراء لمناقشة السوق والمتطلبات." }
   ],
@@ -165,7 +160,6 @@ export const planFaqsByLocale = {
     { question: "Comment fonctionne la facturation annuelle ?", answer: "La facturation annuelle est calculée sur 10 mois : deux mois sont donc offerts par rapport au paiement mensuel. Tarifs hors taxes." },
     { question: "Comment fonctionne la mise en route ?", answer: "Les offres annuelles incluent la mise en route et la migration des données depuis Excel, QuickBooks ou Odoo. Pour les offres mensuelles, la mise en route est chiffrée avec votre configuration." },
     { question: "Pouvons-nous changer d'offre ?", answer: "Oui. Contactez-nous quand votre équipe ou votre façon de travailler évolue et nous vous aiderons à passer à la bonne offre." },
-  { question: "Quel est le statut de CryptoSettle ?", answer: "CryptoSettle est en accès anticipé. L'extension est prévue pour Helixium ERP et pourra aussi fonctionner seule. Contactez-nous pour recevoir les mises à jour de l'accès anticipé." },
     { question: "Le déploiement sur site est-il disponible ?", answer: "Les options cloud ou sur site peuvent être étudiées avec l'équipe Helixium. Contactez-nous pour parler de votre environnement et de vos besoins." },
     { question: "Qu'en est-il des taxes locales et de la facturation électronique ?", answer: "L'intégration de la facturation électronique locale est sur notre feuille de route. Contactez-nous avant achat pour discuter de votre marché et de vos besoins." }
   ]

@@ -3,53 +3,72 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { erpUrl, localizedPath, navItems } from "../lib/site";
+import { localizedPath } from "../lib/site";
 import { translations, type Locale } from "../lib/content";
 
+type MenuName = "products" | "solutions" | "language" | null;
+
 export function SiteHeader({ locale = "en" }: { locale?: string }) {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<MenuName>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname() || "/";
   const menuButton = useRef<HTMLButtonElement>(null);
+  const currentLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
+  const copy = translations[currentLocale];
+  const basePath = pathname.replace(/^\/(ar|fr)(?=\/|$)/, "") || "/";
+  const switchPath = (targetLocale: string) => localizedPath(targetLocale, basePath);
+  const closeMenus = () => {
+    setOpenMenu(null);
+    setMobileOpen(false);
+  };
   useEffect(() => {
-    if (!open) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setOpen(false);
+        setOpenMenu(null);
+        setMobileOpen(false);
         menuButton.current?.focus();
       }
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
-  }, [open]);
-  const basePath = pathname.replace(/^\/(ar|fr)(?=\/|$)/, "") || "/";
-  const switchPath = (targetLocale: string) => localizedPath(targetLocale, basePath);
-  const currentLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
-  const copy = translations[currentLocale];
-  const labels = [copy.nav.erp, copy.nav.field, copy.nav.crypto, copy.nav.solutions, copy.nav.plans, copy.nav.about, copy.nav.contact];
+  }, []);
+  const toggleMenu = (menu: Exclude<MenuName, null>) => {
+    setOpenMenu((current) => current === menu ? null : menu);
+  };
+  const menuLink = (href: string, label: string) => <Link role="menuitem" href={localizedPath(locale, href)} onClick={closeMenus}>{label}</Link>;
   return <header className="site-header">
     <div className="shell nav-row">
-      <Link className="brand" href={localizedPath(locale, "/")} onClick={() => setOpen(false)}>
+      <Link className="brand" href={localizedPath(locale, "/")} onClick={closeMenus}>
         <span className="brand-mark" aria-hidden="true">H</span><span className="brand-copy">Helixium Solutions</span>
       </Link>
       <nav className="nav-links" aria-label={copy.mainNavigation}>
-        {navItems.map((item, index) => <Link key={item.href} href={localizedPath(locale, item.href)}>{labels[index]}</Link>)}
+        <div className="nav-dropdown-wrap">
+          <button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="products-menu" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button>
+          {openMenu === "products" && <div id="products-menu" className="nav-dropdown" role="menu">{menuLink("/erp/", copy.nav.erp)}{menuLink("/matchpulse/", copy.nav.match)}</div>}
+        </div>
+        <div className="nav-dropdown-wrap">
+          <button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} aria-controls="solutions-menu" onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button>
+          {openMenu === "solutions" && <div id="solutions-menu" className="nav-dropdown" role="menu">{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div>}
+        </div>
+        <Link href={localizedPath(locale, "/plans/")}>{copy.nav.plans}</Link>
+        <Link href={localizedPath(locale, "/customers/")}>{copy.nav.customers}</Link>
+        <Link href={localizedPath(locale, "/about/")}>{copy.nav.about}</Link>
       </nav>
       <div className="nav-actions">
-        <nav className="language-links" aria-label={copy.languageSwitcher}>
-          <Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>EN</Link>
-          <Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>AR</Link>
-          <Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>FR</Link>
-        </nav>
-        <Link className="button button-secondary compact" href={localizedPath(locale, "/contact/")}>{copy.ctaContact} <span aria-hidden="true">→</span></Link>
-        <a className="button button-primary compact" href={erpUrl}>{copy.ctaErp} <span aria-hidden="true">↗</span></a>
-        <button ref={menuButton} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className="sr-only">{copy.toggleNavigation}</span>☰</button>
+        <div className="language-control">
+          <button className="language-trigger" type="button" aria-expanded={openMenu === "language"} aria-controls="language-menu" aria-label={copy.languageSwitcher} onClick={() => toggleMenu("language")}><span aria-hidden="true">◎</span> {currentLocale.toUpperCase()}</button>
+          {openMenu === "language" && <div id="language-menu" className="language-menu" role="menu"><Link role="menuitem" href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined} onClick={closeMenus}>EN</Link><Link role="menuitem" href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined} onClick={closeMenus}>العربية</Link><Link role="menuitem" href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined} onClick={closeMenus}>FR</Link></div>}
+        </div>
+        <Link className="button button-primary compact header-talk" href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.ctaContact}</Link>
+        <button ref={menuButton} className="menu-button" type="button" aria-expanded={mobileOpen} aria-controls="mobile-menu" onClick={() => setMobileOpen((current) => !current)}><span className="sr-only">{copy.toggleNavigation}</span>☰</button>
       </div>
     </div>
-    {open && <nav id="mobile-menu" className="mobile-nav shell" aria-label={copy.mobileNavigation}>
-      {navItems.map((item, index) => <Link key={item.href} href={localizedPath(locale, item.href)} onClick={() => setOpen(false)}>{labels[index]}</Link>)}
-      <div className="mobile-language-links"><Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>{copy.languageNames[0]}</Link><Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>{copy.languageNames[1]}</Link><Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>{copy.languageNames[2]}</Link></div>
-      <Link className="button button-secondary" href={localizedPath(locale, "/contact/")}>{copy.ctaContact} →</Link>
-      <a className="button button-primary" href={erpUrl}>{copy.ctaErp} ↗</a>
+    {mobileOpen && <nav id="mobile-menu" className="mobile-nav shell" aria-label={copy.mobileNavigation}>
+      <div className="mobile-nav-group"><button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button>{openMenu === "products" && <div className="mobile-subnav">{menuLink("/erp/", copy.nav.erp)}{menuLink("/matchpulse/", copy.nav.match)}</div>}</div>
+      <div className="mobile-nav-group"><button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button>{openMenu === "solutions" && <div className="mobile-subnav">{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div>}</div>
+      <Link href={localizedPath(locale, "/plans/")} onClick={closeMenus}>{copy.nav.plans}</Link><Link href={localizedPath(locale, "/customers/")} onClick={closeMenus}>{copy.nav.customers}</Link><Link href={localizedPath(locale, "/about/")} onClick={closeMenus}>{copy.nav.about}</Link>
+      <div className="mobile-language-links"><Link href={switchPath("en")} onClick={closeMenus}>{copy.languageNames[0]}</Link><Link href={switchPath("ar")} onClick={closeMenus}>{copy.languageNames[1]}</Link><Link href={switchPath("fr")} onClick={closeMenus}>{copy.languageNames[2]}</Link></div>
+      <Link className="button button-primary" href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.ctaContact}</Link>
     </nav>}
   </header>;
 }

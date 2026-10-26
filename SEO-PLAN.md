@@ -12,8 +12,7 @@ Canonical host: `https://www.helixiumsolutions.com`. Every page emits canonical,
 | `/erp/pos/` | retail POS software | restaurant POS, نقطة البيع | EN/AR/FR |
 | `/erp/manufacturing/` | manufacturing ERP | production orders, ERP production | EN/AR/FR |
 | `/erp/payroll/` | payroll ERP software | pay slips, logiciel paie | EN/AR/FR |
-| `/field-service/` | field service management software | repair order software, dispatch software | EN/AR/FR |
-| `/cryptosettle/` | USDT payment reconciliation | crypto invoice reconciliation, stablecoin payments | EN/AR/FR; no compliance claim |
+| `/erp/field-service/` | field service management software | repair order software, dispatch software | EN/AR/FR |
 | `/matchpulse/` | match prediction and leaderboard software | match-day predictions, private leaderboards | EN/AR/FR; quoted per venue |
 | `/plans/` | ERP pricing and plans | Pantheon, Olympus, Elysium, ERP Lebanon pricing | Market selector, monthly/annual toggle, tax-exclusive prices, and neutral local-integration wording where applicable |
 | `/compare/` | Odoo alternative for Lebanon and the Gulf | QuickBooks Online alternative, Zoho Books alternative, Arabic ERP | EN/AR/FR; competitor cells stay Check unless source-backed |

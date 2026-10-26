@@ -3,6 +3,7 @@ import { join, relative } from "node:path";
 
 const outputRoot = join(process.cwd(), "out");
 const forbidden = [
+  /CryptoSettle/i,
   /\bfounding\b/i,
   /\bfounders?\b/i,
   /\bpilot\b/i,
@@ -26,7 +27,6 @@ function htmlFiles(directory) {
 const failures = [];
 for (const file of htmlFiles(outputRoot)) {
   const route = relative(outputRoot, file);
-  if (route.startsWith("cryptosettle/")) continue;
   const html = readFileSync(file, "utf8");
   for (const pattern of forbidden) {
     const match = html.match(pattern);
@@ -43,9 +43,9 @@ for (const file of ["public/llms.txt", "SEO-PLAN.md"]) {
 }
 
 if (failures.length) {
-  console.error(`Product language sweep failed: ${failures.length} forbidden MatchPulse or launch strings`);
+  console.error(`Product language sweep failed: ${failures.length} forbidden product or launch strings`);
   failures.forEach((failure) => console.error(`- ${failure}`));
   process.exit(1);
 }
 
-console.log(`Product language sweep passed: no forbidden MatchPulse or launch strings in ${htmlFiles(outputRoot).length - htmlFiles(outputRoot).filter((file) => relative(outputRoot, file).startsWith("cryptosettle/")).length} rendered routes, llms.txt, or SEO-PLAN.md.`);
+console.log(`Product language sweep passed: no forbidden product or launch strings in ${htmlFiles(outputRoot).length} rendered routes, llms.txt, or SEO-PLAN.md.`);

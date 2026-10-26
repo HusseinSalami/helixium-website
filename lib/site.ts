@@ -1,6 +1,7 @@
 import type { Locale } from "./content";
 
 export const erpUrl = process.env.NEXT_PUBLIC_ERP_APP_URL || "https://erp.helixiumsolutions.com/signup";
+export const erpSignInUrl = (process.env.NEXT_PUBLIC_ERP_APP_URL || "https://erp.helixiumsolutions.com/signup").replace(/\/signup\/?$/, "/login");
 export const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "";
 export const whatsappUrl = "https://wa.me/96171495273";
 
@@ -52,19 +53,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Logiciel ERP de paie", description: "Gardez employés, contrats et bulletins de paie dans le même système opérationnel." }
   },
   "field-service": {
-    en: { title: "Field service and repair order software", description: "Manage work orders, repair orders, dispatch, checklists, contracts, warranty workflows, and technician jobs." },
+    en: { title: "Field service management and repair order software", description: "Manage work orders, repair orders, dispatch, checklists, contracts, warranty workflows, and technician jobs inside your ERP." },
     ar: { title: "برنامج إدارة الخدمة الميدانية وأوامر الإصلاح", description: "أدر أوامر العمل والإصلاح والتوزيع وقوائم التحقق والعقود وسير عمل الضمان ومهام الفنيين." },
     fr: { title: "Logiciel de service terrain et ordres de réparation", description: "Gérez ordres de travail et de réparation, dispatch, checklists, contrats, garanties et interventions." }
-  },
-  field: {
-    en: { title: "Field service management and repair order software", description: "Manage work orders, repair orders, dispatch, checklists, service contracts, warranty workflows, and technician jobs." },
-    ar: { title: "برنامج إدارة الخدمة الميدانية وأوامر الإصلاح", description: "نسّق أوامر العمل والإصلاح والتوزيع وقوائم التحقق والعقود وسير عمل الضمان ومهام الفنيين." },
-    fr: { title: "Logiciel de gestion du service terrain et des réparations", description: "Coordonnez ordres de travail et de réparation, dispatch, checklists, contrats et interventions." }
-  },
-  crypto: {
-    en: { title: "CryptoSettle early access", description: "Join early access for CryptoSettle, a planned ERP add-on for blockchain monitoring, payment matching, statements, and webhooks." },
-    ar: { title: "الوصول المبكر إلى CryptoSettle", description: "انضم إلى الوصول المبكر إلى CryptoSettle، إضافة ERP المخطط لها لمراقبة البلوك تشين ومطابقة المدفوعات والكشوف وإشعارات الويب." },
-    fr: { title: "Accès anticipé à CryptoSettle", description: "Rejoignez l'accès anticipé de CryptoSettle, une extension ERP prévue pour la surveillance blockchain, le rapprochement, les relevés et les webhooks." }
   },
   match: {
     en: { title: "MatchPulse match prediction and leaderboard software", description: "MatchPulse lets fans predict match scores, follow results, collect points, and compete in global or private leaderboards." },
@@ -72,9 +63,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "MatchPulse pour pronostics et classements", description: "MatchPulse permet aux fans de pronostiquer les scores, suivre les résultats, gagner des points et participer à des classements globaux ou privés." }
   },
   plans: {
-    en: { title: "Helixium ERP pricing", description: "Compare Pantheon, Olympus, and Elysium with market pricing for Lebanon, the Gulf, the US, and France. CryptoSettle is early access." },
-    ar: { title: "أسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium مع أسعار الأسواق في لبنان والخليج والولايات المتحدة وفرنسا. CryptoSettle في مرحلة الوصول المبكر." },
-    fr: { title: "Tarifs Helixium ERP", description: "Comparez Pantheon, Olympus et Elysium avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France. CryptoSettle est en accès anticipé." }
+    en: { title: "Helixium ERP pricing", description: "Compare Pantheon, Olympus, and Elysium with market pricing for Lebanon, the Gulf, the US, and France." },
+    ar: { title: "أسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium مع أسعار الأسواق في لبنان والخليج والولايات المتحدة وفرنسا." },
+    fr: { title: "Tarifs Helixium ERP", description: "Comparez Pantheon, Olympus et Elysium avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France." }
   },
   compare: {
     en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval steps." },
@@ -107,9 +98,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "À propos de Helixium Solutions", description: "Helixium Solutions crée des logiciels pratiques pour des opérations connectées." }
   },
   contact: {
-    en: { title: "Contact Helixium Solutions", description: "Talk with Helixium about ERP, CryptoSettle, MatchPulse, agentic AI, or custom software." },
-    ar: { title: "تواصل مع Helixium Solutions", description: "تحدث مع Helixium عن ERP أو CryptoSettle أو MatchPulse أو الذكاء الاصطناعي الوكيلي أو البرمجيات المخصصة." },
-    fr: { title: "Contacter Helixium Solutions", description: "Parlez à Helixium d'ERP, CryptoSettle, MatchPulse, d'IA agentique ou de logiciels sur mesure." }
+    en: { title: "Contact Helixium Solutions", description: "Talk with Helixium about ERP, MatchPulse, agentic AI, or custom software." },
+    ar: { title: "تواصل مع Helixium Solutions", description: "تحدث مع Helixium عن ERP أو MatchPulse أو الذكاء الاصطناعي الوكيلي أو البرمجيات المخصصة." },
+    fr: { title: "Contacter Helixium Solutions", description: "Parlez à Helixium d'ERP, de MatchPulse, d'IA agentique ou de logiciels sur mesure." }
   }
 };
 
@@ -130,12 +121,3 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
   };
 }
 
-export const navItems = [
-  { label: "ERP", href: "/erp/" },
-  { label: "Field service", href: "/field-service/" },
-  { label: "CryptoSettle - Early access", href: "/cryptosettle/" },
-  { label: "Solutions", href: "/solutions/" },
-  { label: "Pricing", href: "/plans/" },
-  { label: "About", href: "/about/" },
-  { label: "Contact", href: "/contact/" }
-];

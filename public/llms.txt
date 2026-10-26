@@ -6,7 +6,6 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 
 - Helixium ERP: accounting, inventory, sales and purchases, POS, manufacturing, payroll, reporting, work orders, repair orders, dispatch, checklists, service contracts, and service requests.
 - Field service: work orders, repair orders, technician dispatch, schedules, checklists, service contracts, warranty-aware workflows, notifications, and service history.
-- CryptoSettle: an ERP add-on that can also work standalone. The current code monitors supported EVM-family chains and Tron, records transfers, matches invoices, creates payment links, emits webhooks, and exports CSV or OFX statements.
 - MatchPulse: match prediction software where fans predict scores, follow results, collect points, and compare their place in global or private leaderboards. A past deployed World Cup 2026 edition is available at https://play.helixiumsolutions.com/worldcup. Venue pricing is quoted on request.
 - Custom software and agentic AI: portfolio work and workflow design with human approval. Confirm scope, outcomes, and security claims with Helixium.
 
@@ -14,7 +13,7 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 
 Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium starts at the enterprise customization tier. Current monthly prices are Lebanon USD 49/129/from 399, UAE AED 229/579/from 1799, KSA SAR 229/599/from 1999, US USD 99/249/from 999, and France EUR 79/199/from 749. Annual billing is ten monthly payments, or two months free compared with monthly billing; prices are tax-exclusive. Pantheon includes 3 users, Olympus includes 10 users, and Elysium users are customized. Annual plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
 
-CryptoSettle is early access with no published price yet. MatchPulse pricing is quoted per venue on request.
+MatchPulse pricing is quoted per venue on request.
 
 ## Claim boundaries
 

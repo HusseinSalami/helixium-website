@@ -1,5 +1,11 @@
 /products/ /erp/ 301
 /pricing/ /plans/ 301
+/field-service /erp/field-service/ 301
+/field-service/ /erp/field-service/ 301
+/ar/field-service /ar/erp/field-service/ 301
+/ar/field-service/ /ar/erp/field-service/ 301
+/fr/field-service /fr/erp/field-service/ 301
+/fr/field-service/ /fr/erp/field-service/ 301
 /agents/ /solutions/agentic-ai/ 301
 /portfolio/ /solutions/custom-software/ 301
 /pantheon/ /plans/ 301

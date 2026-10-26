@@ -3,16 +3,16 @@ import { join } from "node:path";
 
 const outputRoot = join(process.cwd(), "out");
 const routes = [
-  "/", "/about/", "/compare/", "/contact/", "/cryptosettle/", "/customers/",
+  "/", "/about/", "/compare/", "/contact/", "/customers/",
   "/erp/", "/erp/accounting/", "/erp/inventory/", "/erp/sales-purchases/",
   "/erp/pos/", "/erp/manufacturing/", "/erp/payroll/", "/erp/field-service/",
-  "/field-service/", "/matchpulse/", "/plans/", "/solutions/",
+  "/matchpulse/", "/plans/", "/solutions/",
   "/solutions/agentic-ai/", "/solutions/custom-software/"
 ];
 const allowlist = new Set([
   "Helixium", "Helixium Solutions", "ERP", "POS", "USDT", "CSV", "OFX", "EVM",
   "Tron", "Odoo", "QuickBooks Online", "Zoho Books", "Pantheon", "Olympus",
-  "Elysium", "Pantheon", "Olympus", "pantheon", "olympus", "elysium", "MatchPulse", "CryptoSettle", "Gandour", "Feel Nature", "MOM",
+  "Elysium", "Pantheon", "Olympus", "pantheon", "olympus", "elysium", "MatchPulse", "Gandour", "Feel Nature", "MOM",
   "Endomedix", "Medco", "WhatsApp", "Austin", "France", "USD", "AED", "SAR", "EUR",
   "lb", "ae", "sa", "us", "fr", "monthly", "annual", "odoo.com/pricing",
   "Bassam Salame", "Fatme Assi", "Sahar Baaklini", "Jad Salame",
