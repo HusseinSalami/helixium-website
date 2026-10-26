@@ -56,7 +56,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       </nav>
       <div className="nav-actions">
         <div className="language-control">
-          <button className="language-trigger" type="button" aria-expanded={openMenu === "language"} aria-controls="language-menu" aria-label={copy.languageSwitcher} onClick={() => toggleMenu("language")}><span aria-hidden="true">◎</span> {currentLocale.toUpperCase()}</button>
+          <button className="language-trigger" type="button" aria-expanded={openMenu === "language"} aria-controls="language-menu" aria-label={`${copy.languageSwitcher}: ${currentLocale.toUpperCase()}`} onClick={() => toggleMenu("language")}><span aria-hidden="true">◎</span> {currentLocale.toUpperCase()}</button>
           {openMenu === "language" && <div id="language-menu" className="language-menu" role="menu"><Link role="menuitem" href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined} onClick={closeMenus}>EN</Link><Link role="menuitem" href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined} onClick={closeMenus}>العربية</Link><Link role="menuitem" href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined} onClick={closeMenus}>FR</Link></div>}
         </div>
         <Link className="button button-primary compact header-talk" href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.ctaContact}</Link>

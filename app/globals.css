@@ -501,6 +501,8 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .partner-logo-gandour:hover img, .partner-logo-gandour:focus-within img { transform: scale(.99); }
 .partner-logo-mom:hover img, .partner-logo-mom:focus-within img { transform: scale(.96); }
 .team-card img { background: #fff; }
+.mock-nav { color: #5c626d; }
+.mock-nav.selected { color: #08736d; }
 @media (max-width: 900px) {
   .nav-links, .header-talk, .language-control { display: none; }
   .nav-actions { margin-inline-start: auto; }
