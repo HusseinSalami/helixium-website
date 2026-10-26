@@ -118,7 +118,8 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
       languages: { en: path, ar: `/ar${path}`, fr: `/fr${path}`, "x-default": path }
     },
     openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, images: [{ url: `/og/${ogKey}.svg`, width: 1200, height: 630, alt: current.title }] },
-    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [`/og/${ogKey}.svg`] }
+    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [`/og/${ogKey}.svg`] },
+    icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/media/brand/favicon.png", type: "image/png" }], apple: "/apple-touch-icon.png" }
   };
 }
 

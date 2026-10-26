@@ -1,19 +1,19 @@
 # Helixium website revision
 
-Outcome: The site now uses a compact light-first navigation, the ERP owns field service at `/erp/field-service/`, and the retired payment product is absent from active source and generated output. EN/AR/FR routes, pricing, redirects, and evidence were rebuilt locally.
+Outcome: The site now uses the official Wix Helixium artwork in the chrome, ERP preview, About brand badge, favicon set, JSON-LD, and social cards. The official black mark is used on light surfaces and the white artwork is embedded in dark social cards.
 
 ## Decisions to evaluate
 
-D1 Keep the user-approved 2026-10-26 ERP price table in `lib/pricing.ts`: LB USD 49/129/from399, US USD 99/249/from999, UAE AED 229/579/from1,799, KSA SAR 229/599/from1,999, France EUR 79/199/from749; annual billing is 10x monthly. Why: the user approved the values. If overruled: edit the one pricing data file and its derived surfaces.
-D2 Keep the ERP bundle split in `lib/plans.ts`: Pantheon base records, Olympus front-line modules and automation, Elysium customization and advanced configuration. Why: bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
-D3 Keep old standalone field-service URLs as 301 redirects to the ERP module route. Why: preserve existing links while keeping one canonical product path. If overruled: update redirects, sitemap, metadata, and internal links together.
+D1 Keep the user-approved 2026-10-26 ERP price table in `lib/pricing.ts`; annual billing is 10x monthly. Why: the user approved the values. If overruled: edit the one pricing data file and its derived surfaces.
+D2 Keep the ERP bundle split in `lib/plans.ts`. Why: bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
+D3 Keep old standalone field-service URLs as 301 redirects to `/erp/field-service/`. Why: preserve existing links while keeping one canonical module path. If overruled: update redirects, sitemap, metadata, and internal links together.
 D4 Treat Arabic and French as machine-drafted, pending native review. Why: the automated localized-string check passes. If overruled: replace copy and metadata without changing route structure.
+D5 Use the supplied Wix icon, wordmark crop, badge, and white dark-surface variants as the only Helixium mark. Why: they are the user's official assets. If overruled: replace the checked-in brand assets, favicon set, JSON-LD logo, and OG artwork together.
 
 ## Open questions
 
 - Confirm the configured ERP signup, form endpoint, booking URL, and host-specific 404 behavior before release; local defaults remain safe fallbacks.
-- Confirm customer-story publication, portfolio client names, partner relationships, and implementation claims.
-- Confirm the final Wix redirect inventory against the source sitemap.
+- Confirm customer-story publication, portfolio client names, partner relationships, implementation claims, and the Wix redirect inventory.
 
 ## Claims for the user to verify
 
@@ -27,16 +27,15 @@ D4 Treat Arabic and French as machine-drafted, pending native review. Why: the a
 ## Gate facts
 
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
-- Build and translation/product-language checks: PASS in `build-v4.log`; lint: PASS in `lint-v4.log`.
-- Lighthouse provided-device mobile: home and pricing are 100/100/100/100 in `lighthouse-home-mobile-v4.json` and `lighthouse-plans-mobile-v4.json`.
-- Adversarial review: three fresh read-only subagent rounds plus a final verification; findings and dispositions are in `code-review.md`.
+- Build and checks: PASS in `build-logo.log`; lint: PASS in `lint-logo.log`; review: one fresh logo-focused read-only subagent round, with findings resolved.
+- The static export embeds the official OG logo artwork; the PNG favicon is registered for English and localized metadata.
 
 ## Evidence
 
-- `home-desktop.png`, `home-mobile.png`, `mobile-menu-open.png`, `header-1024.png`, `header-1280.png`, `header-1440.png`, `field-service-desktop.png`, `pricing-desktop.png`, `compare-desktop.png`, `about-desktop.png`, `home-ar.png`, `pricing-ar.png`, `home-fr.png`, and `pricing-fr.png` are fresh Playwright captures after scrolling.
-- `SEO-PLAN.md`, `build-v4.log`, `lint-v4.log`, Lighthouse JSON reports, and `code-review.md`.
+- `logo-header-1280.png`, `logo-header-mobile.png`, `logo-footer.png`, `logo-favicon-tab-crop.png`, and `logo-og-home.png` show the official artwork in the requested surfaces.
+- `build-logo.log`, `lint-logo.log`, and `code-review.md` record verification and the fresh adversarial review.
 
 ## Residuals
 
 - Native Arabic and French review and release-owner verification remain.
-- Cloudflare redirect behavior and external form/booking integrations need a production smoke test.
+- Production form, booking, ERP signup, and Cloudflare redirect behavior need a smoke test.

@@ -146,3 +146,14 @@ The final independent review confirmed production metadata base, disclosure focu
 Disposition: changed all remaining public pricing language to “company-based pricing with included users,” then rebuilt, linted, recaptured screenshots, and reran Lighthouse.
 
 Evidence: `build-v4.log`, `lint-v4.log`, `lighthouse-home-mobile-v4.json`, `lighthouse-plans-mobile-v4.json`, and the final Playwright PNG captures.
+
+## Official logo delta review
+
+Fresh independent read-only review of `a2a6f5f..8534e83` covered official artwork fidelity, accessibility, static assets, OG rendering, favicon registration, JSON-LD, and dark-surface treatment. No files were edited; CRUX, AutoSDE, and push were not run.
+
+Findings and dispositions:
+
+- Medium: OG cards could depend on external image URLs. Resolved by embedding the checked-in official icon and wordmark pixels as data URIs in every `public/og/*.svg`; the final local screenshot shows the white artwork on the dark home card and `git grep` finds no production-hosted logo references in those SVGs.
+- Low: the checked-in PNG favicon was not registered. Resolved by registering `/media/brand/favicon.png` alongside `/favicon.svg` and `/apple-touch-icon.png` in English and localized metadata.
+
+Final verification: the invented gradient H and `brand-mark` are absent from tracked source; header, footer, ERP mock, About badge, favicon SVG, PNG/Apple icons, Organization JSON-LD, and OG assets use the supplied artwork. Build and translation/product-language checks pass in `build-logo.log`; lint passes in `lint-logo.log`; the worktree is clean at the final commit.
