@@ -19,7 +19,7 @@ D4 Keep the approved bundle split centralized in `lib/plans.ts`; Olympus owns pa
 
 - Market list and prices: Lebanon USD 39/89/299, UAE AED 179/399/1,499, KSA SAR 179/449/1,699, US USD 79/199/799, France EUR 59/149/599; annual prices are 10x monthly and tax-exclusive.
 - One-time onboarding is quoted with setup; no numeric onboarding fees are published.
-- CryptoSettle: 30-day pilot, then $29 USD/month plus 0.15% matched volume capped at $299 USD; MatchPulse founding venues are $99 USD/month.
+- CryptoSettle is early access with no published price; MatchPulse founding venues are $99 USD/month.
 - Odoo comparison baseline: $24/user/month, and the Oct 2026 date label.
 - ERP modules, AI approval flow, cloud/on-premise wording, partner relationships, customer relationships, trial CTA, addresses, and portfolio stacks.
 - UAE, KSA, and France use only “Local e-invoicing integration on our roadmap - talk to us before you buy”; no ZATCA/FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.

@@ -19,7 +19,6 @@ export const pricing: Record<Market, { currency: string; plans: Record<"pantheon
 };
 
 export const addOns = {
-  cryptoSettle: { pilotDays: 30, monthly: 29, ratePercent: 0.15, cap: 299, currency: "USD" },
   matchPulse: { monthly: 99, currency: "USD" }
 } as const;
 

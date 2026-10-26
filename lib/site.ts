@@ -133,9 +133,9 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
 export const navItems = [
   { label: "ERP", href: "/erp/" },
   { label: "Field service", href: "/field-service/" },
-  { label: "CryptoSettle", href: "/cryptosettle/" },
+  { label: "CryptoSettle - Early access", href: "/cryptosettle/" },
   { label: "Solutions", href: "/solutions/" },
-  { label: "Plans", href: "/plans/" },
+  { label: "Pricing", href: "/plans/" },
   { label: "About", href: "/about/" },
   { label: "Contact", href: "/contact/" }
 ];

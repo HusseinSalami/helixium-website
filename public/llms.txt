@@ -14,7 +14,7 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 
 Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium is for enterprise customization. Current monthly prices are Lebanon USD 39/89/299, UAE AED 179/399/1499, KSA SAR 179/449/1699, US USD 79/199/799, and France EUR 59/149/599. Annual billing is ten monthly payments; prices are tax-exclusive.
 
-CryptoSettle includes a 30-day pilot, then costs $29/month plus 0.15% of matched volume capped at $299. MatchPulse founding venues are $99/month per venue.
+CryptoSettle is early access with no published price yet. MatchPulse founding venues are $99/month per venue.
 
 ## Claim boundaries
 

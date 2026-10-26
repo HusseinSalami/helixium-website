@@ -45,8 +45,8 @@ export const erpModules = [
 
 export const translations = {
   en: {
-    nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle", match: "MatchPulse", solutions: "Solutions", plans: "Plans", customers: "Customers", about: "About", contact: "Contact" },
-    ctaTrial: "Start free trial", ctaDemo: "Book a demo",
+    nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle - Early access", match: "MatchPulse", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", contact: "Contact" },
+    ctaTrial: "Start your 14-day ERP trial", ctaErp: "Try the ERP free", ctaContact: "Talk to us", ctaDemo: "Book a demo",
     homeTitle: "The ERP that does the work, so your team doesn't have to.",
     homeLead: "Accounting, inventory, POS, field service and payroll in one friendly system, in English, Arabic and French. Agents prepare the busywork and you approve with one click.",
     agentChip: "AI agents that ask before they act",
@@ -59,8 +59,8 @@ export const translations = {
     finalTitle: "Bring the busywork. We will make it lighter."
   },
   ar: {
-    nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle", match: "MatchPulse", solutions: "الحلول", plans: "الخطط", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
-    ctaTrial: "ابدأ التجربة المجانية", ctaDemo: "احجز عرضاً",
+    nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle - وصول مبكر", match: "MatchPulse", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
+    ctaTrial: "ابدأ تجربة ERP لمدة 14 يوماً", ctaErp: "جرّب ERP مجاناً", ctaContact: "تواصل معنا", ctaDemo: "احجز عرضاً",
     homeTitle: "نظام ERP ينجز العمل، حتى لا يضطر فريقك إلى ذلك.",
     homeLead: "المحاسبة والمخزون ونقاط البيع والخدمة الميدانية والرواتب في نظام واحد ودود بالعربية والإنجليزية والفرنسية. يجهّز الوكلاء العمل المتكرر وتوافق أنت بنقرة واحدة.",
     agentChip: "وكلاء ذكاء اصطناعي يسألون قبل التنفيذ",
@@ -73,8 +73,8 @@ export const translations = {
     finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
-    nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle", match: "MatchPulse", solutions: "Solutions", plans: "Offres", customers: "Clients", about: "À propos", contact: "Contact" },
-    ctaTrial: "Démarrer l'essai gratuit", ctaDemo: "Réserver une démo",
+    nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle - accès anticipé", match: "MatchPulse", solutions: "Solutions", plans: "Tarifs", customers: "Clients", about: "À propos", contact: "Contact" },
+    ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
     homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",
     homeLead: "Comptabilité, stocks, caisse, service terrain et paie dans un système convivial en français, anglais et arabe. Les agents préparent le travail répétitif et vous validez en un clic.",
     agentChip: "Des agents IA qui demandent avant d'agir",
