@@ -46,7 +46,10 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
   return <header className="site-header">
     <div className="shell nav-row">
       <Link className="brand" href={localizedPath(locale, "/")} onClick={closeMenus}>
-        <span className="brand-mark" aria-hidden="true">H</span><span className="brand-copy">Helixium Solutions</span>
+        <span className="brand-lockup" role="img" aria-label="Helixium Solutions">
+          <img className="brand-icon" src="/media/brand/helixium-icon.png" alt="" width="256" height="256" />
+          <img className="brand-wordmark" src="/media/brand/helixium-wordmark.webp" alt="" width="500" height="105" />
+        </span>
       </Link>
       <nav className="nav-links" aria-label={copy.mainNavigation}>
         <div className="nav-dropdown-wrap">

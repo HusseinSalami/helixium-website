@@ -7,7 +7,7 @@ export const organizationJsonLd = {
   "@type": "Organization",
   name: "Helixium Solutions",
   url: "https://www.helixiumsolutions.com",
-  logo: "https://www.helixiumsolutions.com/favicon.svg",
+  logo: "https://www.helixiumsolutions.com/media/brand/helixium-badge.png",
   contactPoint: [{ "@type": "ContactPoint", email: "info@helixiumsolutions.com", telephone: "+96171495273", contactType: "sales" }],
   sameAs: []
 };
