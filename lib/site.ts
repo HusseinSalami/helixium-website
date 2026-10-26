@@ -67,9 +67,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Accès anticipé à CryptoSettle", description: "Rejoignez l'accès anticipé de CryptoSettle, une extension ERP prévue pour la surveillance blockchain, le rapprochement, les relevés et les webhooks." }
   },
   match: {
-    en: { title: "MatchPulse founding venues", description: "Join the MatchPulse founding venues programme. The first 10 venues receive 50% off." },
-    ar: { title: "برنامج الأماكن المؤسسة لـ MatchPulse", description: "انضم إلى برنامج الأماكن المؤسسة لـ MatchPulse. تحصل أول عشرة أماكن على خصم 50٪." },
-    fr: { title: "Programme des lieux fondateurs MatchPulse", description: "Rejoignez le programme des lieux fondateurs MatchPulse. Les dix premiers lieux bénéficient de 50 % de réduction." }
+    en: { title: "MatchPulse venue engagement software", description: "Help fans predict, compete, and win while MatchPulse helps venues drive footfall and keep people engaged." },
+    ar: { title: "MatchPulse لتفاعل الأماكن مع الجمهور", description: "ساعد المشجعين على التوقع والتنافس والفوز، بينما يساعد MatchPulse الأماكن على زيادة الإقبال والتفاعل." },
+    fr: { title: "MatchPulse pour l'engagement des lieux", description: "Aidez les fans à prédire, se challenger et gagner, tandis que MatchPulse aide les lieux à attirer et fidéliser leur public." }
   },
   plans: {
     en: { title: "Helixium ERP pricing", description: "Compare Pantheon, Olympus, and Elysium with market pricing for Lebanon, the Gulf, the US, and France. CryptoSettle is early access." },

@@ -19,7 +19,7 @@ export const pricing: Record<Market, { currency: string; plans: Record<"pantheon
 };
 
 export const addOns = {
-  matchPulse: { monthly: 99, currency: "USD" }
+  matchPulse: { pricing: "quoted" }
 } as const;
 
 export const includedUsers = { pantheon: 5, olympus: 20, elysium: "unlimited" } as const;

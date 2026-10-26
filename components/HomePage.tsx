@@ -15,7 +15,7 @@ const localizedHome = {
     pricingEyebrow: "Simple plans", pricingTitle: "Pick a plan and get moving.", pricingLead: "Tax-exclusive pricing. Onboarding is one-time.",
     agentsEyebrow: "How agents work", processTitle: "A little automation, with you in control.", processLead: "Agents prepare routine work, show you the context, and wait for your approval before anything consequential happens.",
     process: [["See the record", "Read the context already in your modules."], ["Prepare the next step", "Turn routine work into a clear suggestion."], ["You approve", "Keep people in charge of consequential actions."], ["The system acts", "Use the approved workflow and permissions."], ["Everything stays traceable", "Keep the decision easy to review later."]],
-    founding: "Founding venues", matchTitle: "Give your venue a better match day.", matchLead: "MatchPulse is opening its first 10 venues at $99/month per venue.", matchCta: "Become a founding venue",
+    matchEyebrow: "MatchPulse", matchTitle: "Give your venue a better match day.", matchLead: "Fans predict, compete and win while MatchPulse gives your venue more reasons for people to come in and stay engaged.", matchCta: "Book a MatchPulse demo",
     teamLead: "A small team that cares about the details.", ready: "Ready when you are", finalTitle: "Bring your busywork. We will make it lighter.", finalLead: "Start with the ERP, book a demo, or message us on WhatsApp.", proof: ["Set up in minutes", "Flat price per company", "Cloud or on-premise"]
   },
   ar: {
@@ -25,7 +25,7 @@ const localizedHome = {
     pricingEyebrow: "خطط بسيطة", pricingTitle: "اختر خطتك وابدأ.", pricingLead: "الأسعار لا تشمل الضرائب. رسوم الإعداد لمرة واحدة.",
     agentsEyebrow: "كيف يعمل الوكلاء", processTitle: "أتمتة بسيطة، وأنت في السيطرة.", processLead: "يجهّز الوكلاء العمل المتكرر ويعرضون السياق وينتظرون موافقتك قبل أي خطوة مهمة.",
     process: [["شاهد السجل", "اقرأ السياق الموجود في وحداتك."], ["جهّز الخطوة التالية", "حوّل العمل المتكرر إلى اقتراح واضح."], ["أنت توافق", "حافظ على دور الأشخاص في القرارات المهمة."], ["ينفذ النظام", "استخدم سير العمل والصلاحيات المعتمدة."], ["كل شيء قابل للتتبع", "اجعل القرار سهلاً للمراجعة لاحقاً."]],
-    founding: "الأماكن المؤسسة", matchTitle: "امنح مكانك يوم مباراة أفضل.", matchLead: "يفتح MatchPulse التسجيل لأول 10 أماكن بسعر 99 دولاراً شهرياً لكل مكان.", matchCta: "كن من الأماكن المؤسسة",
+    matchEyebrow: "MatchPulse", matchTitle: "امنح مكانك يوم مباراة أفضل.", matchLead: "يتوقع المشجعون ويتنافسون ويفوزون، بينما يمنح MatchPulse مكانك أسباباً أكثر لزيادة الإقبال والتفاعل.", matchCta: "احجز عرض MatchPulse",
     teamLead: "فريق صغير يهتم بالتفاصيل.", ready: "مستعدون عندما تكون", finalTitle: "أحضر العمل المتكرر وسنجعله أخف.", finalLead: "ابدأ بنظام ERP أو احجز عرضاً أو راسلنا عبر WhatsApp.", proof: ["إعداد خلال دقائق", "سعر ثابت لكل شركة", "سحابي أو محلي"]
   },
   fr: {
@@ -35,7 +35,7 @@ const localizedHome = {
     pricingEyebrow: "Offres simples", pricingTitle: "Choisissez une offre et avancez.", pricingLead: "Tarifs hors taxes. Mise en route facturée une fois.",
     agentsEyebrow: "Comment travaillent les agents", processTitle: "Une automatisation simple, sous votre contrôle.", processLead: "Les agents préparent les tâches répétitives, montrent le contexte et attendent votre validation.",
     process: [["Voir le dossier", "Lire le contexte déjà présent dans vos modules."], ["Préparer la suite", "Transformer la routine en suggestion claire."], ["Vous validez", "Garder les décisions importantes entre des mains humaines."], ["Le système agit", "Utiliser le workflow et les permissions validés."], ["Tout reste traçable", "Rendre chaque décision facile à revoir."]],
-    founding: "Lieux fondateurs", matchTitle: "Offrez une meilleure journée de match à votre lieu.", matchLead: "MatchPulse ouvre ses 10 premiers lieux à 99 $ par mois et par lieu.", matchCta: "Devenir un lieu fondateur",
+    matchEyebrow: "MatchPulse", matchTitle: "Offrez une meilleure journée de match à votre lieu.", matchLead: "Les fans prédisent, se challengent et gagnent, tandis que MatchPulse donne à votre lieu plus de raisons d'attirer et de fidéliser son public.", matchCta: "Réserver une démo MatchPulse",
     teamLead: "Une petite équipe attentive aux détails.", ready: "Prêts quand vous l'êtes", finalTitle: "Apportez le travail répétitif. Nous l'allégerons.", finalLead: "Commencez avec l'ERP, réservez une démo ou écrivez-nous sur WhatsApp.", proof: ["Mise en route en quelques minutes", "Prix fixe par entreprise", "Cloud ou sur site"]
   }
 } as const;
@@ -56,7 +56,7 @@ export function HomePage({ locale = "en" }: { locale?: string }) {
     <SavingsCalculator locale={locale} />
     <section className="section"><div className="shell"><div className="section-heading"><span className="eyebrow">{home.agentsEyebrow}</span><h2>{home.processTitle}</h2><p>{home.processLead}</p></div><div className="process">{home.process.map(([step, detail], index) => <div className="process-step" key={step}><span className="step-number">0{index + 1}</span><h3>{step}</h3><p>{detail}</p></div>)}</div></div></section>
     {showCustomerStories && <section className="section"><div className="shell case-highlight"><div><span className="eyebrow">Customer stories</span><h2>Real teams, real workflows.</h2><p>See how MOM and Endomedix use work-order and repair-order features.</p></div><Link className="button button-secondary" href={localizedPath(locale, "/customers/")}>Read the stories →</Link></div></section>}
-    {showMatchPulseStrip && <section className="section-tight"><div className="shell matchpulse-strip"><div><span className="eyebrow">{home.founding}</span><h2>{home.matchTitle}</h2><p>{home.matchLead}</p></div><Link className="button button-primary" href={localizedPath(locale, "/matchpulse/")}>{home.matchCta} →</Link></div></section>}
+    {showMatchPulseStrip && <section className="section-tight"><div className="shell matchpulse-strip"><div><span className="eyebrow">{home.matchEyebrow}</span><h2>{home.matchTitle}</h2><p>{home.matchLead}</p></div><Link className="button button-primary" href={localizedPath(locale, "/matchpulse/")}>{home.matchCta} →</Link></div></section>}
     <section className="section"><div className="shell"><div className="section-heading"><span className="eyebrow">{copy.teamTitle}</span><h2>{home.teamLead}</h2></div><div className="team-grid">{teamByLocale[currentLocale].map((person) => <article className="team-card" key={person.name}><Image src={person.image} alt={person.alt} width={person.width} height={person.height} loading="eager" /><div><h3>{person.name}</h3><p>{person.role}</p></div></article>)}</div></div></section>
     <section className="cta"><span className="eyebrow">{home.ready}</span><h2>{home.finalTitle}</h2><p>{home.finalLead}</p><div className="hero-actions"><a className="button button-primary" href={erpUrl}>{copy.ctaTrial} ↗</a><Link className="button button-secondary" href={localizedPath(locale, "/contact/")}>{copy.ctaDemo} →</Link><a className="button button-secondary" href={whatsappUrl}>WhatsApp ↗</a></div></section>
   </>;

@@ -13,14 +13,14 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 ## Open questions
 
 - Confirm Pantheon 5 users, Olympus 20 users, and Elysium unlimited as the final included-user policy; these remain calculator defaults.
-- Confirm ERP signup hostname, form endpoint, booking URL, onboarding-fee policy, and portfolio client names before launch.
+- Confirm ERP signup hostname, form endpoint, booking URL, onboarding-fee policy, and portfolio client names before release.
 - Confirm final redirects against the source Wix sitemap and native Arabic/French copy review.
 
 ## Claims for the user to verify
 
 - Prices: Lebanon USD 39/89/299, UAE AED 179/399/1,499, KSA SAR 179/449/1,699, US USD 79/199/799, France EUR 59/149/599; annual prices are 10x monthly and tax-exclusive.
 - Onboarding is quoted once with setup; no numeric onboarding fee is published.
-- CryptoSettle is early access with no price; MatchPulse founding venues are $99 USD/month.
+- CryptoSettle is early access with no price; MatchPulse is quoted per venue on request.
 - Odoo comparison benchmark is $24/user/month, labelled as published list pricing in Oct 2026.
 - ERP modules, approval flow, cloud/on-premise wording, partner/customer relationships, trial behavior, addresses, and portfolio stacks.
 - UAE, KSA, and France use only local e-invoicing integration on the roadmap; no ZATCA, FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.
@@ -39,5 +39,5 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 
 ## Residuals
 
-- Native translations, final contact integrations, pricing policy, onboarding policy, customer-story content, and redirect verification remain launch-owner decisions.
-- The configured ERP signup endpoint and host-specific 404 behavior still need a launch smoke test.
+- Native translations, final contact integrations, pricing policy, onboarding policy, customer-story content, and redirect verification remain release-owner decisions.
+- The configured ERP signup endpoint and host-specific 404 behavior still need a release smoke test.

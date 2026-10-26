@@ -142,7 +142,7 @@ export const planFaqs = [
   { question: "How does annual billing work?", answer: "Annual billing is priced at 10 months, so you receive two months free compared with paying monthly. Prices are tax-exclusive." },
   { question: "How does onboarding work?", answer: "Onboarding is a one-time fee quoted with your setup. We confirm the scope, data preparation, configuration, and training needs with you." },
   { question: "Can we switch plans?", answer: "Yes. Talk with us when your team or way of working changes and we will help you move to the right bundle." },
-  { question: "What is the CryptoSettle status?", answer: "CryptoSettle is in early access. It is planned as an ERP add-on that can also work standalone. Join the waitlist to hear when access opens." },
+  { question: "What is the CryptoSettle status?", answer: "CryptoSettle is in early access. It is planned as an ERP add-on that can also work standalone. Contact us for early-access updates." },
   { question: "Is on-premise deployment available?", answer: "Cloud or on-premise options can be discussed with the Helixium team. Contact us so we can understand your environment and requirements." },
   { question: "What about local tax and e-invoicing requirements?", answer: "Local e-invoicing integration is on our roadmap. Talk to us before you buy so we can discuss your market and requirements." }
 ] as const;
@@ -155,7 +155,7 @@ export const planFaqsByLocale = {
     { question: "كيف تعمل الفوترة السنوية؟", answer: "تُسعّر الفوترة السنوية بما يعادل 10 أشهر، أي تحصل على شهرين مجاناً مقارنة بالدفع الشهري. الأسعار لا تشمل الضرائب." },
     { question: "كيف يعمل الإعداد الأولي؟", answer: "رسوم الإعداد الأولي لمرة واحدة وتُحدد مع إعدادك. نؤكد معك النطاق وتجهيز البيانات والإعداد والتدريب المطلوب." },
     { question: "هل يمكننا تغيير الخطة؟", answer: "نعم. تواصل معنا عندما يتغير فريقك أو أسلوب عملك وسنساعدك في الانتقال إلى الحزمة المناسبة." },
-    { question: "ما حالة CryptoSettle؟", answer: "CryptoSettle في مرحلة الوصول المبكر. من المخطط أن تكون إضافة إلى ERP ويمكنها أيضاً العمل بشكل مستقل. انضم إلى قائمة الانتظار لمعرفة موعد فتح الوصول." },
+  { question: "ما حالة CryptoSettle؟", answer: "CryptoSettle في مرحلة الوصول المبكر. من المخطط أن تكون إضافة إلى ERP ويمكنها أيضاً العمل بشكل مستقل. تواصل معنا للحصول على تحديثات الوصول المبكر." },
     { question: "هل يتوفر النشر المحلي؟", answer: "يمكن مناقشة الخيارات السحابية أو المحلية مع فريق Helixium. تواصل معنا لفهم بيئتك ومتطلباتك." },
     { question: "ماذا عن الضرائب المحلية ومتطلبات الفوترة الإلكترونية؟", answer: "تكامل الفوترة الإلكترونية المحلية ضمن خارطة الطريق. تواصل معنا قبل الشراء لمناقشة السوق والمتطلبات." }
   ],
@@ -165,7 +165,7 @@ export const planFaqsByLocale = {
     { question: "Comment fonctionne la facturation annuelle ?", answer: "La facturation annuelle est calculée sur 10 mois : deux mois sont donc offerts par rapport au paiement mensuel. Tarifs hors taxes." },
     { question: "Comment fonctionne la mise en route ?", answer: "La mise en route est facturée une fois et chiffrée avec votre configuration. Nous confirmons le périmètre, la préparation des données, la configuration et la formation." },
     { question: "Pouvons-nous changer d'offre ?", answer: "Oui. Contactez-nous quand votre équipe ou votre façon de travailler évolue et nous vous aiderons à passer à la bonne offre." },
-    { question: "Quel est le statut de CryptoSettle ?", answer: "CryptoSettle est en accès anticipé. L'extension est prévue pour Helixium ERP et pourra aussi fonctionner seule. Inscrivez-vous à la liste d'attente pour connaître l'ouverture de l'accès." },
+  { question: "Quel est le statut de CryptoSettle ?", answer: "CryptoSettle est en accès anticipé. L'extension est prévue pour Helixium ERP et pourra aussi fonctionner seule. Contactez-nous pour recevoir les mises à jour de l'accès anticipé." },
     { question: "Le déploiement sur site est-il disponible ?", answer: "Les options cloud ou sur site peuvent être étudiées avec l'équipe Helixium. Contactez-nous pour parler de votre environnement et de vos besoins." },
     { question: "Qu'en est-il des taxes locales et de la facturation électronique ?", answer: "L'intégration de la facturation électronique locale est sur notre feuille de route. Contactez-nous avant achat pour discuter de votre marché et de vos besoins." }
   ]

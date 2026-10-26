@@ -30,13 +30,3 @@ export function ContactForm({ endpoint, interest = "ERP", locale = "en" }: { end
   </div></form>;
 }
 
-export function WaitlistForm({ endpoint, locale = "en" }: { endpoint: string; locale?: string }) {
-  const copy = locale === "ar" ? { name: "الاسم", email: "البريد الإلكتروني", company: "المكان أو الشركة", message: "أخبرنا عن مكانك", submit: "كن من الأماكن المؤسسة" } : locale === "fr" ? { name: "Nom", email: "E-mail", company: "Lieu ou entreprise", message: "Parlez-nous de votre lieu", submit: "Devenir un lieu fondateur" } : { name: "Name", email: "Email", company: "Venue or company", message: "Tell us about your venue", submit: "Become a founding venue" };
-  return <form action={endpoint || "mailto:info@helixiumsolutions.com?subject=MatchPulse%20founding%20venue"} method="post" encType={endpoint ? undefined : "text/plain"} onSubmit={(event) => submitOrMailto(event, endpoint, "MatchPulse founding venue")}><div className="form-grid">
-    <div className="field"><label htmlFor="venue-name">{copy.name}</label><input id="venue-name" name="name" required /></div>
-    <div className="field"><label htmlFor="venue-email">{copy.email}</label><input id="venue-email" name="email" type="email" required /></div>
-    <div className="field full"><label htmlFor="venue-company">{copy.company}</label><input id="venue-company" name="company" required /></div>
-    <div className="field full"><label htmlFor="venue-message">{copy.message}</label><textarea id="venue-message" name="message" /></div>
-    <div className="field full"><button className="button button-primary" type="submit">{copy.submit} →</button></div>
-  </div></form>;
-}

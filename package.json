@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/check-translations.mjs",
+    "build": "next build && node scripts/check-translations.mjs && node scripts/check-product-language.mjs",
     "start": "next start",
     "lint": "next lint"
   },

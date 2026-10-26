@@ -7,14 +7,14 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 - Helixium ERP: accounting, inventory, sales and purchases, POS, manufacturing, payroll, reporting, work orders, repair orders, dispatch, checklists, service contracts, and service requests.
 - Field service: work orders, repair orders, technician dispatch, schedules, checklists, service contracts, warranty-aware workflows, notifications, and service history.
 - CryptoSettle: an ERP add-on that can also work standalone. The current code monitors supported EVM-family chains and Tron, records transfers, matches invoices, creates payment links, emits webhooks, and exports CSV or OFX statements.
-- MatchPulse: a founding-venues programme. There are no customers yet. The first 10 venues are offered 50% off.
+- MatchPulse: venue engagement software where fans predict, compete, and win; it helps venues drive footfall and keep people engaged. Venue pricing is quoted on request.
 - Custom software and agentic AI: portfolio work and workflow design with human approval. Confirm scope, outcomes, and security claims with Helixium.
 
 ## Plans
 
 Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium is for enterprise customization. Current monthly prices are Lebanon USD 39/89/299, UAE AED 179/399/1499, KSA SAR 179/449/1699, US USD 79/199/799, and France EUR 59/149/599. Annual billing is ten monthly payments; prices are tax-exclusive.
 
-CryptoSettle is early access with no published price yet. MatchPulse founding venues are $99/month per venue.
+CryptoSettle is early access with no published price yet. MatchPulse pricing is quoted per venue on request.
 
 ## Claim boundaries
 
