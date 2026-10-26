@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { erpSignInUrl, erpUrl, localizedPath, whatsappUrl } from "../lib/site";
 
 export function SiteFooter({ locale = "en" }: { locale?: string }) {
@@ -6,7 +7,7 @@ export function SiteFooter({ locale = "en" }: { locale?: string }) {
   const fieldLabel = locale === "ar" ? "الخدمة الميدانية" : locale === "fr" ? "Service terrain" : "Field service";
   return <footer className="site-footer"><div className="shell">
     <div className="footer-grid">
-      <div><Link className="brand" href={localizedPath(locale, "/")}><span className="brand-lockup" role="img" aria-label="Helixium Solutions"><img className="brand-icon" src="/media/brand/helixium-icon.png" alt="" width="256" height="256" /><img className="brand-wordmark" src="/media/brand/helixium-wordmark.webp" alt="" width="500" height="105" /></span></Link><p className="footer-copy">{copy.desc}</p></div>
+      <div><Link className="brand" href={localizedPath(locale, "/")}><span className="brand-lockup" role="img" aria-label="Helixium Solutions"><Image className="brand-icon" src="/media/brand/helixium-icon.png" alt="" width={256} height={256} /><Image className="brand-wordmark" src="/media/brand/helixium-wordmark.webp" alt="" width={500} height={105} /></span></Link><p className="footer-copy">{copy.desc}</p></div>
       <div><h2 className="footer-heading">{copy.explore}</h2><div className="footer-links"><Link href={localizedPath(locale, "/erp/")}>ERP</Link><Link href={localizedPath(locale, "/erp/field-service/")}>{fieldLabel}</Link><Link href={localizedPath(locale, "/matchpulse/")}>{copy.match}</Link><Link href={localizedPath(locale, "/solutions/")}>{copy.solutions}</Link><Link href={localizedPath(locale, "/plans/")}>{copy.plans}</Link><Link href={localizedPath(locale, "/compare/")}>{copy.compare}</Link><Link href={localizedPath(locale, "/customers/")}>{copy.customers}</Link></div></div>
       <div><h2 className="footer-heading">{copy.talk}</h2><div className="footer-links"><a href="mailto:info@helixiumsolutions.com">info@helixiumsolutions.com</a><a href="tel:+96171495273">+961 71 49 52 73</a><a href="tel:+15127169315">+1 (512) 716-9315</a><a href={whatsappUrl}>WhatsApp</a><span dangerouslySetInnerHTML={{ __html: copy.address }} /><a href={erpSignInUrl}>{copy.signIn} ↗</a><a href={erpUrl}>{copy.trial} ↗</a></div></div>
     </div>

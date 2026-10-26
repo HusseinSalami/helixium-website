@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { localizedPath } from "../lib/site";
@@ -47,8 +48,8 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
     <div className="shell nav-row">
       <Link className="brand" href={localizedPath(locale, "/")} onClick={closeMenus}>
         <span className="brand-lockup" role="img" aria-label="Helixium Solutions">
-          <img className="brand-icon" src="/media/brand/helixium-icon.png" alt="" width="256" height="256" />
-          <img className="brand-wordmark" src="/media/brand/helixium-wordmark.webp" alt="" width="500" height="105" />
+          <Image className="brand-icon" src="/media/brand/helixium-icon.png" alt="" width={256} height={256} />
+          <Image className="brand-wordmark" src="/media/brand/helixium-wordmark.webp" alt="" width={500} height={105} />
         </span>
       </Link>
       <nav className="nav-links" aria-label={copy.mainNavigation}>
