@@ -20,10 +20,11 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 
 - Prices: Lebanon USD 39/89/299, UAE AED 179/399/1,499, KSA SAR 179/449/1,699, US USD 79/199/799, France EUR 59/149/599; annual prices are 10x monthly and tax-exclusive.
 - Onboarding is quoted once with setup; no numeric onboarding fee is published.
-- CryptoSettle is early access with no price; MatchPulse is quoted per venue on request.
+- CryptoSettle is early access with no price; MatchPulse is quoted per venue on request and its deployed World Cup 2026 edition is linked as product proof.
 - Odoo comparison benchmark is $24/user/month, labelled as published list pricing in Oct 2026.
 - ERP modules, approval flow, cloud/on-premise wording, partner/customer relationships, trial behavior, addresses, and portfolio stacks.
 - UAE, KSA, and France use only local e-invoicing integration on the roadmap; no ZATCA, FATOORA, UBL, structured e-invoice, compliant QR, UAE compliance, or French compliance claim is made.
+- MatchPulse public screens confirm score predictions, results, points, correct-call counts, global ranking, and invite-only leaderboards; prize mechanics, exact scoring rules, venue/sponsor branding controls, and permission to reuse visible leaderboard handles remain unconfirmed.
 
 ## Gate facts
 

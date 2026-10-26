@@ -118,3 +118,9 @@ Disposition: Pantheon trial cards now use `erpUrl`; Olympus wording now says to 
 The follow-up review confirmed the static locale roots, expanded checker, ERP JSON-LD cleanup, and CryptoSettle separation. Its remaining findings were fixed in the final polish: localized `404.html` outputs and checker coverage were added, Olympus CTA wording was aligned with its contact destination, and the logo strip's accessible label and source alts now use neutral relationship wording. No CRUX, AutoSDE, or push was run.
 
 Final confirmation: clean for the requested fixes. The only launch-only residual is verifying the production `NEXT_PUBLIC_ERP_APP_URL` signup endpoint.
+
+## MatchPulse live deployment review
+
+The fresh independent review checked the deployed World Cup 2026 screens and the marketing delta. It found venue wording that was stronger than the fan-facing evidence, progression/live wording that was not demonstrated by the captured `Upcoming (0)` state, a pending publication-rights question for visible leaderboard handles, and a performance trade-off from eager loading the below-fold homepage proof image.
+
+Disposition: softened the venue copy to describe a shared fan-facing prediction destination and an optional venue deployment, changed ranking language to compare position rather than claim progression, changed live-tournament wording to a tournament experience, and recorded the leaderboard-image rights question in `DECISIONS.md`. The eager image load remains intentional because lazy loading produced a dark empty block in full-page captures; explicit dimensions preserve layout stability. The reviewer confirmed the external link attributes, WebP dimensions, localized alt text, localized metadata/JSON-LD, and generated internal links.
