@@ -33,7 +33,7 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[], locale
   };
 }
 
-export function faqJsonLd(items: { question: string; answer: string }[]) {
+export function faqJsonLd(items: ReadonlyArray<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

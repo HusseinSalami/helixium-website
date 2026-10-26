@@ -40,7 +40,7 @@ function PageCta({ locale, title = "Ready to make the next step clearer?" }: { l
   return <section className="cta"><span className="eyebrow">Start a conversation</span><h2>{title}</h2><p>Start with the ERP trial, or tell us what your team needs to connect.</p><div className="hero-actions"><a className="button button-primary" href={erpUrl}>{copy.ctaTrial} ↗</a><Link className="button button-secondary" href={localizedPath(locale, "/contact/")}>{copy.ctaDemo} →</Link></div></section>;
 }
 
-function Faq({ items }: { items: { question: string; answer: string }[] }) {
+function Faq({ items }: { items: ReadonlyArray<{ question: string; answer: string }> }) {
   return <div className="faq-list">{items.map((item) => <details className="faq-item" key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>;
 }
 
