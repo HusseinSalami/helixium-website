@@ -77,7 +77,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Offres et tarifs Helixium ERP", description: "Comparez Pantheon, Olympus, Elysium et l'extension CryptoSettle avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France." }
   },
   compare: {
-    en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval-aware automation." },
+    en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval steps." },
     ar: { title: "بديل Odoo في لبنان والخليج", description: "قارن Helixium ERP مع Odoo وQuickBooks Online وZoho Books في نموذج التسعير واللغات والخدمة الميدانية ونقاط البيع." },
     fr: { title: "Alternative à Odoo au Liban et dans le Golfe", description: "Comparez Helixium ERP à Odoo, QuickBooks Online et Zoho Books sur le modèle tarifaire, les langues, le service terrain et la caisse." }
   },
@@ -87,7 +87,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Solutions d'IA agentique et de logiciels sur mesure", description: "Découvrez les workflows d'IA agentique et les réalisations logicielles pour les équipes opérationnelles." }
   },
   agentic: {
-    en: { title: "Custom AI agents with human approval", description: "Design approval-aware AI workflows that observe records, propose actions, act in context, and preserve an audit trail." },
+    en: { title: "Custom AI agents with human approval", description: "Design AI workflows that observe records, propose actions, act in context, and preserve an audit trail." },
     ar: { title: "وكلاء ذكاء اصطناعي مخصصون مع موافقة بشرية", description: "صمّم سير عمل يراقب السجلات ويقترح الإجراءات وينفذها ضمن السياق ويحفظ أثراً قابلاً للمراجعة." },
     fr: { title: "Agents IA sur mesure avec validation humaine", description: "Concevez des workflows qui observent les données, proposent des actions, agissent avec contexte et conservent une trace." }
   },

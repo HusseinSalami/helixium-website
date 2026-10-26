@@ -1,17 +1,18 @@
 # Helixium website revision
 
-Outcome: v3 presents a light, friendly Helixium ERP site with a product-led hero, market pricing, a savings calculator, and a cited comparison page. EN/AR/FR routes retain localized metadata and RTL support.
+Outcome: v3 presents a light, friendly Helixium ERP site with a product-led hero, approved bundle pricing, a savings calculator, and a cited comparison page. The polish pass verified full-page imagery, balanced headings, localized plans/compare content, and RTL rendering.
 
 ## Decisions to evaluate
 
 D1 Use the approved market prices in `lib/pricing.ts`, with annual billing at 10x monthly. Why: the user approved the current matrix for now. If overruled: edit only the centralized pricing data.
 D2 Keep local e-invoicing wording neutral for UAE, KSA, and France. Why: no compliance implementation is verified. If overruled: add only a verified integration and matching evidence.
 D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: approved metrics, quotes, and outcomes are not available. If overruled: enable only after content approval.
+D4 Keep the approved bundle split centralized in `lib/plans.ts`; Olympus owns payroll and field service. Why: the ERP bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
 
 ## Open questions
 
 - Confirm Pantheon 5 users, Olympus 20 users, and Elysium unlimited as the final included-user policy; these are calculator defaults.
-- Arabic and French body copy is machine-drafted and needs native review; the visible home pricing, savings, footer, hero, cards, process, and product mock are localized.
+- Arabic and French body copy is machine-drafted and needs native review; plans and compare surfaces are localized but still need native review.
 - Confirm the ERP signup hostname, form endpoint, booking URL, onboarding-fee policy, and portfolio client names before launch.
 
 ## Claims for the user to verify
@@ -27,12 +28,12 @@ D3 Keep customer stories hidden behind `showCustomerStories = false`. Why: appro
 
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls.
 - Call sites: none touched in `packages/*`.
-- Lanes: v3 build, lint, Lighthouse, screenshots, and review captures are listed in the evidence directory; final mobile scores are 100/100/100/100 for home, plans, and compare.
-- Adversarial review: six fresh v3 review rounds are recorded in `code-review.md`.
+- Lanes: final polish build/lint passed in `build-v3-final-polish.log` and `lint-v3-final-polish.log`; final mobile home and plans scores are 100/100/100/100 in the fixed Lighthouse reports.
+- Adversarial review: six v3 rounds plus three polish review passes are recorded in `code-review.md`.
 
 ## Evidence
 
-- `build-v3-final.log`, `lint-v3-final.log`, `lighthouse-v3-mobile-final11.log`, final/before v3 screenshots, `SEO-PLAN.md`, `PRICING-SOURCES.md`, and `code-review.md`.
+- `build-v3-final-polish.log`, `lint-v3-final-polish.log`, `lighthouse-home-mobile-polish-fixed.json`, `lighthouse-plans-mobile-polish-fixed.json`, `polish-fixed-*.png`, `SEO-PLAN.md`, `PRICING-SOURCES.md`, and `code-review.md`.
 
 ## Residuals
 

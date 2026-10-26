@@ -76,6 +76,22 @@ Disposition: localized that note while retaining the same neutral meaning and th
 
 Final verification: pass. No new findings remain. The static-export root language attribute and Lighthouse trace-gatherer warning remain documented residuals, not product-claim or visual blockers.
 
+## v3 Polish Round 1
+
+The fresh polish review found localized plans and compare content still in English, light-theme contrast and focus concerns, plan JSON-LD that did not expose the full centralized bundle, uneven Endomedix optical sizing, and remaining jargon. It verified the team photos, balanced hero wrapping, single plans card set, approved matrix, and 10-user savings default.
+
+Disposition: localized plan FAQ/matrix and compare rows, strengthened light-theme muted/focus colors, aligned plan JSON-LD variants and annual offers with bundle rows, simplified public copy, and improved Endomedix sizing.
+
+## v3 Polish Round 2
+
+The follow-up review found only the static-export root language semantics, English localized plan JSON-LD, an untranslated Compare breadcrumb, and two jargon phrases.
+
+Disposition: plan JSON-LD now derives localized bundle properties from the same rows as the visible matrix, Compare breadcrumbs are localized, and the remaining jargon is removed. The static-export root `lang`/`dir` limitation remains documented.
+
+## v3 Polish Round 3
+
+Final read-only verification was requested after the last committed metadata polish; the remaining static-export root language limitation is the only accepted residual.
+
 ## Remaining launch verification
 
 - Set `NEXT_PUBLIC_ERP_APP_URL` to the confirmed production ERP `/signup` URL before release; the repository default is a placeholder pending verification.
@@ -86,9 +102,9 @@ Final verification: pass. No new findings remain. The static-export root languag
 
 ## Evidence lanes
 
-- Build: PASS in `build-v3-final.log`; 73 static pages generated.
-- Lint: PASS in `lint-v3-final.log`.
+- Build: PASS in `build-v3-final-polish.log`; 73 static pages generated.
+- Lint: PASS in `lint-v3-final-polish.log`.
 - Internal link scan: PASS, 0 broken generated internal links.
-- Lighthouse: provided local mobile reports in `lighthouse-v3-mobile-final11.log`; home, plans, and compare scored 100 in all four categories. Lighthouse logs include a Chrome trace-gatherer warning for trace-dependent audits.
-- UX: captured fresh before/after English desktop/mobile, Arabic mobile, plans, and compare screenshots in the v3 staging set.
+- Lighthouse: `lighthouse-home-mobile-polish-fixed.json` and `lighthouse-plans-mobile-polish-fixed.json` score 100 in all four categories. Logs include the recurring Chrome trace-gatherer warning for trace-dependent audits.
+- UX: `polish-fixed-home-*.png`, `polish-fixed-plans-*.png`, `polish-fixed-compare-*.png`, `polish-fixed-about-*.png`, and `polish-fixed-home-ar-*.png` are fresh full-page captures after scrolling.
 - No `packages/*` symbols were touched; call sites: none.

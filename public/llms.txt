@@ -8,7 +8,7 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 - Field service: work orders, repair orders, technician dispatch, schedules, checklists, service contracts, warranty-aware workflows, notifications, and service history.
 - CryptoSettle: an ERP add-on that can also work standalone. The current code monitors supported EVM-family chains and Tron, records transfers, matches invoices, creates payment links, emits webhooks, and exports CSV or OFX statements.
 - MatchPulse: a founding-venues programme. There are no customers yet. The first 10 venues are offered 50% off.
-- Custom software and agentic AI: portfolio work and approval-aware workflow design. Confirm scope, outcomes, and security claims with Helixium.
+- Custom software and agentic AI: portfolio work and workflow design with human approval. Confirm scope, outcomes, and security claims with Helixium.
 
 ## Plans
 

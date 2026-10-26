@@ -53,6 +53,24 @@ export const planFeatures = {
   }
 } as const;
 
+export const planDescriptions = {
+  en: [
+    { audience: "Small teams", copy: "Start with the records and routines your team needs every day." },
+    { audience: "Growing and multi-company teams", copy: "Add front-line workflows and automation as operations grow." },
+    { audience: "Enterprise", copy: "Shape the platform around complex ways of working and integrations." }
+  ],
+  ar: [
+    { audience: "للفرق الصغيرة", copy: "ابدأ بالسجلات والمهام اليومية التي يحتاجها فريقك." },
+    { audience: "للفرق النامية ومتعددة الشركات", copy: "أضف أعمال الخط الأمامي والأتمتة مع نمو عملياتك." },
+    { audience: "للفرق الكبيرة", copy: "شكّل المنصة حول طرق عملك المعقدة وتكاملاتك." }
+  ],
+  fr: [
+    { audience: "Petites équipes", copy: "Commencez avec les données et routines essentielles de votre équipe." },
+    { audience: "Équipes en croissance et multi-sociétés", copy: "Ajoutez les opérations terrain et l'automatisation au fil de votre croissance." },
+    { audience: "Entreprises", copy: "Adaptez la plateforme à vos méthodes de travail et à vos intégrations." }
+  ]
+} as const;
+
 const included = { pantheon: "included", olympus: "included", elysium: "included" } as const;
 const olympusPlus = { pantheon: "not-included", olympus: "included", elysium: "included" } as const;
 const elysiumOnly = { pantheon: "not-included", olympus: "not-included", elysium: "included" } as const;
@@ -123,7 +141,7 @@ export const planFaqs = [
   { question: "What happens when the trial ends?", answer: "We will help you choose the plan that fits your team. You can continue with a paid plan or talk with us about the next step before billing begins." },
   { question: "How does annual billing work?", answer: "Annual billing is priced at 10 months, so you receive two months free compared with paying monthly. Prices are tax-exclusive." },
   { question: "How does onboarding work?", answer: "Onboarding is a one-time fee quoted with your setup. We confirm the scope, data preparation, configuration, and training needs with you." },
-  { question: "Can we switch plans?", answer: "Yes. Talk with us when your team or operating model changes and we will help you move to the right bundle." },
+  { question: "Can we switch plans?", answer: "Yes. Talk with us when your team or way of working changes and we will help you move to the right bundle." },
   { question: "How is CryptoSettle billed?", answer: "CryptoSettle starts with a 30-day pilot. After that, it is $29 USD per month plus 0.15% of matched volume, capped at $299 USD, as an ERP add-on or standalone service." },
   { question: "Is on-premise deployment available?", answer: "Cloud or on-premise options can be discussed with the Helixium team. Contact us so we can understand your environment and requirements." },
   { question: "What about local tax and e-invoicing requirements?", answer: "Local e-invoicing integration is on our roadmap. Talk to us before you buy so we can discuss your market and requirements." }
