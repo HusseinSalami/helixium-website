@@ -30,14 +30,14 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
 - Build and translation check: PASS in `build-v3-final.log`; lint: PASS in `lint-v3-final.log`.
 - Lighthouse mobile, provided-device mode: home, plans, and compare each score 100/100/100/100; see the `lighthouse-*-mobile-v3-final` reports and logs.
-- Adversarial review: one fresh independent review round is captured in `code-review.md`.
+- Adversarial review: three fresh read-only passes are captured in `code-review.md`; the final confirmation found no remaining code findings.
 
 ## Evidence
 
-- `v3-final-*.png` are fresh full-page desktop/mobile captures; `lighthouse-*-mobile-v3-final.json` are current reports.
+- `final-*.png` are fresh full-page desktop/mobile captures after scrolling; `lighthouse-*-mobile-review-fixes.json` are current reports.
 - `SEO-PLAN.md`, `PRICING-SOURCES.md`, `build-v3-final.log`, `lint-v3-final.log`, and `code-review.md`.
 
 ## Residuals
 
 - Native translations, final contact integrations, pricing policy, onboarding policy, customer-story content, and redirect verification remain launch-owner decisions.
-- Static export keeps the outer HTML language attribute English while localized route scripts set language and direction before content display.
+- The configured ERP signup endpoint and host-specific 404 behavior still need a launch smoke test.

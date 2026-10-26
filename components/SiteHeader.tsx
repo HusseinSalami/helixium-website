@@ -31,11 +31,11 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       <Link className="brand" href={localizedPath(locale, "/")} onClick={() => setOpen(false)}>
         <span className="brand-mark" aria-hidden="true">H</span><span className="brand-copy">Helixium Solutions</span>
       </Link>
-      <nav className="nav-links" aria-label="Main navigation">
+      <nav className="nav-links" aria-label={copy.mainNavigation}>
         {navItems.map((item, index) => <Link key={item.href} href={localizedPath(locale, item.href)}>{labels[index]}</Link>)}
       </nav>
       <div className="nav-actions">
-        <nav className="language-links" aria-label="Language switcher">
+        <nav className="language-links" aria-label={copy.languageSwitcher}>
           <Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>EN</Link>
           <Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>AR</Link>
           <Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>FR</Link>
@@ -45,9 +45,9 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
         <button ref={menuButton} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className="sr-only">{copy.toggleNavigation}</span>☰</button>
       </div>
     </div>
-    {open && <nav id="mobile-menu" className="mobile-nav shell" aria-label="Mobile navigation">
+    {open && <nav id="mobile-menu" className="mobile-nav shell" aria-label={copy.mobileNavigation}>
       {navItems.map((item, index) => <Link key={item.href} href={localizedPath(locale, item.href)} onClick={() => setOpen(false)}>{labels[index]}</Link>)}
-      <div className="mobile-language-links"><Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>English</Link><Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>العربية</Link><Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>Français</Link></div>
+      <div className="mobile-language-links"><Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined}>{copy.languageNames[0]}</Link><Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined}>{copy.languageNames[1]}</Link><Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined}>{copy.languageNames[2]}</Link></div>
       <Link className="button button-secondary" href={localizedPath(locale, "/contact/")}>{copy.ctaContact} →</Link>
       <a className="button button-primary" href={erpUrl}>{copy.ctaErp} ↗</a>
     </nav>}

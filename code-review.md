@@ -108,3 +108,13 @@ Final read-only verification was requested after the last committed metadata pol
 - Lighthouse: `lighthouse-home-mobile-polish-fixed.json` and `lighthouse-plans-mobile-polish-fixed.json` score 100 in all four categories. Logs include the recurring Chrome trace-gatherer warning for trace-dependent audits.
 - UX: `polish-fixed-home-*.png`, `polish-fixed-plans-*.png`, `polish-fixed-compare-*.png`, `polish-fixed-about-*.png`, and `polish-fixed-home-ar-*.png` are fresh full-page captures after scrolling.
 - No `packages/*` symbols were touched; call sites: none.
+
+## Fresh independent review
+
+The independent review found trial-card destination ambiguity, client-only localized document semantics, incomplete translation-check coverage, ERP JSON-LD offers that were not visible on `/erp`, a generic static 404, relationship wording that implied partnerships, and a mismatch between the user-required CryptoSettle matrix status and product status.
+
+Disposition: Pantheon trial cards now use `erpUrl`; Olympus wording now says to talk with us about an ERP trial or book a demo; English, Arabic, and French use separate static root layouts with correct `lang` and `dir`; the checker now covers text, alt, accessibility attributes, metadata, document language, direction, and localized static 404 files; `/erp` JSON-LD no longer emits invisible price offers; localized 404 HTML files are included; relationship labels and logo alts are neutral. CryptoSettle remains `Coming soon` only in the plan matrix and `Early access` on product/add-on surfaces because that is the approved brief.
+
+The follow-up review confirmed the static locale roots, expanded checker, ERP JSON-LD cleanup, and CryptoSettle separation. Its remaining findings were fixed in the final polish: localized `404.html` outputs and checker coverage were added, Olympus CTA wording was aligned with its contact destination, and the logo strip's accessible label and source alts now use neutral relationship wording. No CRUX, AutoSDE, or push was run.
+
+Final confirmation: clean for the requested fixes. The only launch-only residual is verifying the production `NEXT_PUBLIC_ERP_APP_URL` signup endpoint.

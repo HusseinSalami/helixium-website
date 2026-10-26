@@ -17,7 +17,7 @@ const allowlist = new Set([
   "lb", "ae", "sa", "us", "fr", "monthly", "annual", "odoo.com/pricing",
   "Bassam Salame", "Fatme Assi", "Sahar Baaklini", "Jad Salame",
   "Master of Maintenance", "info@helixiumsolutions.com", "13800 Lyndhurst Street",
-  "Austin, TX 78717", "[O1]", "[Q1]", "[Z1]"
+  "Austin, TX 78717", "[O1]", "[Q1]", "[Z1]", "EN", "AR", "FR"
 ]);
 
 function fileFor(locale, route) {
@@ -44,8 +44,8 @@ function tokensAreAllowed(value) {
 function visibleStrings(html) {
   const withoutCode = html.replace(/<script[\s\S]*?<\/script>/gi, "").replace(/<style[\s\S]*?<\/style>/gi, "");
   const text = [...withoutCode.matchAll(/>([^<>]+)</g)].map((match) => decode(match[1]).replace(/\s+/g, " ").trim()).filter(Boolean);
-  const alt = [...withoutCode.matchAll(/\balt="([^"]*)"/gi)].map((match) => decode(match[1]).replace(/\s+/g, " ").trim()).filter(Boolean);
-  return new Set([...text, ...alt]);
+  const attributes = [...withoutCode.matchAll(/\b(?:alt|aria-label|placeholder|title)="([^"]*)"/gi)].map((match) => decode(match[1]).replace(/\s+/g, " ").trim()).filter(Boolean);
+  return new Set([...text, ...attributes]);
 }
 
 function metadataStrings(html) {
@@ -71,12 +71,18 @@ function metadataStrings(html) {
 }
 
 const failures = [];
+const english404 = readFileSync(join(outputRoot, "404.html"), "utf8");
 for (const route of routes) {
   const english = readFileSync(fileFor("en", route), "utf8");
   const englishVisible = visibleStrings(english);
   const englishMetadata = metadataStrings(english);
   for (const locale of ["ar", "fr"]) {
     const localized = readFileSync(fileFor(locale, route), "utf8");
+    const root = localized.match(/<html\b[^>]*\blang="([^"]+)"[^>]*>/i);
+    const direction = localized.match(/<html\b[^>]*\bdir="([^"]+)"[^>]*>/i);
+    const expectedDirection = locale === "ar" ? "rtl" : "ltr";
+    if (!root || root[1] !== locale) failures.push(`${locale}${route} document lang: ${root?.[1] || "missing"}`);
+    if (!direction || direction[1] !== expectedDirection) failures.push(`${locale}${route} document dir: ${direction?.[1] || "missing"}`);
     const localizedVisible = visibleStrings(localized);
     const localizedMetadata = metadataStrings(localized);
     for (const value of englishVisible) {
@@ -85,6 +91,23 @@ for (const route of routes) {
     for (const value of englishMetadata) {
       if (value.length > 2 && localizedMetadata.has(value) && !tokensAreAllowed(value)) failures.push(`${locale}${route} metadata: ${value}`);
     }
+  }
+}
+
+for (const locale of ["ar", "fr"]) {
+  const localized404Path = join(outputRoot, locale, "404.html");
+  try {
+    const localized404 = readFileSync(localized404Path, "utf8");
+    const root = localized404.match(/<html\b[^>]*\blang="([^"]+)"[^>]*>/i);
+    const direction = localized404.match(/<html\b[^>]*\bdir="([^"]+)"[^>]*>/i);
+    if (!root || root[1] !== locale) failures.push(`${locale}/404.html document lang: ${root?.[1] || "missing"}`);
+    if (!direction || direction[1] !== (locale === "ar" ? "rtl" : "ltr")) failures.push(`${locale}/404.html document dir: ${direction?.[1] || "missing"}`);
+    const localizedVisible = visibleStrings(localized404);
+    for (const value of visibleStrings(english404)) {
+      if (value.length > 2 && localizedVisible.has(value) && !tokensAreAllowed(value)) failures.push(`${locale}/404.html visible: ${value}`);
+    }
+  } catch {
+    failures.push(`${locale}/404.html missing`);
   }
 }
 

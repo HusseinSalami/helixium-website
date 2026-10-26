@@ -25,9 +25,9 @@ export const teamByLocale = {
 } as const;
 
 export const partners = [
-  { name: "Medco", image: "/media/optimized/medco.webp", alt: "Medco partner logo" },
-  { name: "Endomedix", image: "/media/optimized/endomedix.webp", alt: "Endomedix partner logo" },
-  { name: "Gandour", image: "/media/optimized/gandour.webp", alt: "Gandour partner logo" },
+  { name: "Medco", image: "/media/optimized/medco.webp", alt: "Medco logo" },
+  { name: "Endomedix", image: "/media/optimized/endomedix.webp", alt: "Endomedix logo" },
+  { name: "Gandour", image: "/media/optimized/gandour.webp", alt: "Gandour logo" },
   { name: "MOM", image: "/media/optimized/mom.webp", alt: "Master of Maintenance logo" }
 ];
 
@@ -63,11 +63,11 @@ export const translations = {
   en: {
     nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle - Early access", match: "MatchPulse", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", contact: "Contact" },
     ctaTrial: "Start your 14-day ERP trial", ctaErp: "Try the ERP free", ctaContact: "Talk to us", ctaDemo: "Book a demo",
-    toggleNavigation: "Toggle navigation",
+    toggleNavigation: "Toggle navigation", mainNavigation: "Main navigation", languageSwitcher: "Language switcher", mobileNavigation: "Mobile navigation", languageNames: ["English", "Arabic", "French"],
     homeTitle: "The ERP that does the work, so your team doesn't have to.",
     homeLead: "Accounting, inventory, POS, field service and payroll in one friendly system, in English, Arabic and French. Agents prepare the busywork and you approve with one click.",
     agentChip: "AI agents that ask before they act",
-    partners: "Partners and product teams",
+    partners: "Selected relationships",
     threeWays: "Three ways to work with us",
     homeThreeLead: "Start with the platform you need today, then extend it around the way your team actually operates.",
     securityTitle: "A little automation, with you in control.",
@@ -78,11 +78,11 @@ export const translations = {
   ar: {
     nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle - وصول مبكر", match: "MatchPulse", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
     ctaTrial: "ابدأ تجربة ERP لمدة 14 يوماً", ctaErp: "جرّب ERP مجاناً", ctaContact: "تواصل معنا", ctaDemo: "احجز عرضاً",
-    toggleNavigation: "فتح قائمة التنقل",
+    toggleNavigation: "فتح قائمة التنقل", mainNavigation: "التنقل الرئيسي", languageSwitcher: "مبدّل اللغة", mobileNavigation: "التنقل على الهاتف", languageNames: ["الإنجليزية", "العربية", "الفرنسية"],
     homeTitle: "نظام ERP ينجز العمل، حتى لا يضطر فريقك إلى ذلك.",
     homeLead: "المحاسبة والمخزون ونقاط البيع والخدمة الميدانية والرواتب في نظام واحد ودود بالعربية والإنجليزية والفرنسية. يجهّز الوكلاء العمل المتكرر وتوافق أنت بنقرة واحدة.",
     agentChip: "وكلاء ذكاء اصطناعي يسألون قبل التنفيذ",
-    partners: "شركاء وفرق المنتجات",
+    partners: "علاقات مختارة",
     threeWays: "ثلاث طرق للعمل معنا",
     homeThreeLead: "ابدأ بالمنصة التي تحتاجها اليوم، ثم وسّعها بما يناسب طريقة عمل فريقك.",
     securityTitle: "أتمتة بسيطة، وأنت دائماً في السيطرة.",
@@ -93,11 +93,11 @@ export const translations = {
   fr: {
     nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle - accès anticipé", match: "MatchPulse", solutions: "Nos solutions", plans: "Tarifs", customers: "Clients", about: "À propos", contact: "Nous contacter" },
     ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
-    toggleNavigation: "Ouvrir la navigation",
+    toggleNavigation: "Ouvrir la navigation", mainNavigation: "Navigation principale", languageSwitcher: "Sélecteur de langue", mobileNavigation: "Navigation mobile", languageNames: ["Anglais", "Arabe", "Français"],
     homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",
     homeLead: "Comptabilité, stocks, caisse, service terrain et paie dans un système convivial en français, anglais et arabe. Les agents préparent le travail répétitif et vous validez en un clic.",
     agentChip: "Des agents IA qui demandent avant d'agir",
-    partners: "Partenaires et équipes produit",
+    partners: "Relations sélectionnées",
     threeWays: "Trois façons de travailler avec nous",
     homeThreeLead: "Commencez par la plateforme dont vous avez besoin, puis adaptez-la au fonctionnement réel de votre équipe.",
     securityTitle: "Une automatisation simple, sous votre contrôle.",

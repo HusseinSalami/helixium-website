@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "../globals.css";
 import { SiteLayout } from "../../components/SiteLayout";
 
 export const metadata: Metadata = {
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <div lang="en" dir="ltr"><SiteLayout locale="en">{children}</SiteLayout></div>;
+  return <html lang="en" dir="ltr"><body><SiteLayout locale="en">{children}</SiteLayout></body></html>;
 }
