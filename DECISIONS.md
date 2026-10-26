@@ -30,14 +30,14 @@ D5 Treat Arabic and French as machine-drafted pending native review. Why: the au
 ## Gate facts
 
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
-- Build and translation check: PASS in `build-v3-final.log`; lint: PASS in `lint-v3-final.log`.
-- Lighthouse mobile, provided-device mode: home, plans, and compare each score 100/100/100/100; see the `lighthouse-*-mobile-v3-final` reports and logs.
-- Adversarial review: three fresh read-only passes are captured in `code-review.md`; the final confirmation found no remaining code findings.
+- Build and translation check: PASS in `build-pricing-approved.log`; lint: PASS in `lint-pricing-approved.log`.
+- Lighthouse mobile, provided-device mode: home, plans, and compare each score 100/100/100/100; see the `lighthouse-*-mobile-pricing-approved` reports.
+- Adversarial review: prior rounds plus two pricing passes are captured in `code-review.md`; the final pricing finding was fixed.
 
 ## Evidence
 
-- `final-*.png` are fresh full-page desktop/mobile captures after scrolling; `lighthouse-*-mobile-review-fixes.json` are current reports.
-- `SEO-PLAN.md`, `PRICING-SOURCES.md`, `build-v3-final.log`, `lint-v3-final.log`, and `code-review.md`.
+- `pricing-approved-*.png` are fresh full-page captures; `lighthouse-*-mobile-pricing-approved.json` are current reports.
+- `SEO-PLAN.md`, `PRICING-SOURCES.md`, `build-pricing-approved.log`, `lint-pricing-approved.log`, and `code-review.md`.
 
 ## Residuals
 

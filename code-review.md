@@ -127,6 +127,8 @@ Disposition: softened the venue copy to describe a shared fan-facing prediction 
 
 ## Approved pricing update review
 
-An independent read-only pricing review found no findings. It verified the five market tables, annual 10x math, Elysium starting prices, included-user and extra-user policy, monthly/annual onboarding copy, 10-user Olympus savings comparison, localized Arabic/French strings, JSON-LD offers, absence of stale prices or 5/20-user defaults, and neutral e-invoicing wording.
+An independent read-only pricing review found one important finding: visible Elysium cards carried “From” semantics while JSON-LD Offer names did not. It also checked the five market tables, annual 10x math, included-user and extra-user policy, monthly/annual onboarding copy, 10-user Olympus savings comparison, localized Arabic/French strings, absence of stale prices or 5/20-user defaults, and neutral e-invoicing wording.
+
+Disposition: added localized “from” semantics to monthly and annual Elysium Offer names, rebuilt, reran lint, and recaptured the evidence. The default rendered state keeps monthly onboarding quoted; annual onboarding is supplied by the billing toggle.
 
 Evidence: `build-pricing-approved.log`, `lint-pricing-approved.log`, `lighthouse-home-mobile-pricing-approved.json`, `lighthouse-plans-mobile-pricing-approved.json`, `lighthouse-compare-mobile-pricing-approved.json`, and the `pricing-approved-*.png` captures.
