@@ -48,7 +48,7 @@ export const planFeatures = {
   },
   fr: {
     pantheon: ["Comptabilité", "Facturation", "Stocks", "Achats", "Commandes de vente", "Rapprochement bancaire", "Rapports standards", "IA de base"],
-    olympus: ["Tout Pantheon", "Caisse", "Service terrain et ordres de réparation", "Paie", "Production", "Budgets", "Rapports avancés", "Transactions récurrentes", "Notifications", "Automatisation des workflows"],
+    olympus: ["Tout Pantheon", "Caisse", "Service terrain et ordres de réparation", "Paie", "Production", "Budgets financiers", "Rapports avancés", "Transactions récurrentes", "Alertes et notifications", "Automatisation des workflows"],
     elysium: ["Tout Olympus", "Personnalisation", "Import et configuration", "Intégrations externes et API", "Règles avancées", "IA avancée"]
   }
 } as const;
@@ -117,7 +117,7 @@ const localizedBundleLabels = {
     accounting: "Comptabilité", invoicing: "Facturation", inventory: "Stocks", purchasing: "Achats", salesOrders: "Commandes de vente",
     bankReconciliation: "Rapprochement bancaire", standardReports: "Rapports standards", basicAi: "IA de base",
     pos: "Caisse", fieldService: "Service terrain et ordres de réparation", payroll: "Paie", manufacturing: "Production",
-    budgets: "Budgets", advancedReports: "Rapports avancés", recurringTransactions: "Transactions récurrentes", notifications: "Notifications",
+    budgets: "Budgets financiers", advancedReports: "Rapports avancés", recurringTransactions: "Transactions récurrentes", notifications: "Alertes et notifications",
     workflowAutomation: "Automatisation des workflows", customization: "Personnalisation", importerConfiguration: "Import et configuration",
     externalIntegrations: "Intégrations externes et API", advancedRules: "Règles avancées", advancedAi: "IA avancée",
     cryptosettle: "Extension CryptoSettle - bientôt"

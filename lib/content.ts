@@ -8,6 +8,22 @@ export const team = [
   { name: "Jad Salame", role: "Architect", image: "/media/optimized/team-jad.webp", alt: "Jad Salame, Architect at Helixium Solutions", width: 164, height: 213 }
 ];
 
+export const teamByLocale = {
+  en: team,
+  ar: [
+    { ...team[0], role: "الرئيس التنفيذي", alt: "بسام سلامة، الرئيس التنفيذي في Helixium Solutions" },
+    { ...team[1], role: "مصممة منتجات رقمية", alt: "فاطمة عاصي، مصممة منتجات رقمية في Helixium Solutions" },
+    { ...team[2], role: "منسقة التسويق", alt: "سحر بعقليني، منسقة التسويق في Helixium Solutions" },
+    { ...team[3], role: "مهندس معماري", alt: "جاد سلامة، مهندس معماري في Helixium Solutions" }
+  ],
+  fr: [
+    { ...team[0], role: "Directeur général", alt: "Bassam Salame, directeur général de Helixium Solutions" },
+    { ...team[1], role: "Designer produit numérique", alt: "Fatme Assi, designer produit numérique chez Helixium Solutions" },
+    { ...team[2], role: "Coordinatrice marketing", alt: "Sahar Baaklini, coordinatrice marketing chez Helixium Solutions" },
+    { ...team[3], role: "Architecte", alt: "Jad Salame, architecte chez Helixium Solutions" }
+  ]
+} as const;
+
 export const partners = [
   { name: "Medco", image: "/media/optimized/medco.webp", alt: "Medco partner logo" },
   { name: "Endomedix", image: "/media/optimized/endomedix.webp", alt: "Endomedix partner logo" },
@@ -47,6 +63,7 @@ export const translations = {
   en: {
     nav: { erp: "ERP", field: "Field service", crypto: "CryptoSettle - Early access", match: "MatchPulse", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", contact: "Contact" },
     ctaTrial: "Start your 14-day ERP trial", ctaErp: "Try the ERP free", ctaContact: "Talk to us", ctaDemo: "Book a demo",
+    toggleNavigation: "Toggle navigation",
     homeTitle: "The ERP that does the work, so your team doesn't have to.",
     homeLead: "Accounting, inventory, POS, field service and payroll in one friendly system, in English, Arabic and French. Agents prepare the busywork and you approve with one click.",
     agentChip: "AI agents that ask before they act",
@@ -61,6 +78,7 @@ export const translations = {
   ar: {
     nav: { erp: "نظام ERP", field: "الخدمة الميدانية", crypto: "CryptoSettle - وصول مبكر", match: "MatchPulse", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", contact: "تواصل معنا" },
     ctaTrial: "ابدأ تجربة ERP لمدة 14 يوماً", ctaErp: "جرّب ERP مجاناً", ctaContact: "تواصل معنا", ctaDemo: "احجز عرضاً",
+    toggleNavigation: "فتح قائمة التنقل",
     homeTitle: "نظام ERP ينجز العمل، حتى لا يضطر فريقك إلى ذلك.",
     homeLead: "المحاسبة والمخزون ونقاط البيع والخدمة الميدانية والرواتب في نظام واحد ودود بالعربية والإنجليزية والفرنسية. يجهّز الوكلاء العمل المتكرر وتوافق أنت بنقرة واحدة.",
     agentChip: "وكلاء ذكاء اصطناعي يسألون قبل التنفيذ",
@@ -73,8 +91,9 @@ export const translations = {
     finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
-    nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle - accès anticipé", match: "MatchPulse", solutions: "Solutions", plans: "Tarifs", customers: "Clients", about: "À propos", contact: "Contact" },
+    nav: { erp: "ERP", field: "Service terrain", crypto: "CryptoSettle - accès anticipé", match: "MatchPulse", solutions: "Nos solutions", plans: "Tarifs", customers: "Clients", about: "À propos", contact: "Nous contacter" },
     ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
+    toggleNavigation: "Ouvrir la navigation",
     homeTitle: "L'ERP qui fait le travail, pour que votre équipe n'ait pas à le faire.",
     homeLead: "Comptabilité, stocks, caisse, service terrain et paie dans un système convivial en français, anglais et arabe. Les agents préparent le travail répétitif et vous validez en un clic.",
     agentChip: "Des agents IA qui demandent avant d'agir",

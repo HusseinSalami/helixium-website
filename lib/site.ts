@@ -62,9 +62,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Logiciel de gestion du service terrain et des réparations", description: "Coordonnez ordres de travail et de réparation, dispatch, checklists, contrats et interventions." }
   },
   crypto: {
-    en: { title: "CryptoSettle USDT payment reconciliation", description: "CryptoSettle monitors supported chains, matches stablecoin payments to invoices, exports statements, and sends webhooks." },
-    ar: { title: "مطابقة مدفوعات USDT مع CryptoSettle", description: "يراقب CryptoSettle السلاسل المدعومة ويطابق المدفوعات بالفواتير ويصدر الكشوف ويرسل إشعارات الويب." },
-    fr: { title: "Rapprochement des paiements USDT avec CryptoSettle", description: "CryptoSettle surveille les chaînes prises en charge, rapproche les paiements, exporte les relevés et envoie des webhooks." }
+    en: { title: "CryptoSettle early access", description: "Join early access for CryptoSettle, a planned ERP add-on for blockchain monitoring, payment matching, statements, and webhooks." },
+    ar: { title: "الوصول المبكر إلى CryptoSettle", description: "انضم إلى الوصول المبكر إلى CryptoSettle، إضافة ERP المخطط لها لمراقبة البلوك تشين ومطابقة المدفوعات والكشوف وإشعارات الويب." },
+    fr: { title: "Accès anticipé à CryptoSettle", description: "Rejoignez l'accès anticipé de CryptoSettle, une extension ERP prévue pour la surveillance blockchain, le rapprochement, les relevés et les webhooks." }
   },
   match: {
     en: { title: "MatchPulse founding venues", description: "Join the MatchPulse founding venues programme. The first 10 venues receive 50% off." },
@@ -72,9 +72,9 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "Programme des lieux fondateurs MatchPulse", description: "Rejoignez le programme des lieux fondateurs MatchPulse. Les dix premiers lieux bénéficient de 50 % de réduction." }
   },
   plans: {
-    en: { title: "Helixium ERP plans and pricing", description: "Compare Pantheon, Olympus, Elysium, and the CryptoSettle add-on with market pricing for Lebanon, the Gulf, the US, and France." },
-    ar: { title: "خطط وأسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium وإضافة CryptoSettle مع أسعار الأسواق في لبنان والخليج والولايات المتحدة وفرنسا." },
-    fr: { title: "Offres et tarifs Helixium ERP", description: "Comparez Pantheon, Olympus, Elysium et l'extension CryptoSettle avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France." }
+    en: { title: "Helixium ERP pricing", description: "Compare Pantheon, Olympus, and Elysium with market pricing for Lebanon, the Gulf, the US, and France. CryptoSettle is early access." },
+    ar: { title: "أسعار Helixium ERP", description: "قارن بين Pantheon وOlympus وElysium مع أسعار الأسواق في لبنان والخليج والولايات المتحدة وفرنسا. CryptoSettle في مرحلة الوصول المبكر." },
+    fr: { title: "Tarifs Helixium ERP", description: "Comparez Pantheon, Olympus et Elysium avec des tarifs par marché au Liban, dans le Golfe, aux États-Unis et en France. CryptoSettle est en accès anticipé." }
   },
   compare: {
     en: { title: "Odoo alternative for Lebanon and the Gulf", description: "Compare Helixium ERP with Odoo, QuickBooks Online, and Zoho Books on pricing model, languages, field service, POS, deployment, and approval steps." },

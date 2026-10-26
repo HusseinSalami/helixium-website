@@ -42,7 +42,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
         </nav>
         <Link className="button button-secondary compact" href={localizedPath(locale, "/contact/")}>{copy.ctaContact} <span aria-hidden="true">→</span></Link>
         <a className="button button-primary compact" href={erpUrl}>{copy.ctaErp} <span aria-hidden="true">↗</span></a>
-        <button ref={menuButton} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className="sr-only">Toggle navigation</span>☰</button>
+        <button ref={menuButton} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className="sr-only">{copy.toggleNavigation}</span>☰</button>
       </div>
     </div>
     {open && <nav id="mobile-menu" className="mobile-nav shell" aria-label="Mobile navigation">

@@ -1,0 +1,97 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+const outputRoot = join(process.cwd(), "out");
+const routes = [
+  "/", "/about/", "/compare/", "/contact/", "/cryptosettle/", "/customers/",
+  "/erp/", "/erp/accounting/", "/erp/inventory/", "/erp/sales-purchases/",
+  "/erp/pos/", "/erp/manufacturing/", "/erp/payroll/", "/erp/field-service/",
+  "/field-service/", "/matchpulse/", "/plans/", "/solutions/",
+  "/solutions/agentic-ai/", "/solutions/custom-software/"
+];
+const allowlist = new Set([
+  "Helixium", "Helixium Solutions", "ERP", "POS", "USDT", "CSV", "OFX", "EVM",
+  "Tron", "Odoo", "QuickBooks Online", "Zoho Books", "Pantheon", "Olympus",
+  "Elysium", "Pantheon", "Olympus", "pantheon", "olympus", "elysium", "MatchPulse", "CryptoSettle", "Gandour", "Feel Nature", "MOM",
+  "Endomedix", "Medco", "WhatsApp", "Austin", "France", "USD", "AED", "SAR", "EUR",
+  "lb", "ae", "sa", "us", "fr", "monthly", "annual", "odoo.com/pricing",
+  "Bassam Salame", "Fatme Assi", "Sahar Baaklini", "Jad Salame",
+  "Master of Maintenance", "info@helixiumsolutions.com", "13800 Lyndhurst Street",
+  "Austin, TX 78717", "[O1]", "[Q1]", "[Z1]"
+]);
+
+function fileFor(locale, route) {
+  const relative = route === "/" ? "index.html" : `${route.replace(/^\/|\/$/g, "")}/index.html`;
+  return join(outputRoot, locale === "en" ? relative : locale + "/" + relative);
+}
+
+function decode(value) {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#x27;|&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)));
+}
+
+function tokensAreAllowed(value) {
+  const cleaned = value.replace(/[.,:;!?()[\]{}<>/|+\-–—%$€£¥0-9↗→✓·]/g, " ").trim();
+  if (!cleaned) return true;
+  return cleaned.split(/\s+/).every((token) => allowlist.has(token) || allowlist.has(value));
+}
+
+function visibleStrings(html) {
+  const withoutCode = html.replace(/<script[\s\S]*?<\/script>/gi, "").replace(/<style[\s\S]*?<\/style>/gi, "");
+  const text = [...withoutCode.matchAll(/>([^<>]+)</g)].map((match) => decode(match[1]).replace(/\s+/g, " ").trim()).filter(Boolean);
+  const alt = [...withoutCode.matchAll(/\balt="([^"]*)"/gi)].map((match) => decode(match[1]).replace(/\s+/g, " ").trim()).filter(Boolean);
+  return new Set([...text, ...alt]);
+}
+
+function metadataStrings(html) {
+  const values = [];
+  const title = html.match(/<title>([^<]*)<\/title>/i);
+  if (title) values.push(decode(title[1]).trim());
+  for (const match of html.matchAll(/<meta[^>]+(?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description)"[^>]+content="([^"]*)"/gi)) {
+    values.push(decode(match[1]).trim());
+  }
+  for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+    try {
+      const walk = (value, key = "") => {
+        if (typeof value === "string" && ["name", "description", "text", "question", "acceptedAnswer"].includes(key)) values.push(value.trim());
+        else if (Array.isArray(value)) value.forEach(walk);
+        else if (value && typeof value === "object") Object.entries(value).forEach(([childKey, childValue]) => walk(childValue, childKey));
+      };
+      walk(JSON.parse(match[1]));
+    } catch {
+      values.push("INVALID_JSON_LD");
+    }
+  }
+  return new Set(values.filter(Boolean));
+}
+
+const failures = [];
+for (const route of routes) {
+  const english = readFileSync(fileFor("en", route), "utf8");
+  const englishVisible = visibleStrings(english);
+  const englishMetadata = metadataStrings(english);
+  for (const locale of ["ar", "fr"]) {
+    const localized = readFileSync(fileFor(locale, route), "utf8");
+    const localizedVisible = visibleStrings(localized);
+    const localizedMetadata = metadataStrings(localized);
+    for (const value of englishVisible) {
+      if (value.length > 2 && localizedVisible.has(value) && !tokensAreAllowed(value)) failures.push(`${locale}${route} visible: ${value}`);
+    }
+    for (const value of englishMetadata) {
+      if (value.length > 2 && localizedMetadata.has(value) && !tokensAreAllowed(value)) failures.push(`${locale}${route} metadata: ${value}`);
+    }
+  }
+}
+
+if (failures.length) {
+  console.error(`Translation check failed: ${failures.length} identical English strings`);
+  failures.slice(0, 80).forEach((failure) => console.error(`- ${failure}`));
+  process.exit(1);
+}
+
+console.log(`Translation check passed for ${routes.length} routes in Arabic and French.`);
