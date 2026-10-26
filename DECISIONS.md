@@ -29,7 +29,7 @@ D4 Treat Arabic and French as machine-drafted, pending native review. Why: the a
 - Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
 - Build and translation/product-language checks: PASS in `build-v4.log`; lint: PASS in `lint-v4.log`.
 - Lighthouse provided-device mobile: home and pricing are 100/100/100/100 in `lighthouse-home-mobile-v4.json` and `lighthouse-plans-mobile-v4.json`.
-- Adversarial review: one fresh read-only subagent round; final findings and disposition are in `code-review.md`.
+- Adversarial review: three fresh read-only subagent rounds plus a final verification; findings and dispositions are in `code-review.md`.
 
 ## Evidence
 

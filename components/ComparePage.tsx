@@ -3,7 +3,7 @@ import { localizedPath } from "../lib/site";
 import { StructuredData, breadcrumbJsonLd } from "./StructuredData";
 
 const rows = [
-  ["Pricing model", "Flat price per company", "Per user / plan", "Subscription tiers", "Subscription tiers"],
+  ["Pricing model", "Company-based pricing with included users", "Per user / plan", "Subscription tiers", "Subscription tiers"],
   ["Arabic and French UI", "Yes", "Check", "Check", "Check"],
   ["Field service and repair orders", "Included in ERP source", "Check", "Check", "Check"],
   ["POS", "Olympus and Elysium", "Check", "Check", "Check"],
@@ -13,7 +13,7 @@ const rows = [
 
 const localizedRows = {
   ar: [
-    ["نموذج التسعير", "سعر ثابت لكل شركة", "لكل مستخدم / خطة", "شرائح اشتراك", "شرائح اشتراك"],
+    ["نموذج التسعير", "تسعير حسب الشركة مع مستخدمين مشمولين", "لكل مستخدم / خطة", "شرائح اشتراك", "شرائح اشتراك"],
     ["واجهة بالعربية والفرنسية", "نعم", "تحقق", "تحقق", "تحقق"],
     ["الخدمة الميدانية وأوامر الإصلاح", "مضمنة في مصدر ERP", "تحقق", "تحقق", "تحقق"],
     ["نقاط البيع", "Olympus و Elysium", "تحقق", "تحقق", "تحقق"],
@@ -21,7 +21,7 @@ const localizedRows = {
     ["وكلاء ذكاء اصطناعي مع موافقة", "مصمم حول الموافقة", "تحقق", "تحقق", "تحقق"]
   ],
   fr: [
-    ["Modèle tarifaire", "Prix fixe par entreprise", "Par utilisateur / offre", "Niveaux d'abonnement", "Niveaux d'abonnement"],
+    ["Modèle tarifaire", "Tarification par entreprise avec utilisateurs inclus", "Par utilisateur / offre", "Niveaux d'abonnement", "Niveaux d'abonnement"],
     ["Interface arabe et française", "Oui", "Vérifier", "Vérifier", "Vérifier"],
     ["Service terrain et ordres de réparation", "Inclus dans le code ERP", "Vérifier", "Vérifier", "Vérifier"],
     ["Caisse", "Olympus et Elysium", "Vérifier", "Vérifier", "Vérifier"],

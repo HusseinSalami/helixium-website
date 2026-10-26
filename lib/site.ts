@@ -110,6 +110,7 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
   const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? `erp-${key}` : key;
   const canonical = safeLocale === "en" ? path : `/${safeLocale}${path}`;
   return {
+    metadataBase: new URL("https://www.helixiumsolutions.com"),
     title: current.title,
     description: current.description,
     alternates: {

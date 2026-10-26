@@ -132,3 +132,17 @@ An independent read-only pricing review found one important finding: visible Ely
 Disposition: added localized “from” semantics to monthly and annual Elysium Offer names, rebuilt, reran lint, and recaptured the evidence. The default rendered state keeps monthly onboarding quoted; annual onboarding is supplied by the billing toggle.
 
 Evidence: `build-pricing-approved.log`, `lint-pricing-approved.log`, `lighthouse-home-mobile-pricing-approved.json`, `lighthouse-plans-mobile-pricing-approved.json`, `lighthouse-compare-mobile-pricing-approved.json`, and the `pricing-approved-*.png` captures.
+
+## Current removal and route review
+
+The fresh independent review checked retired-product removal, field-service route consolidation, the compact header, redirects, logo treatment, pricing, SEO, RTL, and generated output. It found stale generated artwork, incomplete disclosure semantics, missing localized compatibility redirects, and relationship wording that was stronger than necessary.
+
+Disposition: rebuilt from a clean `out/` directory; removed the obsolete artwork; changed dropdowns to ordinary disclosure links with persistent controlled targets and visible-opener Escape focus; added localized slash/no-slash compatibility redirects; neutralized customer relationship wording; and confirmed the retired product name remains only in the required checker regex.
+
+## Current final verification
+
+The final independent review confirmed production metadata base, disclosure focus restoration, field-service canonical routing, redirect uniqueness, header no-wrap protection, bundle/pricing consistency, translation/product-language checks, sitemap, canonicals, OG/Twitter metadata, and absence of the retired product from active source and output. It found one remaining “flat/fixed pricing” phrase in the canonical plans and savings copy.
+
+Disposition: changed all remaining public pricing language to “company-based pricing with included users,” then rebuilt, linted, recaptured screenshots, and reran Lighthouse.
+
+Evidence: `build-v4.log`, `lint-v4.log`, `lighthouse-home-mobile-v4.json`, `lighthouse-plans-mobile-v4.json`, and the final Playwright PNG captures.

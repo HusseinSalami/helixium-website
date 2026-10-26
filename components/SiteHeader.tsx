@@ -13,6 +13,9 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname() || "/";
   const menuButton = useRef<HTMLButtonElement>(null);
+  const productButton = useRef<HTMLButtonElement>(null);
+  const solutionButton = useRef<HTMLButtonElement>(null);
+  const languageButton = useRef<HTMLButtonElement>(null);
   const currentLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
   const copy = translations[currentLocale];
   const basePath = pathname.replace(/^\/(ar|fr)(?=\/|$)/, "") || "/";
@@ -24,14 +27,18 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        const activeMenu = openMenu;
         setOpenMenu(null);
         setMobileOpen(false);
-        menuButton.current?.focus();
+        if (mobileOpen) menuButton.current?.focus();
+        else if (activeMenu === "products") productButton.current?.focus();
+        else if (activeMenu === "solutions") solutionButton.current?.focus();
+        else if (activeMenu === "language") languageButton.current?.focus();
       }
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
-  }, []);
+  }, [mobileOpen, openMenu]);
   const toggleMenu = (menu: Exclude<MenuName, null>) => {
     setOpenMenu((current) => current === menu ? null : menu);
   };
@@ -43,11 +50,11 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       </Link>
       <nav className="nav-links" aria-label={copy.mainNavigation}>
         <div className="nav-dropdown-wrap">
-          <button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="products-menu" aria-haspopup="true" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button>
+          <button ref={productButton} className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="products-menu" aria-haspopup="true" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button>
           <div id="products-menu" className="nav-dropdown" hidden={openMenu !== "products"}>{menuLink("/erp/", copy.nav.erp)}{menuLink("/matchpulse/", copy.nav.match)}</div>
         </div>
         <div className="nav-dropdown-wrap">
-          <button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} aria-controls="solutions-menu" aria-haspopup="true" onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button>
+          <button ref={solutionButton} className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} aria-controls="solutions-menu" aria-haspopup="true" onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button>
           <div id="solutions-menu" className="nav-dropdown" hidden={openMenu !== "solutions"}>{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div>
         </div>
         <Link href={localizedPath(locale, "/plans/")}>{copy.nav.plans}</Link>
@@ -56,7 +63,7 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       </nav>
       <div className="nav-actions">
         <div className="language-control">
-          <button className="language-trigger" type="button" aria-expanded={openMenu === "language"} aria-controls="language-menu" aria-label={`${copy.languageSwitcher}: ${currentLocale.toUpperCase()}`} onClick={() => toggleMenu("language")}><span aria-hidden="true">◎</span> {currentLocale.toUpperCase()}</button>
+          <button ref={languageButton} className="language-trigger" type="button" aria-expanded={openMenu === "language"} aria-controls="language-menu" aria-label={`${copy.languageSwitcher}: ${currentLocale.toUpperCase()}`} onClick={() => toggleMenu("language")}><span aria-hidden="true">◎</span> {currentLocale.toUpperCase()}</button>
           <div id="language-menu" className="language-menu" hidden={openMenu !== "language"}><Link href={switchPath("en")} aria-current={currentLocale === "en" ? "page" : undefined} onClick={closeMenus}>EN</Link><Link href={switchPath("ar")} aria-current={currentLocale === "ar" ? "page" : undefined} onClick={closeMenus}>{copy.languageNames[1]}</Link><Link href={switchPath("fr")} aria-current={currentLocale === "fr" ? "page" : undefined} onClick={closeMenus}>FR</Link></div>
         </div>
         <Link className="button button-primary compact header-talk" href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.ctaContact}</Link>
