@@ -192,7 +192,7 @@ button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
 .case-tags small { color: #8997ad; font-size: .72rem; }
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .team-card { overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: rgba(16, 21, 33, .72); }
-.team-card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #151d2c; }
+.team-card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #fff; }
 .team-card > div { padding: 15px 16px 17px; }
 .team-card h3 { margin: 0; font-size: 1rem; }
 .team-card p { color: var(--mist); margin: 4px 0 0; font-size: .78rem; }
@@ -315,7 +315,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .eyebrow::before { background: linear-gradient(90deg, var(--teal), var(--violet)); }
 .hero { padding: 105px 0 85px; background: radial-gradient(circle at 86% 8%, rgba(127,89,217,.10), transparent 22rem), radial-gradient(circle at 10% 25%, rgba(15,159,152,.08), transparent 24rem); }
 .hero-grid { grid-template-columns: .92fr 1.08fr; gap: 68px; }
-.hero h1, .page-hero h1 { max-width: 100%; font-size: clamp(2.8rem, 5.5vw, 4.25rem); letter-spacing: -.065em; line-height: .98; color: var(--ink); overflow-wrap: anywhere; word-break: break-word; }
+.hero h1, .page-hero h1 { max-width: 100%; font-size: clamp(2.8rem, 5.5vw, 4.25rem); letter-spacing: -.065em; line-height: .98; color: var(--ink); text-wrap: balance; overflow-wrap: anywhere; word-break: break-word; }
 .hero-lede, .section-heading p, .page-hero p, .cta p { color: var(--mist); font-size: 1.08rem; }
 .hero-chip { display: inline-flex; margin-top: 20px; padding: 9px 14px; border: 1px solid #dfe6fb; border-radius: 999px; color: #4d65c7; background: #f4f6ff; font-size: .84rem; font-weight: 750; }
 .proof-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: #555b67; font-size: .82rem; font-weight: 700; }
@@ -324,8 +324,10 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .logo-strip-row { grid-template-columns: 1.1fr repeat(4, 1fr); }
 .logo-label { color: #5c626b; }
 .partner-logo { color: var(--ink); font-size: .78rem; font-weight: 700; }
-.partner-logo img { width: 120px; height: 58px; filter: grayscale(1); opacity: .72; transition: filter .2s ease, opacity .2s ease; }
-.partner-logo:hover img { filter: grayscale(0); opacity: 1; }
+.partner-logo img { width: 150px; height: 74px; filter: none; opacity: 1; transition: transform .2s ease; }
+.partner-logo:hover img { transform: scale(1.04); }
+.partner-logo-endomedix img { transform: scale(1.45); }
+.partner-logo-endomedix:hover img { transform: scale(1.5); }
 .section { padding: 105px 0; }
 .section-tight { padding: 66px 0; }
 .section-heading h2, .cta h2 { color: var(--ink); }
@@ -355,6 +357,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .savings-result > strong { margin: 10px 0 18px; color: #fff; font-size: clamp(2.8rem, 6vw, 4.3rem); letter-spacing: -.07em; }
 .savings-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: #b7bac5; font-size: .8rem; }
 .savings-compare b { display: block; color: #fff; margin-top: 5px; font-size: 1rem; }
+.savings-compare small { display: block; margin-top: 3px; color: #9ea2af; font-size: .7rem; }
 .savings-result small { margin-top: 24px; color: #9ea2af; font-size: .7rem; }
 .process-step h3, .process-step p, .bullet-list li { color: var(--ink); }
 .process-step p { color: var(--mist); font-size: .9rem; }
@@ -470,7 +473,7 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
   .hero { padding-top: 68px; }
   .hero-copy { width: 100%; max-width: 100%; }
   .page-hero .shell { width: calc(100% - 28px); max-width: calc(100% - 28px); }
-  .hero h1, .page-hero h1 { width: 100%; max-width: 100%; font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.04; }
+  .hero h1, .page-hero h1 { width: 100%; max-width: 100%; font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.04; text-wrap: balance; }
   .hero-grid > *, .split > *, .contact-grid > * { min-width: 0; }
   .brand { min-width: 0; }
   .brand-copy { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
