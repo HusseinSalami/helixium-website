@@ -379,6 +379,9 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .price-value { color: var(--ink); font-size: 2.05rem; font-weight: 850; letter-spacing: -.06em; }
 .price-value small { display: block; color: var(--mist); font-size: .72rem; font-weight: 550; letter-spacing: 0; }
 .price-onboarding { color: var(--mist); font-size: .78rem; }
+.price-users { display: grid; gap: 3px; min-height: 40px; margin: 14px 0 4px; color: #4e535e; font-size: .78rem; }
+.price-users strong { color: var(--ink); font-size: .82rem; }
+.price-users span { color: var(--mist); }
 .price-list { border-color: var(--line); }
 .price-list li { color: #4e535e; font-size: .9rem; }
 .price-list li::before { color: var(--teal); }

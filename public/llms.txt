@@ -12,7 +12,7 @@ Helixium Solutions builds operational software around a flagship Helixium ERP.
 
 ## Plans
 
-Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium is for enterprise customization. Current monthly prices are Lebanon USD 39/89/299, UAE AED 179/399/1499, KSA SAR 179/449/1699, US USD 79/199/799, and France EUR 59/149/599. Annual billing is ten monthly payments; prices are tax-exclusive.
+Pantheon is for small teams. Olympus is for growing and multi-company teams. Elysium starts at the enterprise customization tier. Current monthly prices are Lebanon USD 49/129/from 399, UAE AED 229/579/from 1799, KSA SAR 229/599/from 1999, US USD 99/249/from 999, and France EUR 79/199/from 749. Annual billing is ten monthly payments, or two months free compared with monthly billing; prices are tax-exclusive. Pantheon includes 3 users, Olympus includes 10 users, and Elysium users are customized. Annual plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
 
 CryptoSettle is early access with no published price yet. MatchPulse pricing is quoted per venue on request.
 

@@ -124,3 +124,9 @@ Final confirmation: clean for the requested fixes. The only launch-only residual
 The fresh independent review checked the deployed World Cup 2026 screens and the marketing delta. It found venue wording that was stronger than the fan-facing evidence, progression/live wording that was not demonstrated by the captured `Upcoming (0)` state, a pending publication-rights question for visible leaderboard handles, and a performance trade-off from eager loading the below-fold homepage proof image.
 
 Disposition: softened the venue copy to describe a shared fan-facing prediction destination and an optional venue deployment, changed ranking language to compare position rather than claim progression, changed live-tournament wording to a tournament experience, and recorded the leaderboard-image rights question in `DECISIONS.md`. The eager image load remains intentional because lazy loading produced a dark empty block in full-page captures; explicit dimensions preserve layout stability. The reviewer confirmed the external link attributes, WebP dimensions, localized alt text, localized metadata/JSON-LD, and generated internal links.
+
+## Approved pricing update review
+
+An independent read-only pricing review found no findings. It verified the five market tables, annual 10x math, Elysium starting prices, included-user and extra-user policy, monthly/annual onboarding copy, 10-user Olympus savings comparison, localized Arabic/French strings, JSON-LD offers, absence of stale prices or 5/20-user defaults, and neutral e-invoicing wording.
+
+Evidence: `build-pricing-approved.log`, `lint-pricing-approved.log`, `lighthouse-home-mobile-pricing-approved.json`, `lighthouse-plans-mobile-pricing-approved.json`, `lighthouse-compare-mobile-pricing-approved.json`, and the `pricing-approved-*.png` captures.
