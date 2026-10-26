@@ -84,6 +84,34 @@ export const bundleRows: BundleRow[] = [
   { key: "cryptosettle", label: "CryptoSettle add-on", plans: addon }
 ];
 
+const localizedBundleLabels = {
+  en: Object.fromEntries(bundleRows.map((row) => [row.key, row.label])),
+  ar: {
+    accounting: "المحاسبة", invoicing: "الفوترة", inventory: "المخزون", purchasing: "المشتريات", salesOrders: "أوامر البيع",
+    bankReconciliation: "مطابقة الحسابات البنكية", standardReports: "التقارير الأساسية", basicAi: "الذكاء الاصطناعي الأساسي",
+    pos: "نقاط البيع", fieldService: "الخدمة الميدانية وأوامر الإصلاح", payroll: "الرواتب", manufacturing: "التصنيع",
+    budgets: "الموازنات", advancedReports: "التقارير المتقدمة", recurringTransactions: "المعاملات المتكررة", notifications: "الإشعارات",
+    workflowAutomation: "أتمتة سير العمل", customization: "التخصيص", importerConfiguration: "الاستيراد والإعداد",
+    externalIntegrations: "التكاملات الخارجية وواجهات API", advancedRules: "القواعد المتقدمة", advancedAi: "الذكاء الاصطناعي المتقدم",
+    cryptosettle: "إضافة CryptoSettle"
+  },
+  fr: {
+    accounting: "Comptabilité", invoicing: "Facturation", inventory: "Stocks", purchasing: "Achats", salesOrders: "Commandes de vente",
+    bankReconciliation: "Rapprochement bancaire", standardReports: "Rapports standards", basicAi: "IA de base",
+    pos: "Caisse", fieldService: "Service terrain et ordres de réparation", payroll: "Paie", manufacturing: "Production",
+    budgets: "Budgets", advancedReports: "Rapports avancés", recurringTransactions: "Transactions récurrentes", notifications: "Notifications",
+    workflowAutomation: "Automatisation des workflows", customization: "Personnalisation", importerConfiguration: "Import et configuration",
+    externalIntegrations: "Intégrations externes et API", advancedRules: "Règles avancées", advancedAi: "IA avancée",
+    cryptosettle: "Extension CryptoSettle"
+  }
+} as const;
+
+export const bundleRowsByLocale = {
+  en: bundleRows,
+  ar: bundleRows.map((row) => ({ ...row, label: localizedBundleLabels.ar[row.key as keyof typeof localizedBundleLabels.ar] })),
+  fr: bundleRows.map((row) => ({ ...row, label: localizedBundleLabels.fr[row.key as keyof typeof localizedBundleLabels.fr] }))
+} as const;
+
 export const moduleLabels = bundleRows.map((row) => [row.key, row.label] as const);
 
 export const modulePlanMatrix = Object.fromEntries(
@@ -100,3 +128,27 @@ export const planFaqs = [
   { question: "Is on-premise deployment available?", answer: "Cloud or on-premise options can be discussed with the Helixium team. Contact us so we can understand your environment and requirements." },
   { question: "What about local tax and e-invoicing requirements?", answer: "Local e-invoicing integration is on our roadmap. Talk to us before you buy so we can discuss your market and requirements." }
 ] as const;
+
+export const planFaqsByLocale = {
+  en: planFaqs,
+  ar: [
+    { question: "ماذا تشمل التجربة المجانية لمدة 14 يوماً؟", answer: "تشمل التجربة حزمة Olympus الكاملة لمدة 14 يوماً، بما في ذلك نقاط البيع والخدمة الميدانية وأوامر الإصلاح والرواتب والتصنيع والموازنات والتقارير المتقدمة والمعاملات المتكررة والإشعارات وأتمتة سير العمل." },
+    { question: "ماذا يحدث بعد انتهاء التجربة؟", answer: "سنساعدك في اختيار الخطة المناسبة لفريقك. يمكنك الاستمرار في خطة مدفوعة أو التحدث معنا عن الخطوة التالية قبل بدء الفوترة." },
+    { question: "كيف تعمل الفوترة السنوية؟", answer: "تُسعّر الفوترة السنوية بما يعادل 10 أشهر، أي تحصل على شهرين مجاناً مقارنة بالدفع الشهري. الأسعار لا تشمل الضرائب." },
+    { question: "كيف يعمل الإعداد الأولي؟", answer: "رسوم الإعداد الأولي لمرة واحدة وتُحدد مع إعدادك. نؤكد معك النطاق وتجهيز البيانات والإعداد والتدريب المطلوب." },
+    { question: "هل يمكننا تغيير الخطة؟", answer: "نعم. تواصل معنا عندما يتغير فريقك أو أسلوب عملك وسنساعدك في الانتقال إلى الحزمة المناسبة." },
+    { question: "كيف تتم فوترة CryptoSettle؟", answer: "تبدأ CryptoSettle بتجربة لمدة 30 يوماً. بعدها تبلغ التكلفة 29 دولاراً أمريكياً شهرياً إضافة إلى 0.15% من حجم المطابقة، بحد أقصى 299 دولاراً أمريكياً، كإضافة إلى ERP أو كخدمة مستقلة." },
+    { question: "هل يتوفر النشر المحلي؟", answer: "يمكن مناقشة الخيارات السحابية أو المحلية مع فريق Helixium. تواصل معنا لفهم بيئتك ومتطلباتك." },
+    { question: "ماذا عن الضرائب المحلية ومتطلبات الفوترة الإلكترونية؟", answer: "تكامل الفوترة الإلكترونية المحلية ضمن خارطة الطريق. تواصل معنا قبل الشراء لمناقشة السوق والمتطلبات." }
+  ],
+  fr: [
+    { question: "Que comprend l'essai de 14 jours ?", answer: "L'essai comprend toute l'offre Olympus pendant 14 jours : caisse, service terrain et ordres de réparation, paie, production, budgets, rapports avancés, transactions récurrentes, notifications et automatisation des workflows." },
+    { question: "Que se passe-t-il à la fin de l'essai ?", answer: "Nous vous aiderons à choisir l'offre adaptée à votre équipe. Vous pouvez continuer avec une offre payante ou parler avec nous de la suite avant le début de la facturation." },
+    { question: "Comment fonctionne la facturation annuelle ?", answer: "La facturation annuelle est calculée sur 10 mois : deux mois sont donc offerts par rapport au paiement mensuel. Tarifs hors taxes." },
+    { question: "Comment fonctionne la mise en route ?", answer: "La mise en route est facturée une fois et chiffrée avec votre configuration. Nous confirmons le périmètre, la préparation des données, la configuration et la formation." },
+    { question: "Pouvons-nous changer d'offre ?", answer: "Oui. Contactez-nous quand votre équipe ou votre façon de travailler évolue et nous vous aiderons à passer à la bonne offre." },
+    { question: "Comment CryptoSettle est-il facturé ?", answer: "CryptoSettle commence par un pilote de 30 jours. Ensuite, le tarif est de 29 USD par mois plus 0,15 % du volume rapproché, plafonné à 299 USD, comme extension ERP ou service autonome." },
+    { question: "Le déploiement sur site est-il disponible ?", answer: "Les options cloud ou sur site peuvent être étudiées avec l'équipe Helixium. Contactez-nous pour parler de votre environnement et de vos besoins." },
+    { question: "Qu'en est-il des taxes locales et de la facturation électronique ?", answer: "L'intégration de la facturation électronique locale est sur notre feuille de route. Contactez-nous avant achat pour discuter de votre marché et de vos besoins." }
+  ]
+} as const;

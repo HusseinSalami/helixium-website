@@ -10,7 +10,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   return {
     metadataBase: new URL("https://www.helixiumsolutions.com"),
     title: { default: "Helixium Solutions | The ERP that does the work", template: "%s | Helixium Solutions" },
-    description: "Agentic operations software for ERP, field service, POS, predictions, and custom workflows.",
+    description: "Friendly business software for ERP, field service, POS, predictions, and custom workflows.",
     alternates: {
       canonical: locale === "en" ? "/" : `/${locale}/`,
       languages: { en: "/", ar: "/ar/", fr: "/fr/", "x-default": "/" }
