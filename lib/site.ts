@@ -13,9 +13,9 @@ export function localizedPath(locale: string | undefined, path: string) {
 type SeoCopy = { title: string; description: string };
 const seo: Record<string, Record<Locale, SeoCopy>> = {
   home: {
-    en: { title: "Helixium Solutions: ERP, AI agents and custom software", description: "Helixium Solutions brings together ERP, custom AI agents, custom software, and MatchPulse for teams building clearer operations." },
-    ar: { title: "Helixium Solutions: نظام ERP ووكلاء ذكاء اصطناعي وبرمجيات مخصصة", description: "تجمع Helixium Solutions بين نظام ERP ووكلاء الذكاء الاصطناعي المخصصين والبرمجيات المخصصة وMatchPulse لفرق تريد عمليات أوضح." },
-    fr: { title: "Helixium Solutions : ERP, agents IA et logiciels sur mesure", description: "Helixium Solutions réunit ERP, agents IA sur mesure, logiciels personnalisés et MatchPulse pour des équipes qui veulent des opérations plus claires." }
+    en: { title: "Helixium Solutions: ERP, AI agents, custom software and MatchPulse", description: "Helixium Solutions brings together ERP, custom AI agents, custom software, and MatchPulse for teams building clearer operations." },
+    ar: { title: "Helixium Solutions: نظام ERP ووكلاء ذكاء اصطناعي وبرمجيات مخصصة وMatchPulse", description: "تجمع Helixium Solutions بين نظام ERP ووكلاء الذكاء الاصطناعي المخصصين والبرمجيات المخصصة وMatchPulse لفرق تريد عمليات أوضح." },
+    fr: { title: "Helixium Solutions : ERP, agents IA, logiciels sur mesure et MatchPulse", description: "Helixium Solutions réunit ERP, agents IA sur mesure, logiciels personnalisés et MatchPulse pour des équipes qui veulent des opérations plus claires." }
   },
   erp: {
     en: { title: "Helixium ERP software", description: "ERP software for accounting, inventory, sales, purchases, POS, manufacturing, payroll, and connected operations." },
@@ -109,6 +109,7 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
   const current = seo[key][safeLocale];
   const ogKey = ["accounting", "inventory", "sales-purchases", "pos", "manufacturing", "payroll", "field-service"].includes(key) ? `erp-${key}` : key;
   const canonical = safeLocale === "en" ? path : `/${safeLocale}${path}`;
+  const ogImage = safeLocale === "en" ? `/og/${ogKey}.svg` : "/og/localized.svg";
   return {
     metadataBase: new URL("https://www.helixiumsolutions.com"),
     title: current.title,
@@ -117,8 +118,8 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
       canonical,
       languages: { en: path, ar: `/ar${path}`, fr: `/fr${path}`, "x-default": path }
     },
-    openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, images: [{ url: `/og/${ogKey}.svg`, width: 1200, height: 630, alt: current.title }] },
-    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [`/og/${ogKey}.svg`] },
+    openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, siteName: "Helixium Solutions", images: [{ url: ogImage, width: 1200, height: 630, alt: current.title }] },
+    twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [ogImage] },
     icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/media/brand/favicon.png", type: "image/png" }], apple: "/apple-touch-icon.png" }
   };
 }

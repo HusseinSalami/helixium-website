@@ -157,3 +157,17 @@ Findings and dispositions:
 - Low: the checked-in PNG favicon was not registered. Resolved by registering `/media/brand/favicon.png` alongside `/favicon.svg` and `/apple-touch-icon.png` in English and localized metadata.
 
 Final verification: the invented gradient H and `brand-mark` are absent from tracked source; header, footer, ERP mock, About badge, favicon SVG, PNG/Apple icons, Organization JSON-LD, and OG assets use the supplied artwork. Build and translation/product-language checks pass in `build-logo.log`; lint passes in `lint-logo.log`; the worktree is clean at the final commit.
+
+## Homepage repositioning review
+
+Fresh independent read-only review of `3acc930..HEAD` covered company-level homepage positioning, moved ERP content, localized routes, SEO and OG metadata, accessibility, links, and build risks. No CRUX, AutoSDE, or push was run.
+
+Findings and dispositions:
+
+- P2: localized pages referenced the English homepage OG artwork. Resolved by adding the language-neutral official-brand `public/og/localized.svg` and selecting it for Arabic and French metadata.
+- P2: English layout and page-level OG descriptions could drift. Resolved by aligning the layout message with the canonical company-level description, including MatchPulse, and adding `siteName` to localized OG metadata.
+- P3: the product-path container was a generic labelled `div`. Resolved with a named `section` and `aria-labelledby`.
+- P2: moving pricing and automation reduced homepage discoverability. Resolved with localized “plans and savings” links in the ERP flagship section.
+- P3: homepage copy existed in two sources. Resolved by removing unused `homeTitle` and `homeLead` fields from the shared translations.
+
+The review verified that Pricing preserves the plan grid, savings calculator, five-step automation content, and localized routes. Final build, lint, and screenshot evidence were recaptured after fixes.
