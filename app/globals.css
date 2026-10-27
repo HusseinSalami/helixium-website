@@ -508,6 +508,15 @@ body { background: #fbfaf7; color: var(--ink); font-family: Inter, ui-sans-serif
 .about-brand-badge { width: 150px; height: 150px; object-fit: contain; }
 .mock-nav { color: #5c626d; }
 .mock-nav.selected { color: #08736d; }
+.company-hero { padding-bottom: 82px; }
+.company-hero-copy { max-width: 860px; margin: 0 auto; text-align: center; }
+.company-hero-copy .hero-lede { max-width: 720px; margin-inline: auto; }
+.company-hero-copy .hero-actions { justify-content: center; }
+.hero-paths { margin-top: 62px; }
+.hero-paths .section-heading { text-align: center; }
+.hero-paths .section-heading .eyebrow { justify-content: center; }
+.hero-paths .cards { margin-top: 28px; }
+.flagship-section { align-items: center; }
 @media (max-width: 900px) {
   .nav-links, .header-talk, .language-control { display: none; }
   .nav-actions { margin-inline-start: auto; }

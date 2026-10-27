@@ -13,9 +13,9 @@ export function localizedPath(locale: string | undefined, path: string) {
 type SeoCopy = { title: string; description: string };
 const seo: Record<string, Record<Locale, SeoCopy>> = {
   home: {
-    en: { title: "ERP software for connected operations", description: "Helixium ERP connects accounting, inventory, sales, field service, POS, manufacturing, payroll, and agent-assisted workflows." },
-    ar: { title: "برنامج ERP للعمليات المتصلة", description: "يربط Helixium ERP المحاسبة والمخزون والمبيعات والخدمة الميدانية ونقاط البيع والتصنيع والرواتب وسير العمل المدعوم بالوكلاء." },
-    fr: { title: "Logiciel ERP pour des opérations connectées", description: "Helixium ERP relie comptabilité, stocks, ventes, service terrain, caisse, production, paie et workflows assistés par des agents." }
+    en: { title: "Helixium Solutions: ERP, AI agents and custom software", description: "Helixium Solutions brings together ERP, custom AI agents, custom software, and MatchPulse for teams building clearer operations." },
+    ar: { title: "Helixium Solutions: نظام ERP ووكلاء ذكاء اصطناعي وبرمجيات مخصصة", description: "تجمع Helixium Solutions بين نظام ERP ووكلاء الذكاء الاصطناعي المخصصين والبرمجيات المخصصة وMatchPulse لفرق تريد عمليات أوضح." },
+    fr: { title: "Helixium Solutions : ERP, agents IA et logiciels sur mesure", description: "Helixium Solutions réunit ERP, agents IA sur mesure, logiciels personnalisés et MatchPulse pour des équipes qui veulent des opérations plus claires." }
   },
   erp: {
     en: { title: "Helixium ERP software", description: "ERP software for accounting, inventory, sales, purchases, POS, manufacturing, payroll, and connected operations." },
