@@ -99,6 +99,7 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .page-hero { padding: var(--space-8) 0 var(--space-6); }
 .page-hero-with-media .page-hero-layout { display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: var(--space-6); }
 .page-hero-with-media .section-intro { margin-bottom: 0; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
 
 .cards, .feature-grid, .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
 .three-cards { grid-template-columns: repeat(3, 1fr); }
@@ -365,6 +366,7 @@ html[dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
   .mobile-nav-group .nav-menu-trigger { justify-content: space-between; width: 100%; padding: 10px 0; }
   .mobile-subnav { display: grid; gap: 4px; padding-inline-start: 15px; border-inline-start: 2px solid #dfe6fb; }
   .mobile-nav .button { color: #fff; }
+  .mobile-language-links { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
   .hero-grid, .savings-band { grid-template-columns: 1fr; }
   .pricing-toolbar { display: grid; align-items: start; }
   .pricing-controls { flex-wrap: wrap; }
@@ -385,6 +387,7 @@ html[dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
   .process { grid-template-columns: 1fr; }
   .process-step { padding: 16px 0; padding-inline-end: 0; }
   .process-step:not(:last-child)::after { content: "↓"; inset-inline-end: auto; inset-inline-start: 4px; top: auto; bottom: -5px; }
+  html[dir="rtl"] .process-step:not(:last-child)::after { content: "↓"; }
   .number-grid, .industries, .security-facts, .market-values { grid-template-columns: 1fr; }
   .pricing-controls { display: grid; }
   .pricing-controls select { width: 100%; }
