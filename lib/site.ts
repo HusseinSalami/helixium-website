@@ -87,11 +87,6 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     ar: { title: "أعمال تطوير البرمجيات المخصصة", description: "استكشف أعمال Helixium في التجارة الإلكترونية والحجوزات والإنشاءات ونقاط البيع والمنتجات التفاعلية." },
     fr: { title: "Portfolio de développement logiciel sur mesure", description: "Découvrez des projets e-commerce, réservation, construction, caisse, restauration et produits interactifs." }
   },
-  customers: {
-    en: { title: "Helixium ERP customer stories", description: "See how MOM and Endomedix use Helixium work-order and repair-order workflows." },
-    ar: { title: "قصص عملاء Helixium ERP", description: "اكتشف كيف تستخدم MOM وEndomedix سير عمل أوامر العمل والإصلاح في Helixium." },
-    fr: { title: "Histoires clients Helixium ERP", description: "Découvrez comment MOM et Endomedix utilisent les workflows d'ordres de travail et de réparation Helixium." }
-  },
   about: {
     en: { title: "About Helixium Solutions", description: "Helixium Solutions builds practical software for connected operations." },
     ar: { title: "عن Helixium Solutions", description: "تبني Helixium Solutions برمجيات عملية للعمليات المتصلة." },

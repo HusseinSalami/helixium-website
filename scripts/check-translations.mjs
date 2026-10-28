@@ -3,10 +3,10 @@ import { join } from "node:path";
 
 const outputRoot = join(process.cwd(), "out");
 const routes = [
-  "/", "/about/", "/compare/", "/contact/", "/customers/",
+  "/", "/about/", "/compare/", "/contact/",
   "/erp/", "/erp/accounting/", "/erp/inventory/", "/erp/sales-purchases/",
   "/erp/pos/", "/erp/manufacturing/", "/erp/payroll/", "/erp/field-service/",
-  "/matchpulse/", "/plans/", "/solutions/",
+  "/matchpulse/", "/plans/",
   "/solutions/agentic-ai/", "/solutions/custom-software/"
 ];
 const allowlist = new Set([

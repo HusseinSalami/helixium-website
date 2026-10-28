@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { localizedPath } from "../lib/site";
 import { translations, type Locale } from "../lib/content";
 
-type MenuName = "products" | "solutions" | "language" | null;
+type MenuName = "products" | "language" | null;
 
 export function SiteHeader({ locale = "en" }: { locale?: string }) {
   const [openMenu, setOpenMenu] = useState<MenuName>(null);
@@ -15,7 +15,6 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
   const pathname = usePathname() || "/";
   const menuButton = useRef<HTMLButtonElement>(null);
   const productButton = useRef<HTMLButtonElement>(null);
-  const solutionButton = useRef<HTMLButtonElement>(null);
   const languageButton = useRef<HTMLButtonElement>(null);
   const currentLocale = (["en", "ar", "fr"].includes(locale) ? locale : "en") as Locale;
   const copy = translations[currentLocale];
@@ -33,7 +32,6 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
         setMobileOpen(false);
         if (mobileOpen) menuButton.current?.focus();
         else if (activeMenu === "products") productButton.current?.focus();
-        else if (activeMenu === "solutions") solutionButton.current?.focus();
         else if (activeMenu === "language") languageButton.current?.focus();
       }
     };
@@ -55,15 +53,11 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       <nav className="nav-links" aria-label={copy.mainNavigation}>
         <div className="nav-dropdown-wrap">
           <button ref={productButton} className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="products-menu" aria-haspopup="true" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button>
-          <div id="products-menu" className="nav-dropdown" hidden={openMenu !== "products"}>{menuLink("/erp/", copy.nav.erp)}{menuLink("/matchpulse/", copy.nav.match)}</div>
-        </div>
-        <div className="nav-dropdown-wrap">
-          <button ref={solutionButton} className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} aria-controls="solutions-menu" aria-haspopup="true" onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button>
-          <div id="solutions-menu" className="nav-dropdown" hidden={openMenu !== "solutions"}>{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div>
+          <div id="products-menu" className="nav-dropdown" hidden={openMenu !== "products"}>{menuLink("/erp/", copy.nav.erp)}{menuLink("/erp/field-service/", copy.nav.field)}{menuLink("/matchpulse/", copy.nav.match)}{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div>
         </div>
         <Link href={localizedPath(locale, "/plans/")}>{copy.nav.plans}</Link>
-        <Link href={localizedPath(locale, "/customers/")}>{copy.nav.customers}</Link>
         <Link href={localizedPath(locale, "/about/")}>{copy.nav.about}</Link>
+        <Link href={localizedPath(locale, "/contact/")}>{copy.nav.contact}</Link>
       </nav>
       <div className="nav-actions">
         <div className="language-control">
@@ -75,9 +69,8 @@ export function SiteHeader({ locale = "en" }: { locale?: string }) {
       </div>
     </div>
     {mobileOpen && <nav id="mobile-menu" className="mobile-nav shell" aria-label={copy.mobileNavigation}>
-      <div className="mobile-nav-group"><button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="mobile-products-menu" aria-haspopup="true" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button><div id="mobile-products-menu" className="mobile-subnav" hidden={openMenu !== "products"}>{menuLink("/erp/", copy.nav.erp)}{menuLink("/matchpulse/", copy.nav.match)}</div></div>
-      <div className="mobile-nav-group"><button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "solutions"} aria-controls="mobile-solutions-menu" aria-haspopup="true" onClick={() => toggleMenu("solutions")}>{copy.nav.solutions}<span aria-hidden="true">⌄</span></button><div id="mobile-solutions-menu" className="mobile-subnav" hidden={openMenu !== "solutions"}>{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div></div>
-      <Link href={localizedPath(locale, "/plans/")} onClick={closeMenus}>{copy.nav.plans}</Link><Link href={localizedPath(locale, "/customers/")} onClick={closeMenus}>{copy.nav.customers}</Link><Link href={localizedPath(locale, "/about/")} onClick={closeMenus}>{copy.nav.about}</Link>
+      <div className="mobile-nav-group"><button className="nav-menu-trigger" type="button" aria-expanded={openMenu === "products"} aria-controls="mobile-products-menu" aria-haspopup="true" onClick={() => toggleMenu("products")}>{copy.nav.products}<span aria-hidden="true">⌄</span></button><div id="mobile-products-menu" className="mobile-subnav" hidden={openMenu !== "products"}>{menuLink("/erp/", copy.nav.erp)}{menuLink("/erp/field-service/", copy.nav.field)}{menuLink("/matchpulse/", copy.nav.match)}{menuLink("/solutions/agentic-ai/", copy.nav.agentic)}{menuLink("/solutions/custom-software/", copy.nav.custom)}</div></div>
+      <Link href={localizedPath(locale, "/plans/")} onClick={closeMenus}>{copy.nav.plans}</Link><Link href={localizedPath(locale, "/about/")} onClick={closeMenus}>{copy.nav.about}</Link><Link href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.nav.contact}</Link>
       <div className="mobile-language-links"><Link href={switchPath("en")} onClick={closeMenus}>{copy.languageNames[0]}</Link><Link href={switchPath("ar")} onClick={closeMenus}>{copy.languageNames[1]}</Link><Link href={switchPath("fr")} onClick={closeMenus}>{copy.languageNames[2]}</Link></div>
       <Link className="button button-primary" href={localizedPath(locale, "/contact/")} onClick={closeMenus}>{copy.ctaContact}</Link>
     </nav>}

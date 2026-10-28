@@ -1,5 +1,4 @@
 export const showMatchPulseStrip = true;
-export const showCustomerStories = false;
 
 export const team = [
   { name: "Bassam Salame", role: "CEO", image: "/media/optimized/team-bassam.webp", alt: "Bassam Salame, CEO of Helixium Solutions", width: 367, height: 369 },
@@ -61,7 +60,7 @@ export const erpModules = [
 
 export const translations = {
   en: {
-    nav: { products: "Products", solutions: "Solutions", plans: "Pricing", customers: "Customers", about: "About", erp: "ERP", match: "MatchPulse", agentic: "Agentic AI", custom: "Custom software" },
+    nav: { products: "Products", plans: "Pricing", about: "About", contact: "Contact", erp: "ERP", field: "Field service", match: "MatchPulse", agentic: "Agentic AI", custom: "Custom software" },
     ctaTrial: "Start your 14-day ERP trial", ctaErp: "Try the ERP free", ctaContact: "Talk to us", ctaDemo: "Book a demo",
     toggleNavigation: "Toggle navigation", mainNavigation: "Main navigation", languageSwitcher: "Language switcher", mobileNavigation: "Mobile navigation", languageNames: ["English", "Arabic", "French"],
     agentChip: "AI agents that ask before they act",
@@ -74,7 +73,7 @@ export const translations = {
     finalTitle: "Bring the busywork. We will make it lighter."
   },
   ar: {
-    nav: { products: "المنتجات", solutions: "الحلول", plans: "الأسعار", customers: "العملاء", about: "من نحن", erp: "نظام ERP", match: "MatchPulse", agentic: "الذكاء الاصطناعي الوكيلي", custom: "البرمجيات المخصصة" },
+    nav: { products: "المنتجات", plans: "الأسعار", about: "من نحن", contact: "تواصل معنا", erp: "نظام ERP", field: "الخدمة الميدانية", match: "MatchPulse", agentic: "الذكاء الاصطناعي الوكيلي", custom: "البرمجيات المخصصة" },
     ctaTrial: "ابدأ تجربة ERP لمدة 14 يوماً", ctaErp: "جرّب ERP مجاناً", ctaContact: "تواصل معنا", ctaDemo: "احجز عرضاً",
     toggleNavigation: "فتح قائمة التنقل", mainNavigation: "التنقل الرئيسي", languageSwitcher: "مبدّل اللغة", mobileNavigation: "التنقل على الهاتف", languageNames: ["الإنجليزية", "العربية", "الفرنسية"],
     agentChip: "وكلاء ذكاء اصطناعي يسألون قبل التنفيذ",
@@ -87,7 +86,7 @@ export const translations = {
     finalTitle: "أحضر العمل المتكرر، وسنجعله أخف."
   },
   fr: {
-    nav: { products: "Produits", solutions: "Nos solutions", plans: "Tarifs", customers: "Clients", about: "À propos", erp: "ERP", match: "MatchPulse", agentic: "IA agentique", custom: "Logiciel sur mesure" },
+    nav: { products: "Produits", plans: "Tarifs", about: "À propos", contact: "Nous contacter", erp: "ERP", field: "Service terrain", match: "MatchPulse", agentic: "IA agentique", custom: "Logiciel sur mesure" },
     ctaTrial: "Démarrer l'essai ERP de 14 jours", ctaErp: "Essayer l'ERP gratuitement", ctaContact: "Nous contacter", ctaDemo: "Réserver une démo",
     toggleNavigation: "Ouvrir la navigation", mainNavigation: "Navigation principale", languageSwitcher: "Sélecteur de langue", mobileNavigation: "Navigation mobile", languageNames: ["Anglais", "Arabe", "Français"],
     agentChip: "Des agents IA qui demandent avant d'agir",
