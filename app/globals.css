@@ -135,6 +135,7 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 36px; }
 .process-step { position: relative; padding: 20px 0; padding-inline-end: 16px; }
 .process-step:not(:last-child)::after { content: "→"; position: absolute; inset-inline-end: 10px; top: 35px; color: var(--teal); font-size: 1.2rem; }
+html[dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
 .step-number { color: #08736d; font-size: .78rem; font-weight: 800; }
 .process-step h3 { margin: 11px 0 7px; color: var(--ink); font-size: 1rem; }
 .process-step p { max-width: 160px; margin: 0; color: var(--mist); font-size: .9rem; }
@@ -291,7 +292,7 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .portfolio-image { position: relative; aspect-ratio: 1.25; background: #f0efe9; }
 .portfolio-image img { object-fit: cover; }
 .portfolio-body { padding: 20px; }
-.portfolio-body h2 { margin: 10px 0; font-size: 1.25rem; letter-spacing: -.04em; }
+.portfolio-body h3 { margin: 10px 0; font-size: 1.25rem; letter-spacing: -.04em; }
 .portfolio-body dl { display: grid; gap: 10px; margin: 18px 0 0; }
 .portfolio-body dl div { padding-top: 9px; border-top: 1px solid var(--line); }
 .portfolio-body dt { color: #08736d; font-size: .68rem; text-transform: uppercase; letter-spacing: .09em; font-weight: 800; }

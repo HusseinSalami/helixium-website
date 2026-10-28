@@ -1,43 +1,46 @@
 # Helixium website revision
 
-Outcome: The site uses the official Wix Helixium artwork in the chrome, ERP preview, About brand badge, favicon set, JSON-LD, and social cards. The homepage now introduces Helixium as a company with three equal paths, while the ERP remains the flagship and owns the detailed pricing experience.
+## Outcome
+
+The site now presents Helixium as a software company with three equal entry paths, with the ERP as its flagship.
+The UX fix uses one light layout system, one product navigation model, readable MatchPulse proof, and mirrored Arabic/French structure.
 
 ## Decisions to evaluate
 
-D1 Keep the user-approved 2026-10-26 ERP price table in `lib/pricing.ts`; annual billing is 10x monthly. Why: the user approved the values. If overruled: edit the one pricing data file and its derived surfaces.
-D2 Keep the ERP bundle split in `lib/plans.ts`. Why: bundle evidence is authoritative. If overruled: update cards, matrix, FAQ, and JSON-LD together.
-D3 Keep old standalone field-service URLs as 301 redirects to `/erp/field-service/`. Why: preserve existing links while keeping one canonical module path. If overruled: update redirects, sitemap, metadata, and internal links together.
-D4 Treat Arabic and French as machine-drafted, pending native review. Why: the automated localized-string check passes. If overruled: replace copy and metadata without changing route structure.
-D5 Use the supplied Wix icon, wordmark crop, badge, and white dark-surface variants as the only Helixium mark. Why: they are the user's official assets. If overruled: replace the checked-in brand assets, favicon set, JSON-LD logo, and OG artwork together.
-D6 Keep plans, savings calculator, and agent automation steps on Pricing rather than the homepage. Why: the company-level homepage needs equal product entry points while the ERP detail remains available. If overruled: restore those sections to the homepage and revise its length and SEO.
+D1 Keep the approved 2026-10-26 ERP price table in `lib/pricing.ts`; annual billing is 10x monthly. Why: the user approved the values. If overruled: edit the data file and derived pricing surfaces.
+D2 Keep Arabic and French machine-drafted pending native review. Why: automated localized-string checks pass. If overruled: replace localized copy and metadata without changing routes.
+D3 Keep `/solutions/` and `/customers/` as redirects to the company homepage. Why: the primary navigation is product-led and customer proof is logo-only. If overruled: restore standalone pages and update sitemap, metadata, and redirects.
+D4 Use one homepage MatchPulse proof block and one product-page CTA with the existing World Cup ranking crop. Why: it is the clearest available product view. If overruled: replace the crop and its caption together.
 
 ## Open questions
 
-- Confirm configured ERP signup, form endpoint, booking URL, and host-specific 404 behavior before release.
-- Confirm customer-story publication, portfolio names, partner relationships, implementation claims, and Wix redirects.
-- Confirm whether any remaining English source strings in localized shared chrome should be replaced before native review; the new homepage copy is translated in Arabic and French.
+- Confirm ERP signup, form endpoint, booking URL, host-specific 404 behavior, and Cloudflare redirect behavior before release; defaults remain the configured environment variables and static redirects.
+- Confirm annual onboarding/data-migration wording, ERP behavior, portfolio stacks, addresses, and trial behavior; defaults are the current visible copy.
+- Confirm MatchPulse prize mechanics, exact scoring, venue/sponsor controls, and image reuse rights; current copy states only observed screens and deployment facts.
+- Confirm native Arabic and French review; default is to ship the machine-drafted translations for review.
 
 ## Claims for the user to verify
 
 - Annual ERP plans include free onboarding and data migration from Excel, QuickBooks, or Odoo; monthly onboarding is quoted with setup.
 - Pantheon includes 3 users and Lebanon extra users are USD 9/month; Olympus includes 10 users and extra users are quoted; Elysium users are custom.
 - Odoo comparison uses a $24/user/month benchmark labelled as published list pricing in October 2026.
-- ERP module behavior, approval flow, cloud/on-premise wording, addresses, customer relationships, trial behavior, and portfolio stacks.
-- UAE, KSA, and France use only the neutral local e-invoicing roadmap wording; no compliance implementation is claimed.
-- MatchPulse proof confirms predictions, results, points, correct-call counts, global ranking, and invite-only leaderboards; prize mechanics, exact scoring, venue/sponsor controls, and reuse rights remain unconfirmed.
+- ERP module behavior, approval flow, cloud/on-premise wording, portfolio stacks, addresses, and trial behavior.
+- UAE, KSA, and France use only neutral local e-invoicing roadmap wording; no compliance implementation is claimed.
+- MatchPulse proof confirms predictions, results, points, correct-call counts, global ranking, and invite-only leaderboards; unconfirmed mechanics remain open above.
 
 ## Gate facts
 
-- Publish settings: static Next build with trailing-slash routes; no production ERP endpoint calls; no `packages/*` symbols touched.
-- Build and checks: PASS in `build-home-reposition.log`; lint: PASS in `lint-home-reposition.log`; review: one fresh read-only subagent round for the homepage repositioning, with findings resolved.
-- The static export embeds the official OG logo artwork; PNG favicon is registered for all metadata.
+- Publish settings: local commits only; no push, production ERP calls, CRUX, or AutoSDE; no `packages/*` symbols touched.
+- Build: PASS in `build-ux-fix.log`; lint: PASS in `lint-ux-fix.log`; translation/product-language checks are included in the build.
+- Adversarial review: 2 read-only subagent rounds for this UX fix; final round is captured in `code-review.md`.
 
 ## Evidence
 
-- `homepage-company-desktop.png`, `homepage-company-mobile.png`, `erp-page-desktop.png`, `plans-moved-desktop.png`, `plans-moved-mobile.png`, and `homepage-ar-company.png` show the repositioned pages.
-- `build-home-reposition.log`, `lint-home-reposition.log`, `code-review.md`, and `localized.svg` record verification and OG/review handling.
+- `screenshots-ux-fix-verified.log` records 24 successful desktop/mobile route captures.
+- `before-*.png` and `verified-*.png` provide before/after pairs for the homepage, ERP, plans, MatchPulse, About, and Arabic homepage.
+- `finding-verification.md` records the finding-by-finding falsifier table.
+- `build-ux-fix.log`, `lint-ux-fix.log`, `code-review.md`, and this document are captured evidence.
 
 ## Residuals
 
-- Native Arabic and French review and release-owner verification remain.
-- Production form, booking, ERP signup, and Cloudflare redirect behavior need a smoke test.
+Native translation review and release-owner verification remain. Production form, booking, ERP signup, redirects, and the approved commercial claims still need release smoke testing.
