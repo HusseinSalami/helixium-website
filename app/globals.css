@@ -130,6 +130,8 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .dark-panel, .savings-band { border-radius: 28px; background: #14161f; color: #fff; box-shadow: 0 22px 60px rgba(20,22,31,.16); }
 .dark-panel { padding: 55px; }
 .dark-panel h2, .dark-panel h3, .dark-panel .hero-lede, .savings-band h2, .savings-band p { color: #fff; }
+.process-panel { padding: 40px; }
+.process-panel h2, .process-panel .hero-lede { color: var(--ink); }
 .process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 36px; }
 .process-step { position: relative; padding: 20px 0; padding-inline-end: 16px; }
 .process-step:not(:last-child)::after { content: "→"; position: absolute; inset-inline-end: 10px; top: 35px; color: var(--teal); font-size: 1.2rem; }
