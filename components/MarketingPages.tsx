@@ -99,7 +99,7 @@ function PageCta({ locale, title = "Ready to make the next step clearer?", mode 
   };
   const label = localized[mode];
   const href = mode === "erp" ? erpUrl : localizedPath(locale, mode === "matchpulse" ? "/contact/?interest=MatchPulse" : "/contact/");
-  return <section className="cta"><span className="eyebrow">{localized.eyebrow}</span><h2>{title}</h2><p>{localized.lead}</p><div className="hero-actions"><a className="button button-primary" href={href}>{label} ↗</a></div></section>;
+  return <section className="cta"><span className="eyebrow">{localized.eyebrow}</span><h2>{title}</h2><p>{localized.lead}</p><div className="hero-actions"><a className="button button-primary" href={href}>{label} <span aria-hidden="true">↗</span></a></div></section>;
 }
 
 function Faq({ items }: { items: ReadonlyArray<{ question: string; answer: string }> }) {

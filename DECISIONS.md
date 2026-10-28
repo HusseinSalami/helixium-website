@@ -11,6 +11,7 @@ D1 Keep the approved 2026-10-26 ERP price table in `lib/pricing.ts`; annual bill
 D2 Keep Arabic and French machine-drafted pending native review. Why: automated localized-string checks pass. If overruled: replace localized copy and metadata without changing routes.
 D3 Keep `/solutions/` and `/customers/` as redirects to the company homepage. Why: the primary navigation is product-led and customer proof is logo-only. If overruled: restore standalone pages and update sitemap, metadata, and redirects.
 D4 Use one homepage MatchPulse proof block and one product-page CTA with the existing World Cup ranking crop. Why: it is the clearest available product view. If overruled: replace the crop and its caption together.
+D5 Keep the selected-relationships logo strip and Gandour portfolio mention as user-approved company content, with no per-customer usage claims. Why: the user explicitly requested names/logos only and Gandour in the portfolio. If overruled: neutralize those labels and portfolio copy.
 
 ## Open questions
 
@@ -32,7 +33,7 @@ D4 Use one homepage MatchPulse proof block and one product-page CTA with the exi
 
 - Publish settings: local commits only; no push, production ERP calls, CRUX, or AutoSDE; no `packages/*` symbols touched.
 - Build: PASS in `build-ux-fix.log`; lint: PASS in `lint-ux-fix.log`; translation/product-language checks are included in the build.
-- Adversarial review: 2 read-only subagent rounds for this UX fix; final round is captured in `code-review.md`.
+- Adversarial review: 3 read-only subagent rounds for this UX fix; final round is captured in `code-review.md`.
 
 ## Evidence
 

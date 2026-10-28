@@ -26,7 +26,7 @@ export function ContactForm({ endpoint, interest = "ERP", locale = "en" }: { end
     <div className="field"><label htmlFor="country">{copy.country}</label><input id="country" name="country" autoComplete="country-name" /></div>
     <div className="field"><label htmlFor="interest">{copy.interest}</label><select id="interest" name="interest" value={selectedInterest} onChange={(event) => setSelectedInterest(event.target.value)}>{copy.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></div>
     <div className="field full"><label htmlFor="message">{copy.message}</label><textarea id="message" name="message" required /></div>
-    <div className="field full"><button className="button button-primary" type="submit">{copy.submit} ↗</button></div>
+    <div className="field full"><button className="button button-primary" type="submit">{copy.submit} <span aria-hidden="true">↗</span></button></div>
   </div></form>;
 }
 
