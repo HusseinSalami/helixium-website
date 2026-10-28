@@ -5,11 +5,12 @@ type SectionIntroProps = {
   level?: "h1" | "h2";
   centered?: boolean;
   className?: string;
+  id?: string;
 };
 
-export function SectionIntro({ eyebrow, title, lede, level = "h2", centered = false, className = "" }: SectionIntroProps) {
+export function SectionIntro({ eyebrow, title, lede, level = "h2", centered = false, className = "", id }: SectionIntroProps) {
   const Heading = level;
-  return <div className={`section-intro ${centered ? "section-intro-centered" : ""} ${className}`.trim()}>
+  return <div id={id} className={`section-intro ${centered ? "centered section-intro-centered" : ""} ${className}`.trim()}>
     <span className="eyebrow">{eyebrow}</span>
     <Heading>{title}</Heading>
     {lede && <p>{lede}</p>}
