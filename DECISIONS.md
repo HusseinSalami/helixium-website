@@ -13,7 +13,7 @@ D3 Keep `/solutions/` and `/customers/` as homepage redirects. Why: navigation i
 D4 Keep one homepage MatchPulse proof block and one product-page CTA with the World Cup ranking crop. Why: it is the clearest available product view. If overruled: replace the crop and caption together.
 D5 Keep the selected-relationships logo strip and Gandour portfolio mention, with no per-customer usage claims. Why: user requested names/logos only and Gandour in the portfolio. If overruled: neutralize those labels and portfolio copy.
 D6 Use named WebP files from the five supplied Wix gallery originals. Why: each source page visibly matches its project. If overruled: replace that image field and asset.
-D7 Use a self-contained vector favicon with dark tile plus PNG and three-size ICO fallbacks. Why: browsers can reject external favicon references. If overruled: replace declarations and assets together.
+D7 Rasterize PNG, ICO and Apple fallbacks from the bold favicon SVG. Why: every browser format must retain the mark's contrast. If overruled: replace declarations and assets together.
 
 ## Open questions
 
@@ -33,15 +33,15 @@ D7 Use a self-contained vector favicon with dark tile plus PNG and three-size IC
 ## Gate facts
 
 - Publish settings: local commits only; no push, production ERP calls, CRUX, or AutoSDE; no `packages/*` symbols touched.
-- Build: PASS in `build-portfolio-favicon-final.log`; lint: PASS in `lint-portfolio-favicon-final.log`; translation and product-language checks are included in the build.
+- Build: PASS in `build-favicon-fallback-followup.log`; lint: PASS in `lint-favicon-fallback-followup.log`; translation and product-language checks are included in the build.
 - Adversarial review: 4 read-only subagent rounds; final round is in `code-review.md`.
 
 ## Evidence
 
 - `portfolio-originals-1440.png`, `portfolio-originals-390.png`, `home-originals-1440.png`, `home-originals-390.png`, `ar-originals-1440.png`, and `ar-originals-390.png` show the final routes.
 - `contact-sheet.png` labels the five verified Wix originals beside their project titles.
-- `favicon-check-final.png` shows light/dark favicon rendering at 16px, 32px, and zoomed sizes.
-- `build-portfolio-favicon-final.log`, `lint-portfolio-favicon-final.log`, `code-review.md`, and this document are captured evidence.
+- `favicon-fallback-check-final.png` shows matching SVG, PNG, ICO and Apple samples on light/dark backgrounds.
+- `build-favicon-fallback-followup.log`, `lint-favicon-fallback-followup.log`, `code-review.md`, and this document are captured evidence.
 
 ## Residuals
 
