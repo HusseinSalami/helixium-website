@@ -115,7 +115,7 @@ export function localizedMetadata(locale: string, path: string, key: keyof typeo
     },
     openGraph: { title: current.title, description: current.description, url: `https://www.helixiumsolutions.com${canonical}`, type: "website" as const, siteName: "Helixium Solutions", images: [{ url: ogImage, width: 1200, height: 630, alt: current.title }] },
     twitter: { card: "summary_large_image" as const, title: current.title, description: current.description, images: [ogImage] },
-    icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/media/brand/favicon.png", type: "image/png" }], apple: "/apple-touch-icon.png" }
+    icons: { icon: [{ url: "/favicon.ico", sizes: "16x16 32x32 48x48", type: "image/x-icon" }, { url: "/favicon.svg", type: "image/svg+xml" }, { url: "/media/brand/favicon.png", sizes: "32x32", type: "image/png" }], apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }] }
   };
 }
 
