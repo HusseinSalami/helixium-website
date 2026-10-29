@@ -30,14 +30,24 @@ export const partners = [
   { name: "MOM", image: "/media/optimized/mom.webp", alt: "Master of Maintenance logo" }
 ];
 
-export const portfolio = [
+export type PortfolioProject = {
+  title: string;
+  client: string;
+  built: string;
+  stack: string;
+  image?: string;
+  alt: string;
+  placeholderIcon?: string;
+};
+
+export const portfolio: PortfolioProject[] = [
   { title: "Feel Nature e-commerce", client: "Gandour", built: "A product-led e-commerce storefront for the Feel Nature range.", stack: "Web storefront, product catalog, responsive commerce UI", image: "/media/optimized/portfolio-01.webp", alt: "Feel Nature e-commerce storefront" },
-  { title: "Skincare e-commerce", client: "Portfolio project", built: "A visual skincare shop with product discovery and purchase flows.", stack: "Responsive e-commerce, product pages, content management", image: "/media/optimized/portfolio-02.webp", alt: "Skincare e-commerce website" },
-  { title: "Construction and renovation website", client: "Portfolio project", built: "A project-led website for a construction and renovation company.", stack: "Marketing site, project gallery, lead capture", image: "/media/optimized/portfolio-03.webp", alt: "Construction and renovation company website" },
-  { title: "Fitness studio and reservations", client: "Portfolio project", built: "A fitness studio site with a reservation system.", stack: "Marketing site, class discovery, reservation workflow", image: "/media/optimized/portfolio-05.webp", alt: "Fitness studio website and reservation system" },
-  { title: "Retail POS", client: "Portfolio project", built: "A retail point-of-sale interface connected to operational records.", stack: "POS interface, inventory workflow, sales records", image: "/media/optimized/portfolio-06.webp", alt: "Retail point of sale interface" },
+  { title: "Skincare e-commerce", client: "Portfolio project", built: "A visual skincare shop with product discovery and purchase flows.", stack: "Responsive e-commerce, product pages, content management", image: "/media/optimized/portfolio-03.webp", alt: "Skincare e-commerce website" },
+  { title: "Construction and renovation website", client: "Portfolio project", built: "A project-led website for a construction and renovation company.", stack: "Marketing site, project gallery, lead capture", alt: "Construction and renovation company website", placeholderIcon: "⌂" },
+  { title: "Fitness studio and reservations", client: "Portfolio project", built: "A fitness studio site with a reservation system.", stack: "Marketing site, class discovery, reservation workflow", image: "/media/optimized/portfolio-06.webp", alt: "Fitness studio website and reservation system" },
+  { title: "Retail POS", client: "Portfolio project", built: "A retail point-of-sale interface connected to operational records.", stack: "POS interface, inventory workflow, sales records", image: "/media/optimized/portfolio-02.webp", alt: "Retail point of sale interface" },
   { title: "Restaurant POS", client: "Portfolio project", built: "A restaurant point-of-sale experience for front-line teams.", stack: "POS interface, order workflow, service operations", image: "/media/optimized/portfolio-07.webp", alt: "Restaurant point of sale interface" },
-  { title: "Ball game", client: "Portfolio project", built: "A ball game experience built around a focused interactive flow.", stack: "Interactive web experience, responsive UI", image: "/media/optimized/portfolio-03.webp", alt: "Interactive ball game web experience" }
+  { title: "Ball game", client: "Portfolio project", built: "A ball game experience built around a focused interactive flow.", stack: "Interactive web experience, responsive UI", alt: "Interactive ball game web experience", placeholderIcon: "◉" }
 ];
 
 export const activityItems = [

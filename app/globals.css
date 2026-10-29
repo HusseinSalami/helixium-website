@@ -292,6 +292,11 @@ html[dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
 .portfolio-card { overflow: hidden; }
 .portfolio-image { position: relative; aspect-ratio: 1.25; background: #f0efe9; }
 .portfolio-image img { object-fit: cover; }
+.portfolio-placeholder { display: grid; place-items: center; padding: 24px; background: linear-gradient(145deg, #f1f2ff 0%, #f5f3ec 100%); }
+.portfolio-placeholder-content { display: grid; justify-items: center; gap: 10px; max-width: 220px; text-align: center; color: var(--ink); }
+.portfolio-placeholder-content > span { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: #e1e5ff; color: #5364b5; font-size: 1.65rem; }
+.portfolio-placeholder-content strong { font-size: 1rem; letter-spacing: -.02em; }
+.portfolio-placeholder-content small { color: var(--mist); font-size: .78rem; }
 .portfolio-body { padding: 20px; }
 .portfolio-body h3 { margin: 10px 0; font-size: 1.25rem; letter-spacing: -.04em; }
 .portfolio-body dl { display: grid; gap: 10px; margin: 18px 0 0; }
