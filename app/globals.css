@@ -176,6 +176,14 @@ html[dir="rtl"] .process-step:not(:last-child)::after { content: "←"; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 38px; padding-top: 20px; border-top: 1px solid var(--line); color: #5f6672; font-size: .75rem; }
 
 .pricing-section { padding: var(--space-3) 0 var(--space-7); }
+.pricing-jump-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; padding-bottom: var(--space-2); }
+.pricing-jump-nav a { padding: 10px 15px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: #4d65c7; font-size: .82rem; font-weight: 750; box-shadow: 0 5px 15px rgba(20,22,31,.04); }
+.pricing-jump-nav a:hover, .pricing-jump-nav a:focus-visible { border-color: #a9b4e8; background: #f4f6ff; }
+.pricing-product-block { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.pricing-product-block h3, .pricing-product-block p { flex-basis: 100%; }
+.pricing-product-block h3 { margin-bottom: 0; }
+.pricing-product-block p { margin: 0; }
+.price-product-label { display: block; margin-bottom: 10px; }
 .pricing-toolbar { display: flex; align-items: end; justify-content: space-between; gap: var(--space-4); margin-bottom: 28px; }
 .pricing-toolbar h2 { margin: 12px 0 7px; font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -.06em; }
 .pricing-toolbar p, .pricing-footnote, .pricing-source { margin: 0; color: var(--mist); }

@@ -15,7 +15,7 @@ export const organizationJsonLd = {
 const breadcrumbLabels: Record<string, Record<string, string>> = {
   Home: { ar: "الرئيسية", fr: "Accueil" },
   ERP: { ar: "نظام ERP", fr: "ERP" },
-  Plans: { ar: "الخطط", fr: "Offres" },
+  Plans: { ar: "الأسعار", fr: "Tarifs" },
   "Field service": { ar: "الخدمة الميدانية", fr: "Service terrain" },
   "MatchPulse": { ar: "MatchPulse", fr: "MatchPulse" },
   Solutions: { ar: "الحلول", fr: "Solutions" },

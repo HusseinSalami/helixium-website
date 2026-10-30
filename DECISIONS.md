@@ -4,6 +4,7 @@
 
 Helixium is presented as a software company with three equal entry paths and the ERP as its flagship.
 The site uses the light system, product navigation, MatchPulse proof, localized RTL/LTR structure, verified portfolio originals, and the official favicon set.
+The pricing page now names Helixium ERP as the published-price product and gives MatchPulse and services equal, quoted paths.
 
 ## Decisions to evaluate
 
@@ -14,6 +15,7 @@ D4 Keep one homepage MatchPulse proof block and one product-page CTA with the Wo
 D5 Keep the selected-relationships logo strip and Gandour portfolio mention, with no per-customer usage claims. Why: user requested names/logos only and Gandour in the portfolio. If overruled: neutralize those labels and portfolio copy.
 D6 Use named WebP files from the five supplied Wix gallery originals. Why: each source page visibly matches its project. If overruled: replace that image field and asset.
 D7 Rasterize PNG, ICO and Apple fallbacks from the bold favicon SVG. Why: every browser format must retain the mark's contrast. If overruled: replace declarations and assets together.
+D8 Make `/plans/` a company pricing hub with an explicit Helixium ERP plans block and equal MatchPulse and services blocks. Why: visitors must understand what each price covers immediately. If overruled: revise page grouping, metadata, and jump links together.
 
 ## Open questions
 
@@ -33,15 +35,15 @@ D7 Rasterize PNG, ICO and Apple fallbacks from the bold favicon SVG. Why: every 
 ## Gate facts
 
 - Publish settings: local commits only; no push, production ERP calls, CRUX, or AutoSDE; no `packages/*` symbols touched.
-- Build: PASS in `build-favicon-fallback-followup.log`; lint: PASS in `lint-favicon-fallback-followup.log`; translation and product-language checks are included in the build.
-- Adversarial review: 4 read-only subagent rounds; final round is in `code-review.md`.
+- Build: PASS in `build-pricing-clarity.log`; lint: PASS in `lint-pricing-clarity.log`; translation and product-language checks are included in the build.
+- Adversarial review: 5 read-only subagent rounds; final round is in `code-review.md`.
 
 ## Evidence
 
-- `portfolio-originals-1440.png`, `portfolio-originals-390.png`, `home-originals-1440.png`, `home-originals-390.png`, `ar-originals-1440.png`, and `ar-originals-390.png` show the final routes.
-- `contact-sheet.png` labels the five verified Wix originals beside their project titles.
+- Prior route screenshots and `contact-sheet.png` document the portfolio and localized visual work.
+- `pricing-en-1440.png`, `pricing-en-390.png`, and `pricing-ar-1440.png` show the clarified pricing hierarchy.
 - `favicon-fallback-check-final.png` shows matching SVG, PNG, ICO and Apple samples on light/dark backgrounds.
-- `build-favicon-fallback-followup.log`, `lint-favicon-fallback-followup.log`, `code-review.md`, and this document are captured evidence.
+- `build-pricing-clarity.log`, `lint-pricing-clarity.log`, `code-review.md`, and this document are captured evidence.
 
 ## Residuals
 
