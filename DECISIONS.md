@@ -34,15 +34,15 @@ D8 Make `/plans/` a company pricing hub with explicit ERP plans and equal MatchP
 ## Gate facts
 
 - Publish: local commits only; no push, production ERP calls, CRUX, AutoSDE, or `packages/*` changes.
-- Build: PASS in `build-pricing-clarity-final3.log`; lint: PASS in `lint-pricing-clarity-final3.log`; translation and product-language checks are included in the build.
-- Adversarial review: 7 read-only subagent rounds; final round is in `code-review.md`.
+- Build: PASS in `build-pricing-clarity-final4.log`; lint: PASS in `lint-pricing-clarity-final4.log`; translation and product-language checks are included in the build.
+- Adversarial review: 9 read-only subagent rounds; final round is in `code-review.md`.
 
 ## Evidence
 
 - Earlier route evidence and `contact-sheet.png` document prior work.
 - `pricing-en-1440.png`, `pricing-en-390.png`, and `pricing-ar-1440.png` show the clarified pricing hierarchy.
 - `favicon-fallback-check-final.png` shows matching SVG, PNG, ICO and Apple samples on light/dark backgrounds.
-- `build-pricing-clarity-final3.log`, `lint-pricing-clarity-final3.log`, `code-review.md`, and this document are captured evidence.
+- `build-pricing-clarity-final4.log`, `lint-pricing-clarity-final4.log`, `code-review.md`, and this document are captured evidence.
 
 ## Residuals
 
