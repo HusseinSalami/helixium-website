@@ -20,7 +20,7 @@ D8 Make `/plans/` a company pricing hub with explicit ERP plans and equal MatchP
 ## Open questions
 
 - Confirm production signup, form, booking, 404, redirects, addresses, trial behavior, and commercial claims; defaults are current environment variables and visible evidence.
-- Native Arabic and French review remains; machine-drafted translations ship pending review.
+- Native Arabic and French review remains; translations are machine-drafted.
 
 ## Claims for the user to verify
 
