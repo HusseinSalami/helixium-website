@@ -15,13 +15,12 @@ D4 Keep one homepage MatchPulse proof block and one product-page CTA with the Wo
 D5 Keep the selected-relationships logo strip and Gandour portfolio mention, with no per-customer usage claims. Why: user requested names/logos only and Gandour in the portfolio. If overruled: neutralize those labels and portfolio copy.
 D6 Use named WebP files from the five supplied Wix gallery originals. Why: each source page visibly matches its project. If overruled: replace that image field and asset.
 D7 Rasterize PNG, ICO and Apple fallbacks from the bold favicon SVG. Why: every browser format must retain the mark's contrast. If overruled: replace declarations and assets together.
-D8 Make `/plans/` a company pricing hub with an explicit Helixium ERP plans block and equal MatchPulse and services blocks. Why: visitors must understand what each price covers immediately. If overruled: revise page grouping, metadata, and jump links together.
+D8 Make `/plans/` a company pricing hub with explicit ERP plans and equal MatchPulse/services paths. Why: visitors must understand each price. If overruled: revise grouping, metadata, and links.
 
 ## Open questions
 
-- Confirm signup, form endpoint, booking URL, 404 and Cloudflare redirect behavior; defaults are current environment variables and static redirects.
-- Confirm annual onboarding wording, ERP behavior, portfolio stacks, addresses, trial behavior, and MatchPulse mechanics; visible copy uses current verified evidence.
-- Confirm native Arabic and French review; machine-drafted translations ship pending review.
+- Confirm production signup, form, booking, 404, redirects, addresses, trial behavior, and commercial claims; defaults are current environment variables and visible evidence.
+- Native Arabic and French review remains; machine-drafted translations ship pending review.
 
 ## Claims for the user to verify
 
@@ -34,13 +33,13 @@ D8 Make `/plans/` a company pricing hub with an explicit Helixium ERP plans bloc
 
 ## Gate facts
 
-- Publish settings: local commits only; no push, production ERP calls, CRUX, or AutoSDE; no `packages/*` symbols touched.
+- Publish: local commits only; no push, production ERP calls, CRUX, AutoSDE, or `packages/*` changes.
 - Build: PASS in `build-pricing-clarity.log`; lint: PASS in `lint-pricing-clarity.log`; translation and product-language checks are included in the build.
 - Adversarial review: 5 read-only subagent rounds; final round is in `code-review.md`.
 
 ## Evidence
 
-- Prior route screenshots and `contact-sheet.png` document the portfolio and localized visual work.
+- Earlier route evidence and `contact-sheet.png` document prior visual work.
 - `pricing-en-1440.png`, `pricing-en-390.png`, and `pricing-ar-1440.png` show the clarified pricing hierarchy.
 - `favicon-fallback-check-final.png` shows matching SVG, PNG, ICO and Apple samples on light/dark backgrounds.
 - `build-pricing-clarity.log`, `lint-pricing-clarity.log`, `code-review.md`, and this document are captured evidence.

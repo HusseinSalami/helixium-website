@@ -63,7 +63,7 @@ const seo: Record<string, Record<Locale, SeoCopy>> = {
     fr: { title: "MatchPulse pour pronostics et classements", description: "MatchPulse permet aux fans de pronostiquer les scores, suivre les résultats, gagner des points et participer à des classements globaux ou privés." }
   },
   plans: {
-    en: { title: "Pricing: Helixium ERP, MatchPulse and custom software | Helixium Solutions", description: "See published Helixium ERP plans, then explore MatchPulse and custom AI agents and software quoted for your team." },
+    en: { title: "Pricing: Helixium ERP, MatchPulse and custom software", description: "See published Helixium ERP plans, then explore MatchPulse and custom AI agents and software quoted for your team." },
     ar: { title: "الأسعار: Helixium ERP وMatchPulse والبرمجيات المخصصة | Helixium Solutions", description: "اطلع على خطط Helixium ERP المنشورة، ثم استكشف MatchPulse ووكلاء الذكاء الاصطناعي والبرمجيات المخصصة المسعّرة لفريقك." },
     fr: { title: "Tarifs : Helixium ERP, MatchPulse et logiciel sur mesure | Helixium Solutions", description: "Découvrez les offres publiées de Helixium ERP, puis MatchPulse et les agents IA et logiciels sur mesure chiffrés pour votre équipe." }
   },
